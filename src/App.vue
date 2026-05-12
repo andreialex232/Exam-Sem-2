@@ -1,11 +1,12 @@
-<script setup></script>
+<script setup>
+  import Footer from './components/shared/Footer.vue';
+  import Navbar from './components/shared/Navbar.vue';
+</script>
 
 <template>
-  <div class="min-h-screen bg-gray-100 flex items-center justify-center">
-    <h1 class="text-4xl font-bold text-blue-600 underline">
-      Tailwind is working!
-    </h1>
-  </div>
+    <div>
+        <Navbar />
+        <router-view />
+        <Footer />
+    </div>
 </template>
-
-<style scoped></style>
