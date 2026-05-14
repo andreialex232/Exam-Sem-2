@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 @theme {
+    /* Colors */
     --color-premium-bg: #0d1b2a;
     --color-primary: #1b263b;
     --color-secondary: #415a77;
@@ -9,9 +10,105 @@
     --color-cta: #e8630a;
     --color-page-bg: #f5f0e9;
     --color-card-surface: #fafaf8;
-    --color-subtle: #f0ebe3; 
+    --color-subtle: #f0ebe3;
+
+    /* Font */
+    --font-raleway: "Raleway", sans-serif;
+
+    /* Display H1 */
+    --text-h1: 5rem;
+    --text-h1--line-height: 1.05;
+    --text-h1--letter-spacing: -0.03125em;
+    --text-h1--font-weight: 800;
+
+    /* H2 Section title */
+    --text-h2: 2.625rem;
+    --text-h2--line-height: 1.14;
+    --text-h2--letter-spacing: -0.0238em;
+    --text-h2--font-weight: 700;
+
+
+    /* H3 - Card / Panel title */
+    --text-h3: 1.375rem;
+    --text-h3--line-height: 1.36;
+    --text-h3--letter-spacing: 0em;
+    --text-h3--font-weight: 600;
+
+
+    /* H4 - Small Heading */
+    --text-h4: 1.0625rem;
+    --text-h4--line-height: 1.41;
+    --text-h4--letter-spacing: 0em;
+    --text-h4--font-weight: 600;
+
+
+    /* STANDFIRST — Editorial Intro */
+    --text-standfirst: 1.25rem;
+    --text-standfirst--line-height: 1.7;
+    --text-standfirst--letter-spacing: 0em;
+    --text-standfirst--font-weight: 400;
+
+
+    /* BODY — Regular */
+    --text-body: 1rem;
+    --text-body--line-height: 1.75;
+    --text-body--letter-spacing: 0em;
+    --text-body--font-weight: 400;
+
+
+    /* BODY SMALL */
+    --text-body-sm: 0.875rem;
+    --text-body-sm--line-height: 1.57;
+    --text-body-sm--letter-spacing: 0em;
+    --text-body-sm--font-weight: 400;
+
+
+    /* LABEL — Uppercase Tag */
+    --text-label: 0.6875rem;
+    --text-label--line-height: 1.45;
+    --text-label--letter-spacing: 0.22em;
+    --text-label--font-weight: 700;
+
+
+    /* META — Secondary Info */
+    --text-meta: 0.8125rem;
+    --text-meta--line-height: 1.54;
+    --text-meta--letter-spacing: 0em;
+    --text-meta--font-weight: 400;
+
+    
+    /* CAPTION */
+    --text-caption: 0.75rem;
+    --text-caption--line-height: 1.5;
+    --text-caption--letter-spacing: 0em;
+    --text-caption--font-weight: 400;
+
+
+    /* BUTTON TEXT */
+    --text-btn: 0.9375rem;
+    --text-btn--line-height: 1.333;
+    --text-btn--letter-spacing: 0em;
+    --text-btn--font-weight: 600;
+
+
+    /* NAV LINK */
+    --text-nav: 0.875rem;
+    --text-nav--line-height: 1.428;
+    --text-nav--letter-spacing: 0em;
+    --text-nav--font-weight: 500;
+
+
+    /* TRUST DATA — Hero Numbers */
+    --text-trust: 1.25rem;
+    --text-trust--line-height: 1.2;
+    --text-trust--letter-spacing: 0em;
+    --text-trust--font-weight: 700;
 }
 
 html, body {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-raleway);
+}
+
+.white-svg {
+    filter: brightness(0) invert(1);
 }
