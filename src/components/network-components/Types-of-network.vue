@@ -1,5 +1,5 @@
 <script setup>
-    import HeadingsTemplate from '../layout/Headings-template.vue';
+    import HeroTemplate from '../layout/Hero-template.vue';
     import useNetwork from '@/composables/useNetwork';
 
     const { networkTypes } = useNetwork();
@@ -8,7 +8,7 @@
 <template>
     <div class="grid grid-cols-12 w-full bg-page-bg pt-20 pb-20">
         <div class="col-start-2 col-end-12">
-            <HeadingsTemplate>
+            <HeroTemplate>
                 <template #subtitle>
                     who can you find here?
                 </template>
@@ -16,7 +16,7 @@
                 <template #h2>
                     four types of <br>network actors
                 </template>
-            </HeadingsTemplate>
+            </HeroTemplate>
 
 
             <!-- Cards -->
