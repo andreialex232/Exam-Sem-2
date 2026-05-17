@@ -29,11 +29,11 @@ const toggleMenu = () => {
 
       <!-- Navigation Links -->
       <div class="hidden min-[1001px]:flex min-[1001px]:col-span-6 justify-center items-center gap-10 text-secondary text-sm font-medium">
-        <a href="#" class="nav-link">Network</a>
-        <a href="#" class="nav-link">Cases & Insights</a>
-        <a href="#" class="nav-link">Events</a>
-        <a href="#" class="nav-link">Join</a>
-        <a href="#" class="nav-link">Contact</a>
+        <RouterLink to="/network" class="nav-link">Network</RouterLink>
+        <RouterLink to="/cases" class="nav-link">Cases & Insights</RouterLink>
+        <RouterLink to="/events" class="nav-link">Events</RouterLink>
+        <RouterLink to="/join" class="nav-link">Join</RouterLink>
+        <RouterLink to="/contact" class="nav-link">Contact</RouterLink>
       </div>
 
       <div class="col-span-3 min-[1001px]:col-span-3 flex items-center justify-end gap-4 md:gap-6">
@@ -74,11 +74,11 @@ const toggleMenu = () => {
 
     <div v-if="isMenuOpen" class="min-[1001px]:hidden absolute top-[61px] left-0 w-full bg-white border-b border-gray-100 px-4 py-6 flex flex-col shadow-xl animate-fade-in">
       <div class="flex flex-col border-t border-gray-50">
-        <a href="#" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Network</a>
-        <a href="#" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Cases & Insights</a>
-        <a href="#" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Events</a>
-        <a href="#" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Join</a>
-        <a href="#" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Contact</a>
+        <RouterLink to="/network" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Network</RouterLink>
+        <RouterLink to="/cases" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Cases & Insights</RouterLink>
+        <RouterLink to="/events" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Events</RouterLink>
+        <RouterLink to="/join" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Join</RouterLink>
+        <RouterLink to="/contact" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">Contact</RouterLink>
       </div>
 
       <a href="#" class="bg-[var(--color-cta)] text-white px-6 py-4 text-center text-sm font-semibold uppercase mt-6 tracking-wide shadow-md">
