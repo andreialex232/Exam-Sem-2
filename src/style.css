@@ -11,6 +11,7 @@
     --color-page-bg: #f5f0e9;
     --color-card-surface: #fafaf8;
     --color-subtle: #f0ebe3;
+    --color-accent: #E86300;
 
     /* Font */
     --font-raleway: "Raleway", sans-serif;
@@ -103,6 +104,14 @@
     --text-trust--line-height: 1.2;
     --text-trust--letter-spacing: 0em;
     --text-trust--font-weight: 700;
+
+
+    /* Small Title - CAPS */
+    --text-small-title: 0.6875rem;
+    --text-small-title--line-height: 1rem;
+    --text-small-title--letter-spacing: 0.0825rem;
+    --text-small-title--font-weight: 700;
+    --text-small-title--text-transform: uppercase;
 }
 
 html, body {
