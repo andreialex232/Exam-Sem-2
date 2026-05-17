@@ -7,7 +7,13 @@ const router = createRouter({
     path: '/',
     name: 'home',
     component: Home,
-  }],
+  },
+  {
+    path: '/network',
+    name: 'network',
+    component: () => import('@/views/Network.vue')
+  }
+],
 })
 
 export default router
