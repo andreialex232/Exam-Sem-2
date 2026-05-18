@@ -1,8 +1,18 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
     defineProps({
         custom: {
             type: Boolean,
             default: false
+        },
+        cta_1_link: {
+            type: String,
+            default: ''
+        },
+        cta_2_link: {
+            type: String,
+            default: ''
         }
     });
 </script>
@@ -48,21 +58,27 @@
                 <div class="flex justify-center align-center space-x-4">
 
                     <!-- 1 -->
-                    <div class="cursor-pointer capitalize bg-accent text-white text-btn px-5 py-4 rounded-sm">
+                    <RouterLink :to="cta_1_link" class="cursor-pointer capitalize bg-accent text-white text-btn px-5 py-4 rounded-sm border-none outline-none [&_a]:outline-none">
                         <slot name="cta1"></slot>
-                    </div>
+                    </RouterLink>
 
 
                     <!-- 2 -->
-                    <div v-if="$slots.cta2 && !custom" class="cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn px-5 py-4 rounded-sm">
+                    <RouterLink :to="cta_2_link" v-if="$slots.cta2 && !custom" class="cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn px-5 py-4 rounded-sm">
                         <slot name="cta2"></slot>
-                    </div>
+                    </RouterLink>
 
                     <slot 
                         v-if="custom && $slots['cta2-custom']" 
                         :baseClass="'cursor-pointer capitalize border-[1.6px] text-btn px-5 py-4 rounded-sm'"
                         name="cta2-custom">
                     </slot>
+
+                    <!-- <slot 
+                        v-if="fullyCustom" 
+                        :baseClass="'cursor-pointer capitalize text-btn px-5 py-4 rounded-sm'"
+                        name="cta2-custom">
+                    </slot> -->
 
                     
                 </div>
