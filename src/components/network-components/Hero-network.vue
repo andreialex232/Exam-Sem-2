@@ -4,7 +4,7 @@
 
 <template>
     <div class="grid grid-cols-12 gap-8 mt-20">
-        <HeroTemplate class="col-start-2 col-end-6">
+        <HeroTemplate cta_1_link="/network" cta_2_link="/contact" class="col-start-2 col-end-6">
             <template #subtitle>
                 network database
             </template>
@@ -18,15 +18,11 @@
             </template>
 
              <template #cta1>
-                <RouterLink to="/network">
-                    search network &#8594;
-                </RouterLink>
+                search network &#8594;
             </template>
 
             <template #cta2>
-                <RouterLink to="/contact">
-                    add your organization
-                </RouterLink>
+                add your organization
             </template>
 
         </HeroTemplate>
