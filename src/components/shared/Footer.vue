@@ -4,10 +4,10 @@
 </script>
 
 <template>
-<footer class="box-border bg-premium-bg text-support font-raleway">
+<footer class="box-border border-t border-secondary bg-premium-bg text-support font-raleway md:grid md:grid-cols-12">
   <!-- Main grid -->
-  <div class="box-border max-w-[1280px] mx-auto px-8 pt-14 pb-12
-              grid grid-cols-[220px_repeat(4,1fr)] gap-8 items-start
+  <div class="box-border col-span-full md:col-start-2 md:col-end-12 pt-14 pb-12
+              grid grid-cols-[220px_repeat(4,auto)] gap-8 items-start justify-between
               max-md:grid-cols-2 max-md:px-5 max-md:pt-10 max-md:pb-8 max-md:gap-x-6 max-md:gap-y-8
               max-[420px]:grid-cols-1">
     <!-- Brand -->
@@ -85,7 +85,7 @@
   </div>
   
   <!-- Bottom bar -->
-  <div class="box-border max-w-[1280px] mx-auto px-8 py-5
+  <div class="box-border col-span-full md:col-start-2 md:col-end-13 px-8 py-5
               border-t border-secondary/35
               flex items-center justify-between
               max-md:flex-col max-md:items-center max-md:gap-3 max-md:px-5 max-md:py-4 max-md:text-center">
