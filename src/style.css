@@ -121,3 +121,23 @@ html, body {
 .white-svg {
     filter: brightness(0) invert(1);
 }
+
+@layer {
+
+    .accent-btn {
+        @apply cursor-pointer capitalize bg-accent text-white text-btn px-5 py-4 rounded-sm border-none outline-none [&_a]:outline-none
+    }
+
+    .secondary-btn {
+        @apply cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn px-5 py-4 rounded-sm
+    }
+
+    .outline-btn-custom {
+        @apply cursor-pointer capitalize border-[1.6px] text-btn px-5 py-4 rounded-sm
+    }
+
+    .tag {
+        @apply text-small-title text-support px-3 py-1.5 rounded-full uppercase
+    }
+    
+}
