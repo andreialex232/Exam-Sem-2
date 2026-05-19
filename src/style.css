@@ -5,6 +5,7 @@
     /* Colors */
     --color-premium-bg: #0d1b2a;
     --color-primary: #1b263b;
+    --color-tertiary: #1B2B4B;
     --color-secondary: #415a77;
     --color-support: #778da9;
     --color-cta: #e8630a;
@@ -77,7 +78,7 @@
     --text-meta--letter-spacing: 0em;
     --text-meta--font-weight: 400;
 
-    
+
     /* CAPTION */
     --text-caption: 0.75rem;
     --text-caption--line-height: 1.5;
@@ -139,5 +140,5 @@ html, body {
     .tag {
         @apply text-small-title text-support px-3 py-1.5 rounded-full uppercase
     }
-    
+
 }
