@@ -58,7 +58,7 @@ import { RouterLink } from 'vue-router';
                 <div class="flex justify-center align-center space-x-4">
 
                     <!-- 1 -->
-                    <RouterLink :to="cta_1_link" class="cursor-pointer capitalize bg-accent text-white text-btn px-5 py-4 rounded-sm border-none outline-none [&_a]:outline-none">
+                    <RouterLink :to="cta_1_link" class="accent-btn">
                         <slot name="cta1"></slot>
                     </RouterLink>
 
