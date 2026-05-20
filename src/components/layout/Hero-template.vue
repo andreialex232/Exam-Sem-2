@@ -30,7 +30,7 @@ import { RouterLink } from 'vue-router';
             </p>
 
             <!-- H1 -->
-            <h1 v-if="$slots.h1" class="capitalize text-premium-bg text-h1 pb-8">
+            <h1 v-if="$slots.h1" class="capitalize text-premium-bg text-h2 md:text-h1 pb-8">
                 <slot name="h1"></slot>
             </h1>
             <h1 v-if="custom && $slots['h1-custom']">
@@ -68,19 +68,19 @@ import { RouterLink } from 'vue-router';
                         <slot name="cta2"></slot>
                     </RouterLink>
 
-                    <slot 
-                        v-if="custom && $slots['cta2-custom']" 
+                    <slot
+                        v-if="custom && $slots['cta2-custom']"
                         :baseClass="'cursor-pointer capitalize border-[1.6px] text-btn px-5 py-4 rounded-sm'"
                         name="cta2-custom">
                     </slot>
 
-                    <!-- <slot 
-                        v-if="fullyCustom" 
+                    <!-- <slot
+                        v-if="fullyCustom"
                         :baseClass="'cursor-pointer capitalize text-btn px-5 py-4 rounded-sm'"
                         name="cta2-custom">
                     </slot> -->
 
-                    
+
                 </div>
             </div>
 
