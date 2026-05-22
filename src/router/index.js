@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
-import Events from '@/views/Events.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +17,12 @@ const router = createRouter({
     path: '/events',
     name: 'events',
     component: () => import('@/views/Events.vue')
+  },
+  {
+    path: '/network/:name',
+    name: 'network-profile',
+    component: () => import('@/components/network-components/Network-profile.vue'),
+    props: true
   }
   ]
 })
