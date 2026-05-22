@@ -134,7 +134,10 @@ html, body {
     .secondary-btn {
         @apply cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn px-5 py-4 rounded-sm
     }
-
+    
+    .secondary-btn-long {
+        @apply cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn py-4 rounded-sm
+    }
     .outline-btn-custom {
         @apply cursor-pointer capitalize border-[1.6px] text-btn px-5 py-4 rounded-sm
     }
