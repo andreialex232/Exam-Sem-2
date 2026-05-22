@@ -1,13 +1,13 @@
 <script setup>
     import HeroTemplate from '../layout/Hero-template.vue';
     import useNetwork from '@/composables/useNetwork';
-
+    import CardsWIcons from '../layout/Cards-w-icons.vue';
     const { networkTypes } = useNetwork();
 </script>
 
 <template>
-    <div class="grid grid-cols-12 w-full bg-page-bg pt-20 pb-20">
-        <div class="col-start-2 col-end-12">
+    <div class="grid grid-cols-12 w-full bg-page-bg pt-10 pb-10 md:pt-20 md:pb-20">
+        <div class="col-span-12 px-4 sm:col-start-2 sm:col-end-12 sm:px-0">
             <HeroTemplate>
                 <template #subtitle>
                     who can you find here?
@@ -17,32 +17,21 @@
                     four types of <br>network actors
                 </template>
             </HeroTemplate>
-
-
-            <!-- Cards -->
-            <div class="grid grid-cols-4 gap-[20px] pt-12">
-                <div v-for="network in networkTypes" :key="network.id" class="flex flex-col bg-white border-sm p-5 gap-4">
-
-                    <div>
-                        <img 
-                            :src="network.icon" 
-                            class="w-10 h-10 p-2 bg-[#E863001F] rounded-[20px] object-contain" 
-                            alt="Network Icon"/>
-                        </img>
-                    </div>
-                    
-                    <h3 class="text-h4 text-primary">{{ network.name }}</h3>
-                    <p class="text-body text-secondary">{{ network.description }}</p>
-
-                    <div class="inline-block border-top border-t-[1px] pt-4 border-[#E0E1DD]">
-                        <button class="cursor-pointer text-accent">Filter by this &#8594;</button>
-                    </div>
-
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] pt-12">
+                <CardsWIcons v-for="network in networkTypes" :key="network.id" :card_image="network.icon">
+                    <template #h3>
+                        {{ network.name }}
+                    </template>
+                    <template #description>
+                        {{ network.description }}
+                    </template>
+                    <template #filter>
+                        Filter by this &#8594;
+                    </template>
+                </CardsWIcons>
             </div>
-
-
-
+            
+            
 
         </div>
     </div>

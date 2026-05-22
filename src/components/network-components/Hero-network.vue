@@ -3,8 +3,9 @@
 </script>
 
 <template>
-    <div class="grid grid-cols-12 gap-8 mt-20">
-        <HeroTemplate cta_1_link="/network" cta_2_link="/contact" class="col-start-2 col-end-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12 lg:mt-20 px-6 lg:px-0 pb-16 lg:pb-24">
+        
+        <HeroTemplate cta_1_link="/network" cta_2_link="/contact" class="lg:col-start-2 lg:col-end-6">
             <template #subtitle>
                 network database
             </template>
@@ -24,13 +25,15 @@
             <template #cta2>
                 add your organization
             </template>
-
         </HeroTemplate>
 
-        <div class="col-start-7 col-end-13">
-            <img src="https://picsum.photos/1920/1080.webp" alt="Network Image" class="w-full h-full">
+        <div class="lg:col-start-7 lg:col-end-13 w-full">
+            <img 
+                src="https://picsum.photos/1920/1080.webp" 
+                alt="Network Image Placeholder" 
+                class="w-full h-auto lg:h-full object-cover"
+            >
         </div>
-
         
     </div>
 </template>
