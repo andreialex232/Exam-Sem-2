@@ -23,6 +23,11 @@ const router = createRouter({
     name: 'network-profile',
     component: () => import('@/components/network-components/Network-profile.vue'),
     props: true
+  },
+  {
+    path: '/contacts',
+    name: 'contacts',
+    component: () => import('@/views/Contacts.vue')
   }
   ]
 })

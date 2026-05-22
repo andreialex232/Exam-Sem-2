@@ -33,7 +33,7 @@ const toggleMenu = () => {
         <RouterLink to="/cases" class="nav-link">Cases & Insights</RouterLink>
         <RouterLink to="/events" class="nav-link">Events</RouterLink>
         <RouterLink to="/join" class="nav-link">Join</RouterLink>
-        <RouterLink to="/contact" class="nav-link">Contact</RouterLink>
+        <RouterLink to="/contacts" class="nav-link">Contact</RouterLink>
       </div>
 
       <div class="col-span-3 min-[1001px]:col-span-3 flex items-center justify-end gap-4 md:gap-6">

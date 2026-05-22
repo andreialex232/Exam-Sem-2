@@ -1,5 +1,37 @@
 <script setup>
-
+// Definovací pole dat pro uplynulé akce
+const pastEvents = [
+  {
+    id: 1,
+    tag: 'Event Recap',
+    title: '3 takeaways from a cross-border networking event',
+    description: 'A short summary of what companies and partners discussed.',
+    infoText: '✓ Related case available',
+    actionText: 'View recap',
+    link: '#',
+    image: 'https://picsum.photos/355/200?random=1'
+  },
+  {
+    id: 2,
+    tag: 'Photo Recap',
+    title: 'Business DE-DK at regional fair',
+    description: 'Highlights from a fair where companies met advisors and partner organisations.',
+    infoText: '📷 Photo gallery available',
+    actionText: 'View photos',
+    link: '#',
+    image: 'https://picsum.photos/355/200?random=2'
+  },
+  {
+    id: 3,
+    tag: 'Event Recap',
+    title: 'Workshop insights: onboarding international employees',
+    description: 'Key points from a workshop about workforce attraction and integration.',
+    infoText: '▶ Short video available',
+    actionText: 'View recap',
+    link: '#',
+    image: 'https://picsum.photos/355/200?random=3'
+  }
+]
 </script>
 
 <template>
@@ -31,24 +63,29 @@
 
       <div class="flex flex-col gap-6 sm:grid sm:grid-cols-2 md:grid-cols-12 md:gap-8 items-stretch">
 
-        <div class="col-span-12 sm:col-span-1 md:col-span-4 bg-white border border-grey border-t-[3px] rounded-sm flex flex-col justify-between overflow-hidden">
+        <div
+          v-for="(event, index) in pastEvents"
+          :key="event.id"
+          class="col-span-12 sm:col-span-1 md:col-span-4 bg-white border border-grey border-t-[3px] rounded-sm flex flex-col justify-between overflow-hidden"
+          :class="{ 'sm:col-span-2 sm:mx-auto sm:max-w-[50%] md:col-span-4 md:mx-0 md:max-w-none': index === 2 }"
+        >
           <div>
             <div class="w-full h-[200px] bg-grey">
-              <img src="https://picsum.photos/355/200" alt="Event" class="w-full h-full object-cover" />
+              <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
             </div>
 
             <div class="p-6 md:p-8 flex flex-col items-start">
               <span class="bg-secondary text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                Event Recap
+                {{ event.tag }}
               </span>
               <h3 class="text-lg md:text-h4 font-semibold text-primary leading-snug mb-3">
-                3 takeaways from a cross-border networking event
+                {{ event.title }}
               </h3>
               <p class="text-[15px] md:text-base text-secondary font-normal leading-relaxed mb-4">
-                A short summary of what companies and partners discussed.
+                {{ event.description }}
               </p>
               <span class="text-xs text-support font-normal inline-flex items-center gap-1.5">
-                ✓ Related case available
+                {{ event.infoText }}
               </span>
             </div>
           </div>
@@ -56,76 +93,11 @@
           <div class="px-6 pb-6 md:p-8 md:pt-0">
             <div class="w-full h-[1px] bg-grey mb-6"></div>
             <RouterLink
-              to="#"
-              class="block w-full md:w-auto text-center md:text-left border-[1.6px] border-primary md:border-0 rounded-[4px] md:rounded-none py-3.5 md:py-0 text-[15px] font-semibold text-primary hover:bg-primary hover:text-white md:hover:bg-transparent md:hover:text-primary md:hover:underline transition-colors"
+              :to="event.link"
+              class="inline-flex items-center justify-center w-full text-center border-[1.6px] border-primary md:border-0 rounded-[4px] md:rounded-none py-3.5 md:py-0 text-[15px] font-semibold text-primary hover:bg-primary hover:text-white md:hover:bg-transparent md:hover:text-primary md:hover:underline transition-colors gap-1"
             >
-              View recap &rarr;
-            </RouterLink>
-          </div>
-        </div>
-
-        <div class="col-span-12 sm:col-span-1 md:col-span-4 bg-white border border-grey border-t-[3px] rounded-sm flex flex-col justify-between overflow-hidden">
-          <div>
-            <div class="w-full h-[200px] bg-grey">
-              <img src="https://picsum.photos/355/200" alt="Event" class="w-full h-full object-cover" />
-            </div>
-
-            <div class="p-6 md:p-8 flex flex-col items-start">
-              <span class="bg-secondary text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                Photo Recap
-              </span>
-              <h3 class="text-lg md:text-h4 font-semibold text-primary leading-snug mb-3">
-                Business DE-DK at regional fair
-              </h3>
-              <p class="text-[15px] md:text-base text-secondary font-normal leading-relaxed mb-4">
-                Highlights from a fair where companies met advisors and partner organisations.
-              </p>
-              <span class="text-xs text-support font-normal inline-flex items-center gap-1.5">
-                📷 Photo gallery available
-              </span>
-            </div>
-          </div>
-
-          <div class="px-6 pb-6 md:p-8 md:pt-0">
-            <div class="w-full h-[1px] bg-grey mb-6"></div>
-            <RouterLink
-              to="#"
-              class="block w-full md:w-auto text-center md:text-left border-[1.6px] border-primary md:border-0 rounded-[4px] md:rounded-none py-3.5 md:py-0 text-[15px] font-semibold text-primary hover:bg-primary hover:text-white md:hover:bg-transparent md:hover:text-primary md:hover:underline transition-colors"
-            >
-              View photos &rarr;
-            </RouterLink>
-          </div>
-        </div>
-
-        <div class="col-span-12 sm:col-span-2 sm:mx-auto sm:max-w-[50%] md:col-span-4 md:mx-0 md:max-w-none bg-white border border-grey border-t-[3px] rounded-sm flex flex-col justify-between overflow-hidden">
-          <div>
-            <div class="w-full h-[200px] bg-grey">
-              <img src="https://picsum.photos/355/200" alt="Event" class="w-full h-full object-cover" />
-            </div>
-
-            <div class="p-6 md:p-8 flex flex-col items-start">
-              <span class="bg-secondary text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                Event Recap
-              </span>
-              <h3 class="text-lg md:text-h4 font-semibold text-primary leading-snug mb-3">
-                Workshop insights: onboarding international employees
-              </h3>
-              <p class="text-[15px] md:text-base text-secondary font-normal leading-relaxed mb-4">
-                Key points from a workshop about workforce attraction and integration.
-              </p>
-              <span class="text-xs text-support font-normal inline-flex items-center gap-1.5">
-                ▶ Short video available
-              </span>
-            </div>
-          </div>
-
-          <div class="px-6 pb-6 md:p-8 md:pt-0">
-            <div class="w-full h-[1px] bg-grey mb-6"></div>
-            <RouterLink
-              to="#"
-              class="block w-full md:w-auto text-center md:text-left border-[1.6px] border-primary md:border-0 rounded-[4px] md:rounded-none py-3.5 md:py-0 text-[15px] font-semibold text-primary hover:bg-primary hover:text-white md:hover:bg-transparent md:hover:text-primary md:hover:underline transition-colors"
-            >
-              View recap &rarr;
+              <span>{{ event.actionText }}</span>
+              <span>&rarr;</span>
             </RouterLink>
           </div>
         </div>

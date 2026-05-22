@@ -21,7 +21,7 @@
         </p>
       </div>
 
-      <div class="col-span-12 md:col-span-6 bg-tertiary border border-secondary md:border-0 flex flex-col justify-between overflow-hidden group pb-6 md:pb-0 rounded-sm">
+      <div class="col-span-12 md:col-span-6 bg-tertiary border border-secondary md:border-0 flex flex-col overflow-hidden group pb-6 md:pb-0 rounded-sm">
         <div class="hidden md:block relative w-full h-[260px]">
           <img
             src="https://picsum.photos/600/260"
@@ -36,7 +36,7 @@
           <span class="inline-block md:hidden self-start bg-cta text-white text-[11px] font-bold uppercase tracking-[1.5px] px-3 py-1 rounded-full mb-4">
             Interview
           </span>
-          <h3 class="text-h4 md:text-[26px] text-white font-bold leading-snug md:mt-[32px] mb-2">
+          <h3 class="text-h4 md:text-[26px] text-white font-bold leading-snug mb-2 md:mt-5">
             How companies cooperate across <br class="hidden md:block">the border
           </h3>
           <p class="text-base text-support font-normal mt-2 md:mt-5 mb-4 md:mb-0">
