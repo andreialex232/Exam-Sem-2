@@ -1,17 +1,25 @@
 <script setup>
 import HeroTemplate from '../layout/Hero-template.vue';
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onUnmounted, watch } from 'vue';
 import { useNetworkActors } from '@/composables/useNetwork';
 import danishFlag from '@/assets/svg/da.svg';
 import germanFlag from '@/assets/svg/de.svg';
 
 const { networkActors } = useNetworkActors();
 
+// element refs for jumping
+const searchInput = ref(null);
+const actorsHeading = ref(null);
+
 // states
 const search = ref('');
 const selectedProfile = ref('all');
 const selectedCountries = ref(['all']);
 const selectedLanguages = ref(['all']);
+
+// pagination states
+const currentPage = ref(1);
+const itemsPerPage = ref(12);
 
 const profileTypeOptions = ref([
     { label: 'All', value: 'all' },
@@ -33,6 +41,21 @@ const languageOptions = ref([
     { label: 'DK', value: 'da' },
     { label: 'DE', value: 'de' },
 ]);
+
+// jump to search input and focus it
+const jumpToSearch = () => {
+  if (searchInput.value) {
+    searchInput.value.scrollIntoView({ block: 'center' });
+    searchInput.value.focus();
+  }
+};
+
+// jump to the beginning of the network actors list
+const scrollToList = () => {
+  if (actorsHeading.value) {
+    actorsHeading.value.scrollIntoView({ block: 'start' });
+  }
+};
 
 // checkbox switching behavior for countries
 const handleCountryChange = (value) => {
@@ -58,12 +81,13 @@ const handleLanguageChange = (value) => {
   }
 };
 
-// reset filters
+// reset filters and jump to search bar
 const clearFilters = () => {
   search.value = '';
   selectedProfile.value = 'all';
   selectedCountries.value = ['all'];
   selectedLanguages.value = ['all'];
+  jumpToSearch();
 };
 
 // search & filter
@@ -94,24 +118,69 @@ const filteredNetworkActors = computed(() => {
   });
 });
 
-const colorBasedOnRole = (actor, el) => {
-  if(actor.role) {
-    switch(actor.role.toLowerCase()) {
-      case 'company':
-        console.log('company')
-        return `${el}-accent`;
-      case 'advisor':
-        return `${el}-secondary`;
-      case 'partner organization':
-        return `${el}-support`;
-      case 'institution':
-        return `${el}-support`
-      default:
-        return 'bg-white text-red-500';
-    }
-    
-  };
+// responsive pagination logic
+const updateItemsPerPage = () => {
+  if (typeof window !== 'undefined') {
+    itemsPerPage.value = window.innerWidth >= 1024 ? 12 : 6;
+  }
 };
+
+onMounted(() => {
+  updateItemsPerPage();
+  window.addEventListener('resize', updateItemsPerPage);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateItemsPerPage);
+});
+
+// reset back to page 1 whenever filters or search criteria update
+watch([search, selectedProfile, selectedCountries, selectedLanguages], () => {
+  currentPage.value = 1;
+});
+
+const totalItems = computed(() => filteredNetworkActors.value.length);
+const totalPages = computed(() => Math.ceil(totalItems.value / itemsPerPage.value));
+
+const paginatedNetworkActors = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage.value;
+  return filteredNetworkActors.value.slice(start, start + itemsPerPage.value);
+});
+
+const displayStart = computed(() => {
+  if (totalItems.value === 0) return 0;
+  return (currentPage.value - 1) * itemsPerPage.value + 1;
+});
+
+const displayEnd = computed(() => {
+  return Math.min(currentPage.value * itemsPerPage.value, totalItems.value);
+});
+
+const colorBasedOnRole = (actor, el) => {
+  if (!actor.role) return 'bg-white text-red-500';
+
+  const roles = {
+    'company': {
+      bg: 'bg-accent',
+      text: 'text-accent'
+    },
+    'advisor': {
+      bg: 'bg-secondary',
+      text: 'text-secondary'
+    },
+    'partner organization': {
+      bg: 'bg-support',
+      text: 'text-support'
+    },
+    'institution': {
+      bg: 'bg-support',
+      text: 'text-support'
+    }
+  };
+
+  const currentRole = roles[actor.role.toLowerCase()];
+  return currentRole ? currentRole[el] : 'bg-white text-red-500';
+}
 </script>
 
 <template>
@@ -131,6 +200,7 @@ const colorBasedOnRole = (actor, el) => {
           </svg>
         </span>
         <input 
+          ref="searchInput"
           v-model="search"
           type="text" 
           placeholder="Search by name, sector, service or location" 
@@ -177,39 +247,104 @@ const colorBasedOnRole = (actor, el) => {
         </div>
       </div>
 
-
-
-
-      
-      
-
-      <h2 class="text-premium-bg text-h2 pt-12" >
+      <h2 id="actors" ref="actorsHeading" class="text-premium-bg text-h2 pt-12">
         Network actors
       </h2>
-      <div class="grid grid-cols-1 grid-md-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        <div v-for="actor in filteredNetworkActors" :key="actor.id" class="bg-white rounded-sm flex flex-col gap-0.5 border border-slate-100 shadow-sm">
-          <div class="h-16 flex px-6 bg-page-bg justify-between items-center">
-            <img v-if="actor.logo !== ''" :src="actor.logo" :alt="actor.name" class="w-16 h-16 object-contain">
-            <div v-else :class="colorBasedOnRole(actor, 'bg')" class="text-white w-12 h-12 rounded-full flex items-center justify-center text-h4">{{ actor.name[0] }}</div>
-            <p :class="colorBasedOnRole(actor, 'text')" class="uppercase text-small-title">{{ actor.role }}</p>
-          </div>
-          <p class="px-6 py-3 text-h4 text-premium-bg">{{ actor.name }}</p>
-          <div class="px-6 flex justify-content items-center gap-2">
-            <img v-if="actor.country === 'Denmark'" class="w-4 h-4" :src="danishFlag" alt="">
-            <img v-if="actor.country === 'Germany'" class="w-4 h-4" :src="germanFlag" alt="">
-            <p class="text-body-sm text-support">{{ actor.country }}</p>
-          </div>
-          
-          <p class="px-6 text-body-sm text-support">{{ actor.subtitle }}</p>
-          <p class="text-body text-secondary px-6">{{ actor.description }}</p>
 
-          <div class="px-6 pb-6 flex gap-1 mt-auto pt-4">
-            <span v-for="lang in actor.language" :key="lang" class="bg-[#E0E1DD] text-small-title text-support px-3 py-1.5 rounded-full uppercase">
-              {{ lang }}
-            </span>
+      <div v-if="filteredNetworkActors.length > 0">
+        <div class="grid grid-cols-1 grid-md-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <div v-for="actor in paginatedNetworkActors" :key="actor.id" class="bg-white rounded-sm flex flex-col gap-0.5 border border-slate-100 shadow-sm">
+            <div class="h-16 flex px-6 bg-page-bg justify-between items-center">
+              <img v-if="actor.logo !== ''" :src="actor.logo" :alt="actor.name" class="w-16 h-16 object-contain">
+              <div v-else :class="colorBasedOnRole(actor, 'bg')" class="text-white w-12 h-12 rounded-full flex items-center justify-center text-h4">{{ actor.name[0] }}</div>
+              <p :class="colorBasedOnRole(actor, 'text')" class="uppercase text-small-title">{{ actor.role }}</p>
+            </div>
+            <p class="px-6 py-3 text-h4 text-premium-bg">{{ actor.name }}</p>
+            <div class="px-6 flex justify-content items-center gap-2">
+              <img v-if="actor.country === 'Denmark'" class="w-4 h-4" :src="danishFlag" alt="">
+              <img v-if="actor.country === 'Germany'" class="w-4 h-4" :src="germanFlag" alt="">
+              <p class="text-body-sm text-support">{{ actor.country }}</p>
+            </div>
+            
+            <p class="px-6 text-body-sm text-support">{{ actor.subtitle }}</p>
+            <p class="text-body text-secondary px-6">{{ actor.description }}</p>
+
+            <div class="px-6 pb-6 flex gap-1 mt-auto pt-4">
+              <span v-for="lang in actor.language" :key="lang" class="bg-[#E0E1DD] text-small-title text-support px-3 py-1.5 rounded-full uppercase">
+                {{ lang }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 border-t border-slate-100 pt-12 flex flex-col items-center gap-6">
+          <p class="text-slate-500 font-sans text-base">
+            Showing {{ displayStart }}–{{ displayEnd }} of {{ totalItems }} network actors
+          </p>
+
+          <div class="flex items-center gap-2">
+            <button 
+              :disabled="currentPage === 1" 
+              @click="currentPage--; scrollToList()" 
+              class="px-5 py-3 border border-slate-800 rounded text-slate-800 font-medium disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              &larr; Previous
+            </button>
+
+            <button 
+              v-for="page in totalPages" 
+              :key="page" 
+              @click="currentPage = page; scrollToList()" 
+              :class="[
+                'w-12 h-12 flex items-center justify-center font-medium rounded',
+                currentPage === page 
+                  ? 'bg-[#1E293B] text-white' 
+                  : 'bg-white border border-slate-200 text-slate-800'
+              ]"
+            >
+              {{ page }}
+            </button>
+
+            <span v-if="totalPages > 3 && currentPage < totalPages - 1" class="px-2 text-slate-400">...</span>
+
+            <button 
+              :disabled="currentPage === totalPages" 
+              @click="currentPage++; scrollToList()" 
+              class="px-5 py-3 border border-slate-800 rounded text-slate-800 font-medium disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              Next &rarr;
+            </button>
           </div>
         </div>
       </div>
+
+      <div v-else class="text-center py-16 flex flex-col items-center justify-center gap-2 border border-dashed border-slate-200 rounded-md mt-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-slate-300">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        </svg>
+        <p class="text-xl font-medium text-slate-700 mt-2">We couldn't find any network actors matching your criteria.</p>
+        <p class="text-slate-400 text-sm max-w-sm">Try adjusting your search query parameters or changing your profile filters.</p>
+      </div>
+
+      <div class="bg-page-bg p-6 md:p-10 text-center flex flex-col items-center gap-3 md:gap-4 mt-8 rounded-sm w-[90%] md:w-160 mx-auto">
+    
+    <p class="text-sm md:text-body text-secondary">
+        Need to refine your search?
+    </p>
+
+    <div class="flex items-center justify-center gap-3 md:gap-5 mt-2">
+        
+        <button @click="jumpToSearch" class="secondary-btn text-sm md:text-base">
+            Back to filters
+        </button>
+        
+        <button @click="clearFilters" class="cursor-pointer text-sm md:text-body text-support">
+            Clear filters
+        </button>
+        
+    </div>
+    
+</div>
 
     </div>
   </div>
