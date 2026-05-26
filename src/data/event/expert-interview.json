@@ -1,0 +1,305 @@
+{
+  "id": "expert-interview",
+  "slug": "expert-interview",
+  "imageUrl": "https://placehold.co/1920x1080",
+  "languages": ["da", "de"],
+  "translations": {
+    "en": {
+      "hero": {
+        "tag": "interview session",
+        "title": "Expert Interview: The Future of Cross-Border Work",
+        "description": "Join us for an exclusive, in-depth interview with industry leaders discussing the evolving landscape of international recruitment and talent retention.",
+        "cta_1": "save your seat",
+        "cta_2": "submit a question"
+      },
+      "practicalInformation": {
+        "sectionTitle": "practical information",
+        "labels": {
+          "date": "date",
+          "time": "time",
+          "location": "location",
+          "language": "language",
+          "host": "host"
+        },
+        "values": {
+          "date": "15 October",
+          "time": "14:00 - 15:30",
+          "location": "Esbjerg, Denmark",
+          "language": "EN",
+          "host": "Business DE-DK"
+        }
+      },
+      "detailsSection": {
+        "whoIsThisFor": {
+          "title": "Who is this for?",
+          "description": "HR professionals, business leaders, and talent acquisition managers looking to gain strategic insights into the future labor market."
+        },
+        "whatWillYouLearn": {
+          "title": "What will we cover?",
+          "items": [
+            "Emerging trends in cross-border talent acquisition",
+            "Strategies for integrating and retaining international employees",
+            "Live Q&A session where you can ask our experts directly"
+          ]
+        }
+      },
+      "programmeSection": {
+        "title": "Agenda",
+        "items": [
+          { "time": "14:00", "event": "Welcome and introduction" },
+          { "time": "14:10", "event": "Expert Interview: Part 1 - Current Trends" },
+          { "time": "14:40", "event": "Expert Interview: Part 2 - Future Strategies" },
+          { "time": "15:10", "event": "Live Q&A from the audience" },
+          { "time": "15:30", "event": "Wrap-up and networking" }
+        ]
+      },
+      "relatedContent": {
+        "sectionTitle": "Related Content",
+        "tag": "RELATED ARTICLE",
+        "cta": "Read article",
+        "items": [
+          { "title": "Trends shaping the cross-border labor market in 2026" },
+          { "title": "How to prepare your company for an international workforce" }
+        ]
+      },
+      "upcomingEvents": {
+        "tag": "More events",
+        "title": "Other upcoming events",
+        "seeAllCta": "See all events",
+        "registerCta": "Register",
+        "viewDetailsCta": "View details",
+        "items": [
+          {
+            "day": "20",
+            "month": "Oct",
+            "type": "Masterclass",
+            "title": "Advanced Recruitment Strategies",
+            "location": "Online",
+            "language": "EN"
+          },
+          {
+            "day": "05",
+            "month": "Nov",
+            "type": "Networking",
+            "title": "HR Leaders Regional Meetup",
+            "location": "Flensburg, Germany",
+            "language": "DA / DE"
+          },
+          {
+            "day": "12",
+            "month": "Nov",
+            "type": "Webinar",
+            "title": "Legal frameworks for cross-border hiring",
+            "location": "Online",
+            "language": "DA / DE / EN"
+          }
+        ]
+      },
+      "footerCta": {
+        "title": "Stay connected to cross-border business",
+        "description": "Get updates about events, cases and network opportunities in the Danish-German border region.",
+        "cta_1": "Join the network",
+        "cta_2": "Get event updates",
+        "cta_3": "Contact us"
+      }
+    },
+    "da": {
+      "hero": {
+        "tag": "interview session",
+        "title": "Ekspertinterview: Fremtidens grænseoverskridende arbejde",
+        "description": "Deltag i et eksklusivt, dybdegående interview med brancheledere, der diskuterer det foranderlige landskab inden for international rekruttering og fastholdelse af talent.",
+        "cta_1": "reserver din plads",
+        "cta_2": "indsend et spørgsmål"
+      },
+      "practicalInformation": {
+        "sectionTitle": "praktisk information",
+        "labels": {
+          "date": "dato",
+          "time": "tidspunkt",
+          "location": "lokation",
+          "language": "sprog",
+          "host": "vært"
+        },
+        "values": {
+          "date": "15. oktober",
+          "time": "14:00 - 15:30",
+          "location": "Esbjerg, Danmark",
+          "language": "EN",
+          "host": "Business DE-DK"
+        }
+      },
+      "detailsSection": {
+        "whoIsThisFor": {
+          "title": "Hvem er dette for?",
+          "description": "HR-professionelle, virksomhedsledere og rekrutteringsansvarlige, der ønsker strategisk indsigt i det fremtidige arbejdsmarked."
+        },
+        "whatWillYouLearn": {
+          "title": "Hvad vil vi dække?",
+          "items": [
+            "Nye tendenser inden for grænseoverskridende rekruttering",
+            "Strategier til at integrere og fastholde internationale medarbejdere",
+            "Live Q&A-session, hvor du kan spørge vores eksperter direkte"
+          ]
+        }
+      },
+      "programmeSection": {
+        "title": "Dagsorden",
+        "items": [
+          { "time": "14:00", "event": "Velkomst og introduktion" },
+          { "time": "14:10", "event": "Ekspertinterview: Del 1 - Aktuelle tendenser" },
+          { "time": "14:40", "event": "Ekspertinterview: Del 2 - Fremtidige strategier" },
+          { "time": "15:10", "event": "Live Q&A fra publikum" },
+          { "time": "15:30", "event": "Afrunding og netværk" }
+        ]
+      },
+      "relatedContent": {
+        "sectionTitle": "Relateret indhold",
+        "tag": "RELATERET ARTIKEL",
+        "cta": "Læs artikel",
+        "items": [
+          { "title": "Tendenser der former det grænseoverskridende arbejdsmarked i 2026" },
+          { "title": "Sådan forbereder du din virksomhed på en international arbejdsstyrke" }
+        ]
+      },
+      "upcomingEvents": {
+        "tag": "Flere arrangementer",
+        "title": "Andre kommende arrangementer",
+        "seeAllCta": "Se alle arrangementer",
+        "registerCta": "Registrer dig",
+        "viewDetailsCta": "Vis detaljer",
+        "items": [
+          {
+            "day": "20",
+            "month": "Okt",
+            "type": "Masterclass",
+            "title": "Avancerede rekrutteringsstrategier",
+            "location": "Online",
+            "language": "EN"
+          },
+          {
+            "day": "05",
+            "month": "Nov",
+            "type": "Netværk",
+            "title": "Regionalt møde for HR-ledere",
+            "location": "Flensborg, Tyskland",
+            "language": "DA / DE"
+          },
+          {
+            "day": "12",
+            "month": "Nov",
+            "type": "Webinar",
+            "title": "Juridiske rammer for grænseoverskridende ansættelse",
+            "location": "Online",
+            "language": "DA / DE / EN"
+          }
+        ]
+      },
+      "footerCta": {
+        "title": "Forbliv forbundet med grænseoverskridende erhvervsliv",
+        "description": "Få opdateringer om arrangementer, cases og netværksmuligheder i den dansk-tyske grænseregion.",
+        "cta_1": "Bliv en del af netværket",
+        "cta_2": "Få opdateringer om arrangementer",
+        "cta_3": "Kontakt os"
+      }
+    },
+    "de": {
+      "hero": {
+        "tag": "interview-session",
+        "title": "Experteninterview: Die Zukunft der grenzüberschreitenden Arbeit",
+        "description": "Nehmen Sie an einem exklusiven, ausführlichen Interview mit Branchenführern teil, die die sich entwickelnde Landschaft der internationalen Rekrutierung und Talentbindung diskutieren.",
+        "cta_1": "platz sichern",
+        "cta_2": "frage einreichen"
+      },
+      "practicalInformation": {
+        "sectionTitle": "praktische informationen",
+        "labels": {
+          "date": "datum",
+          "time": "uhrzeit",
+          "location": "ort",
+          "language": "sprache",
+          "host": "gastgeber"
+        },
+        "values": {
+          "date": "15. Oktober",
+          "time": "14:00 - 15:30",
+          "location": "Esbjerg, Dänemark",
+          "language": "EN",
+          "host": "Business DE-DK"
+        }
+      },
+      "detailsSection": {
+        "whoIsThisFor": {
+          "title": "Für wen ist das geeignet?",
+          "description": "HR-Experten, Unternehmensführer und Talent-Acquisition-Manager, die strategische Einblicke in den zukünftigen Arbeitsmarkt gewinnen möchten."
+        },
+        "whatWillYouLearn": {
+          "title": "Was werden wir behandeln?",
+          "items": [
+            "Neue Trends bei der grenzüberschreitenden Talentgewinnung",
+            "Strategien zur Integration und Bindung internationaler Mitarbeiter",
+            "Live-Q&A-Runde, in der Sie unsere Experten direkt befragen können"
+          ]
+        }
+      },
+      "programmeSection": {
+        "title": "Agenda",
+        "items": [
+          { "time": "14:00", "event": "Begrüßung und Einführung" },
+          { "time": "14:10", "event": "Experteninterview: Teil 1 - Aktuelle Trends" },
+          { "time": "14:40", "event": "Experteninterview: Teil 2 - Zukünftige Strategien" },
+          { "time": "15:10", "event": "Live-Q&A aus dem Publikum" },
+          { "time": "15:30", "event": "Abschluss und Networking" }
+        ]
+      },
+      "relatedContent": {
+        "sectionTitle": "Ähnliche Inhalte",
+        "tag": "PASSENDER ARTIKEL",
+        "cta": "Artikel lesen",
+        "items": [
+          { "title": "Trends, die den grenzüberschreitenden Arbeitsmarkt 2026 prägen" },
+          { "title": "So bereiten Sie Ihr Unternehmen auf eine internationale Belegschaft vor" }
+        ]
+      },
+      "upcomingEvents": {
+        "tag": "Weitere veranstaltungen",
+        "title": "Andere kommende Veranstaltungen",
+        "seeAllCta": "Alle Veranstaltungen anzeigen",
+        "registerCta": "Registrieren",
+        "viewDetailsCta": "Details anzeigen",
+        "items": [
+          {
+            "day": "20",
+            "month": "Okt",
+            "type": "Masterclass",
+            "title": "Fortgeschrittene Rekrutierungsstrategien",
+            "location": "Online",
+            "language": "EN"
+          },
+          {
+            "day": "05",
+            "month": "Nov",
+            "type": "Networking",
+            "title": "Regionales Treffen der HR-Führungskräfte",
+            "location": "Flensburg, Deutschland",
+            "language": "DA / DE"
+          },
+          {
+            "day": "12",
+            "month": "Nov",
+            "type": "Webinar",
+            "title": "Rechtliche Rahmenbedingungen für grenzüberschreitende Einstellungen",
+            "location": "Online",
+            "language": "DA / DE / EN"
+          }
+        ]
+      },
+      "footerCta": {
+        "title": "Bleiben Sie mit der grenzüberschreitenden Wirtschaft verbunden",
+        "description": "Erhalten Sie Updates zu Veranstaltungen, Fallbeispielen und Netzwerkmöglichkeiten in der deutsch-dänischen Grenzregion.",
+        "cta_1": "Dem Netzwerk beitreten",
+        "cta_2": "Veranstaltungs-Updates erhalten",
+        "cta_3": "Kontaktieren Sie uns"
+      }
+    }
+  }
+}

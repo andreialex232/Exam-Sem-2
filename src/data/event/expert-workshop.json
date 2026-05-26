@@ -1,0 +1,305 @@
+{
+  "id": "expert-workshop",
+  "slug": "expert-workshop",
+  "imageUrl": "https://placehold.co/1920x1080",
+  "languages": ["da", "de"],
+  "translations": {
+    "en": {
+      "hero": {
+        "tag": "workshop session",
+        "title": "Tech Interview: Dynamic Routing in Vue.js",
+        "description": "Join us for an exclusive interview with a frontend architecture expert, diving deep into dynamic route matching, navigation guards, and lazy loading in Vue 3.",
+        "cta_1": "save your seat",
+        "cta_2": "submit a question"
+      },
+      "practicalInformation": {
+        "sectionTitle": "practical information",
+        "labels": {
+          "date": "date",
+          "time": "time",
+          "location": "location",
+          "language": "language",
+          "host": "host"
+        },
+        "values": {
+          "date": "22 November",
+          "time": "10:00 - 11:30",
+          "location": "Online",
+          "language": "EN",
+          "host": "Frontend Hub DE-DK"
+        }
+      },
+      "detailsSection": {
+        "whoIsThisFor": {
+          "title": "Who is this for?",
+          "description": "Frontend developers, tech leads, and software engineers looking to scale single-page applications using advanced Vue Router patterns."
+        },
+        "whatWillYouLearn": {
+          "title": "What will we cover?",
+          "items": [
+            "Setting up dynamic route matching and parameters in Vue Router 4",
+            "Implementing route guards for authentication and data fetching",
+            "Live Q&A session on optimizing application bundle size with lazy loading"
+          ]
+        }
+      },
+      "programmeSection": {
+        "title": "Agenda",
+        "items": [
+          { "time": "10:00", "event": "Welcome and introduction" },
+          { "time": "10:10", "event": "Expert Interview: Part 1 - The basics of dynamic parameters" },
+          { "time": "10:40", "event": "Expert Interview: Part 2 - Advanced routing & state management" },
+          { "time": "11:10", "event": "Live Q&A from the audience" },
+          { "time": "11:30", "event": "Wrap-up and networking" }
+        ]
+      },
+      "relatedContent": {
+        "sectionTitle": "Related Content",
+        "tag": "RELATED ARTICLE",
+        "cta": "Read article",
+        "items": [
+          { "title": "Understanding Vue Router Navigation Guards" },
+          { "title": "Best practices for scaling Vue 3 applications in 2026" }
+        ]
+      },
+      "upcomingEvents": {
+        "tag": "More events",
+        "title": "Other upcoming events",
+        "seeAllCta": "See all events",
+        "registerCta": "Register",
+        "viewDetailsCta": "View details",
+        "items": [
+          {
+            "day": "28",
+            "month": "Nov",
+            "type": "Masterclass",
+            "title": "State Management with Pinia",
+            "location": "Online",
+            "language": "EN"
+          },
+          {
+            "day": "05",
+            "month": "Dec",
+            "type": "Networking",
+            "title": "Frontend Developers Meetup",
+            "location": "Kiel, Germany",
+            "language": "DA / DE"
+          },
+          {
+            "day": "12",
+            "month": "Dec",
+            "type": "Webinar",
+            "title": "Testing Vue Components",
+            "location": "Online",
+            "language": "DA / DE / EN"
+          }
+        ]
+      },
+      "footerCta": {
+        "title": "Stay connected to the tech community",
+        "description": "Get updates about coding events, case studies, and network opportunities in the Danish-German border region.",
+        "cta_1": "Join the network",
+        "cta_2": "Get event updates",
+        "cta_3": "Contact us"
+      }
+    },
+    "da": {
+      "hero": {
+        "tag": "interview session",
+        "title": "Tech Interview: Dynamisk routing i Vue.js",
+        "description": "Deltag i et eksklusivt interview med en ekspert i frontend-arkitektur, hvor vi dykker ned i dynamisk routing, navigation guards og lazy loading i Vue 3.",
+        "cta_1": "reserver din plads",
+        "cta_2": "indsend et spørgsmål"
+      },
+      "practicalInformation": {
+        "sectionTitle": "praktisk information",
+        "labels": {
+          "date": "dato",
+          "time": "tidspunkt",
+          "location": "lokation",
+          "language": "sprog",
+          "host": "vært"
+        },
+        "values": {
+          "date": "22. november",
+          "time": "10:00 - 11:30",
+          "location": "Online",
+          "language": "EN",
+          "host": "Frontend Hub DE-DK"
+        }
+      },
+      "detailsSection": {
+        "whoIsThisFor": {
+          "title": "Hvem er dette for?",
+          "description": "Frontend-udviklere, tech leads og softwareingeniører, der ønsker at skalere single-page applikationer ved hjælp af avancerede Vue Router-mønstre."
+        },
+        "whatWillYouLearn": {
+          "title": "Hvad vil vi dække?",
+          "items": [
+            "Opsætning af dynamisk routing og parametre i Vue Router 4",
+            "Implementering af route guards til autentificering og datahentning",
+            "Live Q&A-session om optimering af applikationens bundle-størrelse med lazy loading"
+          ]
+        }
+      },
+      "programmeSection": {
+        "title": "Dagsorden",
+        "items": [
+          { "time": "10:00", "event": "Velkomst og introduktion" },
+          { "time": "10:10", "event": "Ekspertinterview: Del 1 - Grundlæggende om dynamiske parametre" },
+          { "time": "10:40", "event": "Ekspertinterview: Del 2 - Avanceret routing og tilstandsstyring" },
+          { "time": "11:10", "event": "Live Q&A fra publikum" },
+          { "time": "11:30", "event": "Afrunding og netværk" }
+        ]
+      },
+      "relatedContent": {
+        "sectionTitle": "Relateret indhold",
+        "tag": "RELATERET ARTIKEL",
+        "cta": "Læs artikel",
+        "items": [
+          { "title": "Forståelse af Vue Router Navigation Guards" },
+          { "title": "Bedste praksis for skalering af Vue 3-applikationer i 2026" }
+        ]
+      },
+      "upcomingEvents": {
+        "tag": "Flere arrangementer",
+        "title": "Andre kommende arrangementer",
+        "seeAllCta": "Se alle arrangementer",
+        "registerCta": "Registrer dig",
+        "viewDetailsCta": "Vis detaljer",
+        "items": [
+          {
+            "day": "28",
+            "month": "Nov",
+            "type": "Masterclass",
+            "title": "Tilstandsstyring med Pinia",
+            "location": "Online",
+            "language": "EN"
+          },
+          {
+            "day": "05",
+            "month": "Dec",
+            "type": "Netværk",
+            "title": "Frontend Developers Meetup",
+            "location": "Kiel, Tyskland",
+            "language": "DA / DE"
+          },
+          {
+            "day": "12",
+            "month": "Dec",
+            "type": "Webinar",
+            "title": "Test af Vue-komponenter",
+            "location": "Online",
+            "language": "DA / DE / EN"
+          }
+        ]
+      },
+      "footerCta": {
+        "title": "Forbliv forbundet med tech-fællesskabet",
+        "description": "Få opdateringer om kodearrangementer, cases og netværksmuligheder i den dansk-tyske grænseregion.",
+        "cta_1": "Bliv en del af netværket",
+        "cta_2": "Få opdateringer om arrangementer",
+        "cta_3": "Kontakt os"
+      }
+    },
+    "de": {
+      "hero": {
+        "tag": "interview-session",
+        "title": "Tech Interview: Dynamisches Routing in Vue.js",
+        "description": "Nehmen Sie an einem exklusiven Interview mit einem Experten für Frontend-Architektur teil und tauchen Sie tief in dynamisches Routing, Navigation Guards und Lazy Loading in Vue 3 ein.",
+        "cta_1": "platz sichern",
+        "cta_2": "frage einreichen"
+      },
+      "practicalInformation": {
+        "sectionTitle": "praktische informationen",
+        "labels": {
+          "date": "datum",
+          "time": "uhrzeit",
+          "location": "ort",
+          "language": "sprache",
+          "host": "gastgeber"
+        },
+        "values": {
+          "date": "22. November",
+          "time": "10:00 - 11:30",
+          "location": "Online",
+          "language": "EN",
+          "host": "Frontend Hub DE-DK"
+        }
+      },
+      "detailsSection": {
+        "whoIsThisFor": {
+          "title": "Für wen ist das geeignet?",
+          "description": "Frontend-Entwickler, Tech Leads und Software-Ingenieure, die Single-Page-Anwendungen mit erweiterten Vue Router-Mustern skalieren möchten."
+        },
+        "whatWillYouLearn": {
+          "title": "Was werden wir behandeln?",
+          "items": [
+            "Einrichtung dynamischer Routen und Parameter in Vue Router 4",
+            "Implementierung von Route Guards zur Authentifizierung und zum Datenabruf",
+            "Live-Q&A-Runde zur Optimierung der Bundle-Größe mit Lazy Loading"
+          ]
+        }
+      },
+      "programmeSection": {
+        "title": "Agenda",
+        "items": [
+          { "time": "10:00", "event": "Begrüßung und Einführung" },
+          { "time": "10:10", "event": "Experteninterview: Teil 1 - Grundlagen dynamischer Parameter" },
+          { "time": "10:40", "event": "Experteninterview: Teil 2 - Erweitertes Routing & State Management" },
+          { "time": "11:10", "event": "Live-Q&A aus dem Publikum" },
+          { "time": "11:30", "event": "Abschluss und Networking" }
+        ]
+      },
+      "relatedContent": {
+        "sectionTitle": "Ähnliche Inhalte",
+        "tag": "PASSENDER ARTIKEL",
+        "cta": "Artikel lesen",
+        "items": [
+          { "title": "Verständnis von Vue Router Navigation Guards" },
+          { "title": "Best Practices für die Skalierung von Vue 3-Anwendungen im Jahr 2026" }
+        ]
+      },
+      "upcomingEvents": {
+        "tag": "Weitere veranstaltungen",
+        "title": "Andere kommende Veranstaltungen",
+        "seeAllCta": "Alle Veranstaltungen anzeigen",
+        "registerCta": "Registrieren",
+        "viewDetailsCta": "Details anzeigen",
+        "items": [
+          {
+            "day": "28",
+            "month": "Nov",
+            "type": "Masterclass",
+            "title": "State Management mit Pinia",
+            "location": "Online",
+            "language": "EN"
+          },
+          {
+            "day": "05",
+            "month": "Dez",
+            "type": "Networking",
+            "title": "Frontend Developers Meetup",
+            "location": "Kiel, Deutschland",
+            "language": "DA / DE"
+          },
+          {
+            "day": "12",
+            "month": "Dez",
+            "type": "Webinar",
+            "title": "Testen von Vue-Komponenten",
+            "location": "Online",
+            "language": "DA / DE / EN"
+          }
+        ]
+      },
+      "footerCta": {
+        "title": "Bleiben Sie mit der Tech-Community verbunden",
+        "description": "Erhalten Sie Updates zu Coding-Events, Fallstudien und Netzwerkmöglichkeiten in der deutsch-dänischen Grenzregion.",
+        "cta_1": "Dem Netzwerk beitreten",
+        "cta_2": "Veranstaltungs-Updates erhalten",
+        "cta_3": "Kontaktieren Sie uns"
+      }
+    }
+  }
+}
