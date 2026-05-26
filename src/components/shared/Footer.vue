@@ -49,10 +49,18 @@
     <nav class="box-border flex flex-col gap-2 max-md:col-start-1">
       <h4 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">QUICK LINKS</h4>
       <ul class="box-border m-0 p-0 list-none flex flex-col gap-[0.45rem]">
-        <li class="m-0 p-0"><a href="#" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white">Network</a></li>
-        <li class="m-0 p-0"><a href="#" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white">Cases &amp; Insights</a></li>
-        <li class="m-0 p-0"><a href="#" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white">Events</a></li>
-        <li class="m-0 p-0"><a href="#" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white">Become a member</a></li>
+        <li class="m-0 p-0">
+          <RouterLink class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white" to="/network">Network</RouterLink>
+        </li>
+        <li class="m-0 p-0">
+          <RouterLink class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white" to="/cases">Cases and Insights</RouterLink>
+        </li>
+        <li class="m-0 p-0">
+          <RouterLink class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white" to="/events">Events</RouterLink>
+        </li>
+        <li class="m-0 p-0">
+          <RouterLink class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white" to="/contacts">Become a member</RouterLink>
+        </li>
       </ul>
     </nav>
     
