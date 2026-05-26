@@ -269,10 +269,13 @@ const colorBasedOnRole = (actor, el) => {
             <p class="px-6 text-body-sm text-support">{{ actor.subtitle }}</p>
             <p class="text-body text-secondary px-6">{{ actor.description }}</p>
 
-            <div class="px-6 pb-6 flex gap-1 mt-auto pt-4">
+            <div class="px-6 pb-6 flex gap-1 mt-auto">
               <span v-for="lang in actor.language" :key="lang" class="bg-[#E0E1DD] text-small-title text-support px-3 py-1.5 rounded-full uppercase">
                 {{ lang }}
               </span>
+            </div>
+            <div class="p-6 text-center mx-auto w-full">
+              <RouterLink class="text-center mx-auto block secondary-btn-long w-full" :to="`network/${actor.slug}`">View Profile</RouterLink>
             </div>
           </div>
         </div>
