@@ -22,13 +22,44 @@ const router = createRouter({
     path: '/network/:name',
     name: 'network-profile',
     component: () => import('@/components/network-components/Network-profile.vue'),
+    props: true
   },
   {
     path: '/events/:name',
     name: 'events-profile',
     component: () => import('@/components/events-components/Event-profile.vue')
+  },
+  {
+    path: '/contacts',
+    name: 'contacts',
+    component: () => import('@/views/Contacts.vue')
+  },
+  {
+    path: '/cases',
+    name: 'cases',
+    component: () => import('@/views/Media.vue')
+  },
+  {
+    path: '/cases/:id',
+    name: 'article-detail',
+    component: () => import('@/views/ArticleDetailView.vue'),
+    props: true
   }
-  ]
-})
+  ],
+
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      // If the user is going back/forward in the browser, it keep their original position
+      return savedPosition
+    } else {
+      // When you normally click on a link, you always jump to the very beginning (top: 0)
+      return { top: 0 }
+    }
+  }
+  }
+)
 
 export default router
+
+
+
