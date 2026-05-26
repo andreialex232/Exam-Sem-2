@@ -36,6 +36,7 @@ export function useNetworkActors() {
     const networkActors = ref([
         {
             id: "1",
+            slug: "recruitment-support-advisor",
             name: "Recruitment Support Advisor",
             country: "Denmark",
             subtitle: "International recruitment",
@@ -46,6 +47,7 @@ export function useNetworkActors() {
         },
         {
             id: "2",
+            slug: "regional-business-partner",
             name: "Regional Business Partner",
             country: "Germany",
             subtitle: "Business support",
@@ -56,6 +58,7 @@ export function useNetworkActors() {
         },
         {
             id: "3",
+            slug: "manufacturing-company",
             name: "Manufacturing Company",
             country: "Denmark",
             subtitle: "Manufacturing",
@@ -66,6 +69,7 @@ export function useNetworkActors() {
         },
         {
             id: "4",
+            slug: "education-and-knowledge-partner",
             name: "Education & Knowledge Partner",
             country: "Germany",
             subtitle: "Education",
@@ -76,6 +80,7 @@ export function useNetworkActors() {
         },
         {
             id: "5",
+            slug: "onboarding-and-integration-advisor",
             name: "Onboarding & Integration Advisor",
             country: "Denmark",
             subtitle: "International workforce",
@@ -86,6 +91,7 @@ export function useNetworkActors() {
         },
         {
             id: "6",
+            slug: "cross-border-network-partner",
             name: "Cross-border Network Partner",
             country: "Denmark",
             subtitle: "Regional cooperation",
@@ -96,6 +102,7 @@ export function useNetworkActors() {
         },
         {
             id: "7",
+            slug: "green-tech-company",
             name: "Green Tech Company",
             country: "Germany",
             subtitle: "Green transition",
@@ -106,6 +113,7 @@ export function useNetworkActors() {
         },
         {
             id: "8",
+            slug: "business-start-advisor",
             name: "Business Start Advisor",
             country: "Denmark",
             subtitle: "Business setup",
@@ -116,6 +124,7 @@ export function useNetworkActors() {
         },
         {
             id: "9",
+            slug: "labour-market-partner",
             name: "Labour Market Partner",
             country: "Denmark",
             subtitle: "Workforce attraction",
@@ -126,6 +135,7 @@ export function useNetworkActors() {
         },
         {
             id: "10",
+            slug: "regional-development-institution",
             name: "Regional Development Institution",
             country: "Germany",
             subtitle: "Regional development",
@@ -136,6 +146,7 @@ export function useNetworkActors() {
         },
         {
             id: "11",
+            slug: "logistics-company",
             name: "Logistics Company",
             country: "Germany",
             subtitle: "Logistics",
@@ -146,6 +157,7 @@ export function useNetworkActors() {
         },
         {
             id: "12",
+            slug: "language-and-integration-advisor",
             name: "Language & Integration Advisor",
             country: "Germany",
             subtitle: "Integration support",
