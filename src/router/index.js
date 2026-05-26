@@ -22,7 +22,11 @@ const router = createRouter({
     path: '/network/:name',
     name: 'network-profile',
     component: () => import('@/components/network-components/Network-profile.vue'),
-    props: true
+  },
+  {
+    path: '/events/:name',
+    name: 'events-profile',
+    component: () => import('@/components/events-components/Event-profile.vue')
   }
   ]
 })
