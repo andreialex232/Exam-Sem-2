@@ -1,0 +1,294 @@
+{
+  "id": "recruitment-support-advisor",
+  "slug": "recruitment-support-advisor",
+
+  "imageUrl": "https://placehold.co/1920x1080",
+
+  "media": [
+    {
+      "url": "https://placehold.co/1920x1080",
+      "alt": {
+        "en": "Media 1",
+        "da": "Medie 1",
+        "de": "Medien 1"
+      }
+    },
+    {
+      "url": "https://placehold.co/1920x1080",
+      "alt": {
+        "en": "Media 2",
+        "da": "Medie 2",
+        "de": "Medien 2"
+      }
+    }
+  ],
+
+  "languages": ["da", "de"],
+
+  "translations": {
+    "en": {
+      "hero": {
+        "subtitle": "advisor",
+        "title": "recruitment support advisor",
+        "description": "Get personalized support in finding the right network actors for your organization. Our recruitment support advisor is here to guide you through the process and connect you with the most relevant contacts.",
+        "country": "denmark"
+      },
+      "tags": [
+        "recruitment",
+        "onboarding",
+        "business support",
+        "events"
+      ],
+      "quickFactsSection": {
+        "sectionTitle": "quick facts and contact",
+        "quickFactsTitle": "quick facts",
+        "labels": {
+          "profileType": "profile type",
+          "countryRegion": "country/region",
+          "sectorOrService": "sector or service",
+          "languages": "languages",
+          "mainFocus": "main focus",
+          "linkedin": "linkedin"
+        },
+        "values": {
+          "profileType": "advisor",
+          "countryRegion": "denmark",
+          "sectorOrService": "international recruitment",
+          "languages": "DA / DE",
+          "mainFocus": "workforce attraction",
+          "linkedin": "www.linkedin."
+        }
+      },
+      "contactSection": {
+        "title": "contact",
+        "labels": {
+          "contactPerson": "contact person",
+          "email": "email",
+          "phone": "phone",
+          "website": "website",
+          "address": "address"
+        },
+        "values": {
+          "contactPerson": "Emil",
+          "email": "contact@example.com",
+          "phone": "+45 91 22 22",
+          "website": "www.web.com",
+          "address": "Kanzleistraße 91-93, 24943 Flensburg"
+        },
+        "backButton": "back to network"
+      },
+      "aboutSection": {
+        "subtitle": "about",
+        "title": "recruitment support advisor",
+        "intro": [
+          "Jackstädt-Zentrum Flensburg is a joint institution of the business faculties at Europa-Universität Flensburg and Hochschule Flensburg.",
+          "We are a partner for companies, students, and researchers in the fields of entrepreneurship, small and medium-sized enterprises (SMEs), and knowledge transfer. Our mission is to connect research and practice by promoting research, teaching, and innovation in entrepreneurial thinking and the future of SMEs."
+        ],
+        "sections": [
+          {
+            "content": [
+              "As part of the Interreg project Business DE-DK, Jackstädt-Zentrum Flensburg leads the work package “Analysis and Mapping” (sub-goal 2).",
+              "The purpose is to collect relevant data, analyze the needs of key stakeholders in the border region and improve continuity and transparency.",
+              "We work closely with regional stakeholders to connect international students and skilled professionals with local companies and career opportunities."
+            ]
+          },
+          {
+            "title": "Cross-Border Contribution",
+            "content": [
+              "As a link between academia, business, and society, we contribute our expertise specifically in cross-border contexts through project partnerships, exchange formats and knowledge transfer.",
+              "We connect German and Danish companies, universities and research partners to identify and develop new collaboration opportunities."
+            ]
+          },
+          {
+            "title": "Knowledge Transfer and Exchange-Oriented Events",
+            "content": [
+              "Formats such as JuleVenture and the International Green Entrepreneurship Forum (IGEF) promote direct exchange between stakeholders from Germany and Denmark."
+            ]
+          },
+          {
+            "title": "Project Management and Funding Expertise",
+            "content": [
+              "With more than 30 funded projects over the past decade, we offer extensive experience in project applications and coordination."
+            ]
+          }
+        ]
+      }
+    },
+    "da": {
+      "hero": {
+        "subtitle": "rådgiver",
+        "title": "rådgiver inden for rekrutteringsstøtte",
+        "description": "Få personlig støtte til at finde de rette netværksaktører til din organisation. Vores rådgiver inden for rekrutteringsstøtte hjælper dig gennem processen og forbinder dig med de mest relevante kontakter.",
+        "country": "danmark"
+      },
+      "tags": [
+        "rekruttering",
+        "onboarding",
+        "forretningsstøtte",
+        "arrangementer"
+      ],
+      "quickFactsSection": {
+        "sectionTitle": "hurtige fakta og kontakt",
+        "quickFactsTitle": "hurtige fakta",
+        "labels": {
+          "profileType": "profiltype",
+          "countryRegion": "land/region",
+          "sectorOrService": "sektor eller service",
+          "languages": "sprog",
+          "mainFocus": "hovedfokus",
+          "linkedin": "linkedin"
+        },
+        "values": {
+          "profileType": "rådgiver",
+          "countryRegion": "danmark",
+          "sectorOrService": "international rekruttering",
+          "languages": "DA / DE",
+          "mainFocus": "tiltrækning af arbejdskraft",
+          "linkedin": "linkedin.com"
+        }
+      },
+      "contactSection": {
+        "title": "kontakt",
+        "labels": {
+          "contactPerson": "kontaktperson",
+          "email": "email",
+          "phone": "telefon",
+          "website": "hjemmeside",
+          "address": "adresse"
+        },
+        "values": {
+          "contactPerson": "Emil Kostenko",
+          "email": "EmilKo@gmail.com",
+          "phone": "+45 91 22 22",
+          "website": "www.web.com",
+          "address": "Kanzleistraße 91-93, 24943 Flensburg"
+        },
+        "backButton": "tilbage til netværket"
+      },
+      "aboutSection": {
+        "subtitle": "om os",
+        "title": "rådgiver inden for rekrutteringsstøtte",
+        "intro": [
+          "Jackstädt-Zentrum Flensburg er en fælles institution for økonomifakulteterne ved Europa-Universität Flensburg og Hochschule Flensburg.",
+          "Vi er en partner for virksomheder, studerende og forskere inden for iværksætteri, små og mellemstore virksomheder (SMV’er) og vidensoverførsel."
+        ],
+        "sections": [
+          {
+            "content": [
+              "Som en del af Interreg-projektet Business DE-DK leder Jackstädt-Zentrum Flensburg arbejdspakken “Analyse og Kortlægning”.",
+              "Formålet er at indsamle relevante data og analysere behovene hos nøgleaktører i grænseregionen.",
+              "Vi arbejder tæt sammen med regionale aktører for at forbinde internationale studerende og faglærte med lokale virksomheder."
+            ]
+          },
+          {
+            "title": "Grænseoverskridende bidrag",
+            "content": [
+              "Som et bindeled mellem akademia, erhvervsliv og samfund bidrager vi med vores kompetencer i grænseoverskridende sammenhænge.",
+              "Vi forbinder tyske og danske virksomheder, universiteter og forskningspartnere."
+            ]
+          },
+          {
+            "title": "Vidensoverførsel og arrangementer",
+            "content": [
+              "Arrangementer som JuleVenture og International Green Entrepreneurship Forum (IGEF) fremmer direkte udveksling mellem aktører fra Tyskland og Danmark."
+            ]
+          },
+          {
+            "title": "Projektledelse og finansiering",
+            "content": [
+              "Vi tilbyder omfattende erfaring med projektansøgninger og koordinering."
+            ]
+          }
+        ]
+      }
+    },
+    "de": {
+      "hero": {
+        "subtitle": "berater",
+        "title": "berater für rekrutierungsunterstützung",
+        "description": "Erhalten Sie persönliche Unterstützung bei der Suche nach den richtigen Netzwerkakteuren für Ihre Organisation. Unser Berater für Rekrutierungsunterstützung begleitet Sie durch den Prozess und verbindet Sie mit den relevantesten Kontakten.",
+        "country": "dänemark"
+      },
+      "tags": [
+        "rekrutierung",
+        "onboarding",
+        "unternehmensunterstützung",
+        "veranstaltungen"
+      ],
+      "quickFactsSection": {
+        "sectionTitle": "fakten und kontakt",
+        "quickFactsTitle": "fakten",
+        "labels": {
+          "profileType": "profiltyp",
+          "countryRegion": "land/region",
+          "sectorOrService": "sektor oder dienstleistung",
+          "languages": "sprachen",
+          "mainFocus": "hauptfokus",
+          "linkedin": "linkedin"
+        },
+        "values": {
+          "profileType": "berater",
+          "countryRegion": "dänemark",
+          "sectorOrService": "internationale rekrutierung",
+          "languages": "DA / DE",
+          "mainFocus": "gewinnung von arbeitskräften",
+          "linkedin": "linkedin.com"
+        }
+      },
+      "contactSection": {
+        "title": "kontakt",
+        "labels": {
+          "contactPerson": "kontaktperson",
+          "email": "email",
+          "phone": "telefon",
+          "website": "webseite",
+          "address": "adresse"
+        },
+        "values": {
+          "contactPerson": "Emil Kostenko",
+          "email": "EmilKo@gmail.com",
+          "phone": "+45 91 22 22",
+          "website": "www.web.com",
+          "address": "Kanzleistraße 91-93, 24943 Flensburg"
+        },
+        "backButton": "zurück zum netzwerk"
+      },
+      "aboutSection": {
+        "subtitle": "über uns",
+        "title": "berater für rekrutierungsunterstützung",
+        "intro": [
+          "Das Jackstädt-Zentrum Flensburg ist eine gemeinsame Einrichtung der wirtschaftswissenschaftlichen Fakultäten der Europa-Universität Flensburg und der Hochschule Flensburg.",
+          "Wir sind Partner für Unternehmen, Studierende und Forschende in den Bereichen Unternehmertum, KMU und Wissenstransfer."
+        ],
+        "sections": [
+          {
+            "content": [
+              "Im Rahmen des Interreg-Projekts Business DE-DK leitet das Jackstädt-Zentrum Flensburg das Arbeitspaket „Analyse und Kartierung“.",
+              "Ziel ist es, relevante Daten zu sammeln und die Bedürfnisse der wichtigsten Akteure in der Grenzregion zu analysieren.",
+              "Wir arbeiten eng mit regionalen Akteuren zusammen, um internationale Studierende und Fachkräfte mit lokalen Unternehmen zu vernetzen."
+            ]
+          },
+          {
+            "title": "Grenzüberschreitender Beitrag",
+            "content": [
+              "Als Bindeglied zwischen Wissenschaft, Wirtschaft und Gesellschaft bringen wir unsere Kompetenzen gezielt in grenzüberschreitende Kontexte ein.",
+              "Wir vernetzen deutsche und dänische Unternehmen, Hochschulen und Forschungspartner."
+            ]
+          },
+          {
+            "title": "Wissenstransfer und Veranstaltungen",
+            "content": [
+              "Formate wie JuleVenture und das International Green Entrepreneurship Forum fördern den direkten Austausch."
+            ]
+          },
+          {
+            "title": "Projektmanagement",
+            "content": [
+              "Wir verfügen über umfassende Erfahrung in Projektanträgen und Koordination."
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
