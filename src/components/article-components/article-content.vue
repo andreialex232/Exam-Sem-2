@@ -4,7 +4,7 @@
 
 <template>
   <section class="w-full bg-white py-12 md:py-[70px]">
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="grid grid-cols-12">
         <div class="col-span-12 lg:col-span-12 flex flex-col gap-10 md:gap-12">

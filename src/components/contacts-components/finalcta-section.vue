@@ -12,7 +12,7 @@ const scrollToSection = (id) => {
 
 <template>
   <section class="w-full bg-primary border-t border-b border-grey py-16 md:py-[100px] text-center">
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8 flex flex-col items-center">
+    <div class="max-w-[1280px] mx-auto flex flex-col items-center">
 
       <h2 class="text-3xl md:text-h2 text-white mb-4 max-w-[600px]">
         Ready to become visible <br class="hidden sm:block"> in the network?

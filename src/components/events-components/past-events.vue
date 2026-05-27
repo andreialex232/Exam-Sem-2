@@ -36,7 +36,7 @@ const pastEvents = [
 
 <template>
   <section class="w-full bg-page-bg py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="flex flex-col md:flex-row md:justify-between md:items-end w-full mb-10 md:mb-16 gap-4">
         <div>

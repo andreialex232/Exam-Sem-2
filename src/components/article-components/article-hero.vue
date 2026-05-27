@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { articlesData } from '@/data/articles.js' // Import shared data
 
-// We receive the article ID from the URL as a prop from the router
 const props = defineProps({
   id: {
     type: String,
@@ -9,81 +9,39 @@ const props = defineProps({
   }
 })
 
-
-// Reactive state to save current article data
 const article = ref(null)
 
-// In a real application, you would fetch from an API or Pinia store here.
-// For demonstration, we'll create a mock database that contains the exact data from our cards.
-const articlesDatabase = [
-  {
-    id: 'from-local-contact-to-cross-border',
-    type: 'Case',
-    labelBg: 'bg-secondary text-white',
-    date: '13 May 2026',
-    lang: 'DK',
-    topic: 'Onboarding / International workforce',
-    author: 'Example Company',
-    title: 'From local contact to cross-border cooperation',
-    leadText: 'See how one organisation used the network to build new connections and foster sustainable trade partnerships.'
-  },
-  {
-    id: 'what-advisors-can-help-with',
-    type: 'Interview',
-    labelBg: 'bg-cta text-white',
-    date: '13 May 2026',
-    lang: 'EN',
-    topic: 'Onboarding / International workforce',
-    author: 'Example Company',
-    title: 'When onboarding becomes a whole experience',
-    leadText: 'How can companies help international employees feel safe, included and connected — not only at work, but also in the local community?'
-  }
-  // ... Then you add the IDs of the remaining cards here so that the correct texts are loaded.
-]
-
 onMounted(() => {
-  // We search our mock database for the correct article by ID from props
-  const found = articlesDatabase.find(item => item.id === props.id)
-  if (found) {
-    article.value = found
-  } else {
-    // Fallback for testing – if ID is not found, generate data from your screenshot
-    article.value = {
-      type: 'Interview',
-      labelBg: 'bg-cta text-white',
-      date: '13 May 2026',
-      lang: 'EN',
-      topic: 'Onboarding / International workforce',
-      author: 'Example Company',
-      title: 'When onboarding becomes a whole experience',
-      leadText: 'How can companies help international employees feel safe, included and connected — not only at work, but also in the local community?'
+  // Simple loop to find the correct article by ID in our data file
+  for (let i = 0; i < articlesData.length; i++) {
+    if (articlesData[i].id === props.id) {
+      article.value = articlesData[i]
     }
+  }
+
+  // Fallback if no ID matched, so the page doesn't break
+  if (article.value === null) {
+    article.value = articlesData[0]
   }
 })
 
+// --- CLIPBOARD COPY ---
 const copied = ref(false)
-
-const copyToClipboard = async () => {
-  try {
-    // Copies the complete current URL from the address bar
-    await navigator.clipboard.writeText(window.location.href)
-
-    // Changes state to true (toggles text in button)
-    copied.value = true
-
-    // After 2 seconds, revert text back to original value
-    setTimeout(() => {
-      copied.value = false
-    }, 2000)
-  } catch (err) {
-    console.error('Failed to copy URL: ', err)
-  }
+const copyToClipboard = () => {
+  const dummyInput = document.createElement('input')
+  dummyInput.value = window.location.href
+  document.body.appendChild(dummyInput)
+  dummyInput.select()
+  document.execCommand('copy')
+  document.body.removeChild(dummyInput)
+  copied.value = true
+  setTimeout(function() { copied.value = false }, 2000)
 }
 </script>
 
 <template>
   <section v-if="article" class="w-full bg-card-surface border-t border-b border-grey pt-12 md:pt-[90px] pb-16 md:pb-24">
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="grid grid-cols-12 gap-6 items-start mb-10 md:mb-14">
 
@@ -139,9 +97,5 @@ const copyToClipboard = async () => {
       </div>
 
     </div>
-  </section>
-
-  <section v-else class="w-full bg-card-surface py-24 text-center">
-    <p class="text-body text-secondary">Article not found</p>
   </section>
 </template>

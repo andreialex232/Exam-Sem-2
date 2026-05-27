@@ -32,7 +32,7 @@ const events = ref([
 
 <template>
   <section class="w-full bg-card-surface py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-8 md:mb-12 flex justify-between items-center w-full">
         <h2 class="text-3xl md:text-h2 text-primary font-bold">

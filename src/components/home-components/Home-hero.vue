@@ -6,7 +6,7 @@ import HeroTemplate from '../layout/Hero-template.vue';
 <template>
   <section class="w-full bg-card-surface relative pb-12 md:pb-0">
 
-    <div class="grid max-w-[1280px] grid-cols-12 gap-8 h-auto md:h-[895px] bg-card-surface mx-auto px-4 md:px-8 relative">
+    <div class="grid max-w-[1280px] grid-cols-12 gap-8 h-auto md:h-[895px] bg-card-surface mx-auto relative">
 
       <div class="col-span-12 md:col-span-7 flex flex-col justify-start pt-12 md:pt-[50px] z-10">
 
