@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "network": "Netværk",
+    "cases": "Cases og Indsigter",
+    "events": "Arrangementer",
+    "contact": "Kontakt",
+    "become_member": "Bliv medlem"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Dansk-tysk erhvervsnetværk",
+      "title": "Skab forbindelser på tværs af den dansk-tyske grænse",
+      "description": "Find virksomheder, rådgivere og organisationer, der arbejder på tværs af Syddanmark og Nordtyskland. Én platform. Reelle forbindelser.",
+      "ctaExplore": "Udforsk netværket",
+      "ctaBrowse": "Se cases",
+      "stats": {
+        "interreg": "Interreg",
+        "programme": "Program",
+        "across": "På tværs af",
+        "theBorder": "grænsen",
+        "dkDe": "DK + DE",
+        "countries": "Lande",
+        "network": "Netværks-",
+        "platform": "platform"
+      }
+    },
+    "targetGroups": {
+      "companies": {
+        "subtitle": "For virksomheder og arbejdsgivere",
+        "title": "Find partnere, rådgivere og rekrutteringssupport",
+        "description": "Skab kontakt til relevante organisationer, deltag i arrangementer og se, hvad virksomheder som din allerede gør i grænserregionen.",
+        "cta": "Start her"
+      },
+      "advisors": {
+        "subtitle": "For rådgivere og partnerorganisationer",
+        "title": "Gør dig synlig over for de virksomheder, der har brug for din ekspertise",
+        "description": "Bliv en del af netværket, bliv fundet af relevante virksomheder og få adgang til grænseoverskridende muligheder i regionen.",
+        "cta": "Se hvordan det fungerer"
+      }
+    },
+    "membership": {
+      "subtitle": "Bliv medlem",
+      "title": "Tilslut dig det grænseoverskridende erhvervsnetværk",
+      "description": "Bliv synlig, find relevante kontakter, deltag i arrangementer og del dine erfaringer gennem platformen.",
+      "benefits": {
+        "visible": "Bliv synlig i grænseregionen",
+        "connect": "Skab kontakt til virksomheder og rådgivere",
+        "events": "Deltag i arrangementer og vidensdeling"
+      },
+      "ctaJoin": "Bliv medlem",
+      "ctaTalk": "Tag en snak med os først",
+      "whatYouGet": "Det får du"
+    },
+    "news": {
+      "title": "Nyheder og viden fra grænseregionen",
+      "description": "Historier, interview og erfaringer fra den dansk-tyske grænseregion.",
+      "goToCases": "Gå til Cases & Indsigter",
+      "labels": {
+        "interview": "Interview",
+        "case": "Case",
+        "insight": "Indsigt"
+      },
+      "links": {
+        "explore": "Udforsk case",
+        "read": "Læs case",
+        "view": "Vis indsigt"
+      },
+      "mockContent": {
+        "article1": "Hvordan virksomheder samarbejder på tværs af grænsen",
+        "article2": "Fra lokal kontakt til grænseoverskridende samarbejde",
+        "article3": "Hvad rådgivere kan hjælpe med"
+      }
+    },
+    "events": {
+      "title": "Kommende arrangementer",
+      "seeAll": "Se alle arrangementer",
+      "tableHeaders": {
+        "date": "Dato",
+        "event": "Arrangement",
+        "location": "Lokation"
+      }
+    },
+    "partners": {
+      "title": "Understøttet af partnere i grænseregionen",
+      "description": "En del af et grænseoverskridende samarbejdsinitiativ mellem Syddanmark og Nordtyskland.",
+      "tags": {
+        "supported": "Interreg-støttet",
+        "cooperation": "Grænseoverskridende samarbejde",
+        "network": "Regionalt erhvervsnetværk"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Grænseoverskridende erhvervsplatform for Syddanmark og Nordtyskland.",
+    "quickLinks": {
+      "title": "HURTIGE LINKS",
+      "network": "Netværk",
+      "cases": "Cases og Indsigter",
+      "events": "Arrangementer",
+      "member": "Bliv medlem"
+    },
+    "openingHours": {
+      "title": "ÅBNINGSTIDER",
+      "callHours": "Ringetider: Mandag til torsdag:",
+      "times": "08.30 - 15.00 Fredag: 08.30 - 13.00",
+      "visitingHours": "Besøgstid: Efter aftale"
+    },
+    "contact": {
+      "title": "KONTAKT",
+      "address": "Vestergade 9 6270 Tønder"
+    },
+    "legal": {
+      "title": "JURIDISK",
+      "privacy": "Privatlivspolitik",
+      "strategy": "Strategi",
+      "press": "For pressen"
+    },
+    "bottomBar": {
+      "copyright": "© 2026 Business DE-DK. Alle rettigheder forbeholdes.",
+      "language": "Sprog:"
+    }
+  }
+}

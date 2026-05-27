@@ -1,5 +1,6 @@
 <script setup>
-
+  import { useI18n } from 'vue-i18n';
+  const { t } = useI18n();
 </script>
 
 <template>
@@ -8,16 +9,16 @@
 
       <div class="col-span-12 md:col-span-5 bg-page-bg border border-[#E0E1DD] md:border-0 p-6 md:p-0 rounded-[4px] md:rounded-none flex flex-col justify-center">
         <p class="text-small-title text-cta uppercase font-semibold">
-          For Companies and Employers
+          {{ t('home.targetGroups.companies.subtitle') }}
         </p>
         <h2 class="text-h4 md:text-4xl text-primary font-bold mt-4">
-          Find partners, advisors and recruitment support
+          {{ t('home.targetGroups.companies.title') }}
         </h2>
         <p class="text-base md:text-[17px] text-secondary font-normal mt-4 leading-relaxed">
-          Connect with relevant organisations, attend events and discover what companies like yours are already doing in the border region.
+          {{ t('home.targetGroups.companies.description') }}
         </p>
         <button class="w-full md:w-auto md:self-start cursor-pointer border-[1.6px] border-premium-bg text-premium-bg text-btn font-normal md:font-bold px-5 py-3.5 rounded-sm mt-6 hover:bg-premium-bg hover:text-white transition-colors">
-          Start here
+          {{ t('home.targetGroups.companies.cta') }}
         </button>
       </div>
 
@@ -25,16 +26,16 @@
 
       <div class="col-span-12 md:col-start-7 md:col-span-5 bg-page-bg border border-[#E0E1DD] md:border-0 p-6 md:p-0 rounded-[4px] md:rounded-none flex flex-col justify-center">
         <p class="text-small-title text-cta uppercase font-semibold">
-          For Advisors and Partner Organisations
+          {{ t('home.targetGroups.advisors.subtitle') }}
         </p>
         <h2 class="text-h4 md:text-4xl text-primary font-bold mt-4">
-          Be visible to the companies that need your expertise
+          {{ t('home.targetGroups.advisors.title') }}
         </h2>
         <p class="text-base md:text-[17px] text-secondary font-normal mt-4 leading-relaxed">
-          Join the network, get found by relevant companies and connect with cross-border opportunities in the region.
+          {{ t('home.targetGroups.advisors.description') }}
         </p>
         <button class="w-full md:w-auto md:self-start cursor-pointer border-[1.6px] border-premium-bg text-premium-bg text-btn font-normal md:font-bold px-5 py-3.5 rounded-sm mt-6 hover:bg-premium-bg hover:text-white transition-colors">
-          See how it works
+          {{ t('home.targetGroups.advisors.cta') }}
         </button>
       </div>
 

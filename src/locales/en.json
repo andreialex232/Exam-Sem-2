@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "network": "Network",
+    "cases": "Cases and Insights",
+    "events": "Events",
+    "contact": "Contact",
+    "become_member": "Become a Member"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Danish–German Business Network",
+      "title": "Connect across the Danish–German border",
+      "description": "Find companies, advisors and organisations working across Southern Denmark and Northern Germany. One platform. Real connections.",
+      "ctaExplore": "Explore the Network",
+      "ctaBrowse": "Browse Cases",
+      "stats": {
+        "interreg": "Interreg",
+        "programme": "Programme",
+        "across": "Across",
+        "theBorder": "the border",
+        "dkDe": "DK + DE",
+        "countries": "Countries",
+        "network": "Network",
+        "platform": "Platform"
+      }
+    },
+    "targetGroups": {
+      "companies": {
+        "subtitle": "For Companies and Employers",
+        "title": "Find partners, advisors and recruitment support",
+        "description": "Connect with relevant organisations, attend events and discover what companies like yours are already doing in the border region.",
+        "cta": "Start here"
+      },
+      "advisors": {
+        "subtitle": "For Advisors and Partner Organisations",
+        "title": "Be visible to the companies that need your expertise",
+        "description": "Join the network, get found by relevant companies and connect with cross-border opportunities in the region.",
+        "cta": "See how it works"
+      }
+    },
+    "membership": {
+      "subtitle": "Become a member",
+      "title": "Join the cross-border business network",
+      "description": "Become visible, find relevant contacts, join events and share your experience through the platform.",
+      "benefits": {
+        "visible": "Be visible in the border region",
+        "connect": "Connect with companies and advisors",
+        "events": "Join events and knowledge sharing"
+      },
+      "ctaJoin": "Become a member",
+      "ctaTalk": "Talk to us first",
+      "whatYouGet": "What you get"
+    },
+    "news": {
+      "title": "News and knowledge from the border region",
+      "description": "Stories, interviews and experiences from the Danish-German border region.",
+      "goToCases": "Go to Cases & Insights",
+      "labels": {
+        "interview": "Interview",
+        "case": "Case",
+        "insight": "Insight"
+      },
+      "links": {
+        "explore": "Explore case",
+        "read": "Read case",
+        "view": "View insight"
+      },
+      "mockContent": {
+        "article1": "How companies cooperate across the border",
+        "article2": "From local contact to cross-border cooperation",
+        "article3": "What advisors can help with"
+      }
+    },
+    "events": {
+      "title": "Upcoming events",
+      "seeAll": "See all events",
+      "tableHeaders": {
+        "date": "Date",
+        "event": "Event",
+        "location": "Location"
+      }
+    },
+    "partners": {
+      "title": "Supported by partners in the border region",
+      "description": "Part of a cross-border cooperation initiative between Southern Denmark and Northern Germany.",
+      "tags": {
+        "supported": "Interreg-supported",
+        "cooperation": "Cross-border cooperation",
+        "network": "Regional business network"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Cross-border business platform for Southern Denmark and Northern Germany.",
+    "quickLinks": {
+      "title": "QUICK LINKS",
+      "network": "Network",
+      "cases": "Cases and Insights",
+      "events": "Events",
+      "member": "Become a member"
+    },
+    "openingHours": {
+      "title": "OPENING HOURS",
+      "callHours": "Phone hours: Monday to Thursday:",
+      "times": "08.30 - 15.00 Friday: 08.30 - 13.00",
+      "visitingHours": "Visiting hours: By appointment"
+    },
+    "contact": {
+      "title": "CONTACT",
+      "address": "Vestergade 9 6270 Tønder"
+    },
+    "legal": {
+      "title": "LEGAL",
+      "privacy": "Privacy policy",
+      "strategy": "Strategy",
+      "press": "For Press"
+    },
+    "bottomBar": {
+      "copyright": "© 2026 Business DE-DK. All rights reserved.",
+      "language": "Language:"
+    }
+  }
+}

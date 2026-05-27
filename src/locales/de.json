@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "network": "Netzwerk",
+    "cases": "Cases und Insights",
+    "events": "Veranstaltungen",
+    "contact": "Kontakt",
+    "become_member": "Mitglied werden"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Dänisch-Deutsches Wirtschaftsnetzwerk",
+      "title": "Verbindungen über die dänisch-deutsche Grenze schaffen",
+      "description": "Finden Sie Unternehmen, Berater und Organisationen, die grenzüberschreitend in Süddänemark und Norddeutschland tätig sind. Eine Plattform. Echte Verbindungen.",
+      "ctaExplore": "Netzwerk erkunden",
+      "ctaBrowse": "Erfolgsgeschichten durchsuchen",
+      "stats": {
+        "interreg": "Interreg",
+        "programme": "Programm",
+        "across": "Über die",
+        "theBorder": "Grenze hinweg",
+        "dkDe": "DK + DE",
+        "countries": "Länder",
+        "network": "Netzwerk-",
+        "platform": "plattform"
+      }
+    },
+    "targetGroups": {
+      "companies": {
+        "subtitle": "Für Unternehmen und Arbeitgeber",
+        "title": "Partner, Berater und Unterstützung bei der Personalrekrutierung finden",
+        "description": "Knüpfen Sie Kontakte zu relevanten Organisationen, nehmen Sie an Veranstaltungen teil und entdecken Sie, was Unternehmen wie Ihres bereits in der Grenzregion tun.",
+        "cta": "Hier starten"
+      },
+      "advisors": {
+        "subtitle": "Für Berater und Partnerorganisationen",
+        "title": "Werden Sie sichtbar für Unternehmen, die Ihre Expertise benötigen",
+        "description": "Treten Sie dem Netzwerk bei, werden Sie von relevanten Unternehmen gefunden und nutzen Sie grenzüberschreitende Chancen in der Region.",
+        "cta": "So funktioniert es"
+      }
+    },
+    "membership": {
+      "subtitle": "Mitglied werden",
+      "title": "Treten Sie dem grenzüberschreitenden Wirtschaftsnetzwerk bei",
+      "description": "Werden Sie sichtbar, finden Sie relevante Kontakte, nehmen Sie an Veranstaltungen teil und teilen Sie Ihre Erfahrungen über die Plattform.",
+      "benefits": {
+        "visible": "Sichtbar sein in der Grenzregion",
+        "connect": "Kontakte zu Unternehmen und Beratern knüpfen",
+        "events": "Teilnahme an Veranstaltungen und Wissensaustausch"
+      },
+      "ctaJoin": "Mitglied werden",
+      "ctaTalk": "Sprechen Sie zuerst mit uns",
+      "whatYouGet": "Das erhalten Sie"
+    },
+    "news": {
+      "title": "Neuigkeiten und Wissen aus der Grenzregion",
+      "description": "Geschichten, Interviews und Erfahrungen aus der dänisch-deutschen Grenzregion.",
+      "goToCases": "Zu den Cases & Insights",
+      "labels": {
+        "interview": "Interview",
+        "case": "Erfolgsgeschichte",
+        "insight": "Einblick"
+      },
+      "links": {
+        "explore": "Erfolgsgeschichte erkunden",
+        "read": "Erfolgsgeschichte lesen",
+        "view": "Einblick anzeigen"
+      },
+      "mockContent": {
+        "article1": "Wie Unternehmen grenzüberschreitend zusammenarbeiten",
+        "article2": "Vom lokalen Kontakt zur grenzüberschreitenden Kooperation",
+        "article3": "Wobei Berater helfen können"
+      }
+    },
+    "events": {
+      "title": "Anstehende Veranstaltungen",
+      "seeAll": "Alle Veranstaltungen anzeigen",
+      "tableHeaders": {
+        "date": "Datum",
+        "event": "Veranstaltung",
+        "location": "Ort"
+      }
+    },
+    "partners": {
+      "title": "Unterstützt durch Partner in der Grenzregion",
+      "description": "Teil einer grenzüberschreitenden Kooperationsinitiative zwischen Süddänemark und Norddeutschland.",
+      "tags": {
+        "supported": "Interreg-gefördert",
+        "cooperation": "Grenzüberschreitende Zusammenarbeit",
+        "network": "Regionales Wirtschaftsnetzwerk"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Grenzüberschreitende Wirtschaftsplattform für Süddänemark und Norddeutschland.",
+    "quickLinks": {
+      "title": "QUICK LINKS",
+      "network": "Netzwerk",
+      "cases": "Cases und Insights",
+      "events": "Veranstaltungen",
+      "member": "Mitglied werden"
+    },
+    "openingHours": {
+      "title": "ÖFFNUNGSZEITEN",
+      "callHours": "Telefonzeiten: Montag bis Donnerstag:",
+      "times": "08.30 - 15.00 Uhr Freitag: 08.30 - 13.00 Uhr",
+      "visitingHours": "Besuchszeit: Nach Vereinbarung"
+    },
+    "contact": {
+      "title": "KONTAKT",
+      "address": "Vestergade 9 6270 Tønder"
+    },
+    "legal": {
+      "title": "RECHTLICHES",
+      "privacy": "Datenschutzerklärung",
+      "strategy": "Strategie",
+      "press": "Für die Presse"
+    },
+    "bottomBar": {
+      "copyright": "© 2026 Business DE-DK. Alle Rechte vorbehalten.",
+      "language": "Sprache:"
+    }
+  }
+}

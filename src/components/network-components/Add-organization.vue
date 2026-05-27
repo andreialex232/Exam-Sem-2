@@ -1,11 +1,23 @@
 <script setup>
+    import { onMounted } from 'vue';
     import HeroTemplate from '../layout/Hero-template.vue';
+    import { useRoute } from 'vue-router';
+    const route = useRoute();
+
+    onMounted(() => {
+        if (route.hash) {
+            const element = document.querySelector(route.hash);
+            if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    })
 </script>
 
 <template>
     <div class="grid grid-cols-1 lg:grid-cols-12 bg-premium-bg py-12 lg:pt-20 lg:pb-20 px-6 lg:px-0 gap-8 lg:gap-0">
         
-        <HeroTemplate cta_1_link="/" cta_2_link="/contact" custom class="lg:col-start-2 lg:col-end-6">
+        <HeroTemplate cta_1_link="/contacts/#membership-form-section" cta_2_link="/contacts/#membership-form-section" custom class="lg:col-start-2 lg:col-end-6">
             <template #subtitle>
                 add your organization
             </template>
@@ -27,7 +39,7 @@
             </template>
 
             <template #cta2-custom="{ baseClass }">
-                <RouterLink :class="`${baseClass} border-white text-white`" to="/contact">
+                <RouterLink :class="`${baseClass} border-white text-white`" to="/contacts">
                     talk to Business DE-DK first
                 </RouterLink>
             </template>

@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // Fields with data for individual events
 const events = ref([
@@ -34,22 +37,25 @@ const events = ref([
   <section class="w-full bg-card-surface py-12 md:py-[90px]">
     <div class="max-w-[1280px] mx-auto px-4">
 
+      <!-- Section Header -->
       <div class="mb-8 md:mb-12 flex justify-between items-center w-full">
         <h2 class="text-3xl md:text-h2 text-primary font-bold">
-          Upcoming events
+          {{ t('home.events.title') }}
         </h2>
         <button class="hidden md:block cursor-pointer border-[1.6px] border-primary text-primary font-semibold text-[15px] px-6 py-3 rounded-sm hover:bg-primary hover:text-white transition-colors">
-          See all events
+          {{ t('home.events.seeAll') }}
         </button>
       </div>
 
+      <!-- Desktop Table Headers -->
       <div class="hidden md:grid grid-cols-12 gap-8 border-t border-b border-[#E0E1DD] py-4 text-[11px] font-bold uppercase tracking-wider">
-        <div class="col-span-1">Date</div>
-        <div class="col-span-7 pl-4">Event</div>
-        <div class="col-span-2 pl-[17px]">Location</div>
+        <div class="col-span-1">{{ t('home.events.tableHeaders.date') }}</div>
+        <div class="col-span-7 pl-4">{{ t('home.events.tableHeaders.event') }}</div>
+        <div class="col-span-2 pl-[17px]"> {{ t('home.events.tableHeaders.location') }}</div>
         <div class="col-span-1"></div>
       </div>
 
+      <!-- Desktop Grid Layout -->
       <div class="hidden md:block">
         <div
           v-for="event in events"
@@ -100,6 +106,7 @@ const events = ref([
         </div>
       </div>
 
+      <!-- Mobile Layout Layout -->
       <div class="flex flex-col gap-6 md:hidden">
         <div
           v-for="event in events"
@@ -151,9 +158,10 @@ const events = ref([
         </div>
       </div>
 
+      <!-- Mobile Bottom Button -->
       <div class="block md:hidden mt-10 text-center">
         <button class="cursor-pointer text-h4 text-cta font-bold hover:underline inline-flex items-center gap-2">
-          See all events →
+          {{ t('home.events.seeAll') }} →
         </button>
       </div>
 
