@@ -6,7 +6,7 @@ const { t } = useI18n()
 
 <template>
   <section class="w-full bg-primary py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4 grid grid-cols-12 gap-8">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-12 gap-8">
 
       <div class="col-span-12 md:col-start-1 md:col-span-5 flex flex-col text-white">
         <span class="text-[11px] font-bold uppercase tracking-widest text-support mb-4">

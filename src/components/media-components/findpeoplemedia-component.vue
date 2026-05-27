@@ -3,7 +3,7 @@
 
 <template>
   <section class="w-full bg-card-surface py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-10 md:mb-16 max-w-[650px]">
         <span class="text-[11px] font-bold uppercase tracking-widest text-support block mb-3">

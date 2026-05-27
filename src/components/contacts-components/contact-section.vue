@@ -7,7 +7,7 @@ const language = ref('')
 
 <template>
   <section id="contact-section" class="w-full bg-card-surface border-t border-b border-grey py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-10 md:mb-16">
         <span class="text-small-title text-support font-bold uppercase tracking-wider block mb-3">

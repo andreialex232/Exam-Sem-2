@@ -4,7 +4,7 @@
 
 <template>
   <section class="w-full bg-page-bg border-t border-b border-grey py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
         <div class="max-w-[600px]">

@@ -6,7 +6,7 @@ const { t } = useI18n()
 
 <template>
   <section class="w-full bg-card-surface py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4">
+    <div class="max-w-[1280px] mx-auto">
 
       <!-- Text Header Grid -->
       <div class="grid grid-cols-12 gap-8 items-start mb-16 px-4 md:px-0">

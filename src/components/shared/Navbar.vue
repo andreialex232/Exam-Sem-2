@@ -28,7 +28,7 @@ const toggleMenu = () => {
 
 <template>
   <nav class="w-full border-b border-gray-100 bg-white relative z-50">
-    <div class="mx-auto max-w-[1280px] px-4 grid grid-cols-4 min-[1001px]:grid-cols-12 items-center h-[61px]">
+    <div class="mx-auto max-w-[1280px] grid grid-cols-4 min-[1001px]:grid-cols-12 items-center h-[61px]">
 
       <div class="col-span-1 min-[1001px]:col-span-3 flex items-center">
         <img

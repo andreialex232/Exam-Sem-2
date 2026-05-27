@@ -10,7 +10,7 @@ const { t } = useI18n()
 
 <template>
   <section class="w-full bg-primary pb-[90px]">
-    <div class="grid max-w-[1280px] grid-cols-12 gap-8 mx-auto px-4">
+    <div class="grid max-w-[1280px] grid-cols-12 gap-8 mx-auto">
 
       <!-- Header Section -->
       <div class="col-span-12 mt-[90px] flex flex-col justify-start w-full mb-[40px]">

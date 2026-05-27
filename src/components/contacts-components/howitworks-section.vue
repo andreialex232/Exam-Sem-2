@@ -4,7 +4,7 @@
 
 <template>
   <section class="w-full bg-card-surface border-t border-b border-grey py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-10 md:mb-16">
         <h2 class="text-h3 md:text-h2 text-primary font-bold">

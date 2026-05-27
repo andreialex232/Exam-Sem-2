@@ -4,7 +4,7 @@ import HeroTemplate from '../layout/Hero-template.vue';
 
 <template>
   <section class="w-full bg-white py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+    <div class="max-w-[1280px] mx-auto">
 
       <div class="grid grid-cols-12 gap-8 lg:gap-0 items-start">
 
