@@ -51,6 +51,9 @@ const router = createRouter({
     if (savedPosition) {
       // If the user is going back/forward in the browser, it keep their original position
       return savedPosition
+    } else if (to.hash) {
+      // If the user clicks on a link with a hash, it scrolls to the element with that id
+      return { el: to.hash, behavior: 'smooth' }
     } else {
       // When you normally click on a link, you always jump to the very beginning (top: 0)
       return { top: 0 }
