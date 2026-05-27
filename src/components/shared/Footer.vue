@@ -24,17 +24,21 @@ const { t } = useI18n()
       </p>
  
       <div class="flex gap-2">
-        <a href="#" aria-label="LinkedIn"
+        <a href="https://www.linkedin.com/company/businessdedk/posts/?feedView=all" aria-label="LinkedIn"
            class="box-border flex items-center justify-center w-8 h-8 border border-secondary rounded text-support no-underline transition-colors duration-200 hover:border-support hover:text-white">
+           <img src="@/assets/svg/linked.svg" alt="LinkedIn Icon" class="w-8 h-8">
           </a>
-        <a href="#" aria-label="Facebook"
+        <a href="https://www.facebook.com/BusinessDEDK/" aria-label="Facebook"
            class="box-border flex items-center justify-center w-8 h-8 border border-secondary rounded text-support no-underline transition-colors duration-200 hover:border-support hover:text-white">
+           <img src="@/assets/svg/fb.svg" alt="Facebook Icon" class="w-5 h-5">
           </a>
-        <a href="#" aria-label="YouTube"
+        <a href="https://www.youtube.com/@Business-region/videos" aria-label="YouTube"
            class="box-border flex items-center justify-center w-8 h-8 border border-secondary rounded text-support no-underline transition-colors duration-200 hover:border-support hover:text-white">
+           <img src="@/assets/svg/yt.svg" alt="YouTube Icon" class="w-8 h-8">
           </a>
         <a href="#" aria-label="Instagram"
            class="box-border flex items-center justify-center w-8 h-8 border border-secondary rounded text-support no-underline transition-colors duration-200 hover:border-support hover:text-white">
+           <img src="@/assets/svg/ig.svg" alt="Instagram Icon" class="w-8 h-8">
           </a>
       </div>
     </div>
