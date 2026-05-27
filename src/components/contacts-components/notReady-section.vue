@@ -28,7 +28,7 @@
           </div>
           <div>
             <RouterLink
-              to="#"
+              to="/contacts#contact-section"
               class="cursor-pointer block text-center border border-primary text-primary text-[14px] font-semibold px-4 py-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-colors w-full"
             >
               Contact membership team
@@ -47,7 +47,7 @@
           </div>
           <div>
             <RouterLink
-              to="#"
+              to="/network"
               class="cursor-pointer block text-center border border-primary text-primary text-[14px] font-semibold px-4 py-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-colors w-full"
             >
               Go to Network
@@ -66,7 +66,7 @@
           </div>
           <div>
             <RouterLink
-              to="#"
+              to="/events"
               class="cursor-pointer block text-center border border-primary text-primary text-[14px] font-semibold px-4 py-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-colors w-full"
             >
               View events
@@ -85,7 +85,7 @@
           </div>
           <div>
             <RouterLink
-              to="#"
+              to="/cases"
               class="cursor-pointer block text-center border border-primary text-primary text-[14px] font-semibold px-4 py-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-colors w-full"
             >
               Contact about cases

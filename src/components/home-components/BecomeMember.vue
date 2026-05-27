@@ -44,12 +44,12 @@ const { t } = useI18n()
         </div>
 
         <div class="hidden md:flex flex-row gap-4 items-center mt-[65px]">
-          <button class="cursor-pointer bg-cta text-white font-semibold text-[15px] px-6 py-3.5 rounded-sm hover:bg-[#e05e00] transition-colors">
+          <RouterLink to="contacts#membership-form-section" class="cursor-pointer bg-cta text-white font-semibold text-[15px] px-6 py-3.5 rounded-sm hover:bg-[#e05e00] transition-colors">
             {{ t('home.membership.ctaJoin') }}
-          </button>
-          <button class="cursor-pointer border-[1.6px] border-white text-white font-semibold text-[15px] px-6 py-3.5 rounded-sm hover:bg-white hover:text-primary transition-colors">
+          </RouterLink>
+          <RouterLink to="contacts#contact-section" class="cursor-pointer border-[1.6px] border-white text-white font-semibold text-[15px] px-6 py-3.5 rounded-sm hover:bg-white hover:text-primary transition-colors">
             {{ t('home.membership.ctaTalk') }}
-          </button>
+          </RouterLink>
         </div>
       </div>
 

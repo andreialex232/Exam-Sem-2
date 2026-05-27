@@ -13,7 +13,7 @@ const { t } = useI18n()
 
       <div class="col-span-12 md:col-span-7 flex flex-col justify-start pt-12 md:pt-[50px] z-10">
 
-        <HeroTemplate cta_1_link="/network" cta_2_link="/contact" class="w-full">
+        <HeroTemplate cta_1_link="/network" cta_2_link="/cases" class="w-full">
           <template #subtitle>
             {{ t('home.hero.subtitle') }}
           </template>

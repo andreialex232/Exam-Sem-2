@@ -5,7 +5,7 @@
 <template>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 px-6 lg:px-0 pb-16 lg:pb-24 bg-card-surface">
 
-        <HeroTemplate cta_1_link="/3" cta_2_link="/3" class="lg:col-start-2 lg:col-end-6 mt-12">
+        <HeroTemplate cta_1_link="/contacts#membership-form-section" cta_2_link="/contacts#contact-section" class="lg:col-start-2 lg:col-end-6 mt-12">
             <template #subtitle>
                 JOIN THE NETWORK
             </template>

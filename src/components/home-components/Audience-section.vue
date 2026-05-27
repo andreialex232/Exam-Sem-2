@@ -34,9 +34,9 @@
         <p class="text-base md:text-[17px] text-secondary font-normal mt-4 leading-relaxed">
           {{ t('home.targetGroups.advisors.description') }}
         </p>
-        <button class="w-full md:w-auto md:self-start cursor-pointer border-[1.6px] border-premium-bg text-premium-bg text-btn font-normal md:font-bold px-5 py-3.5 rounded-sm mt-6 hover:bg-premium-bg hover:text-white transition-colors">
+        <RouterLink to="/contacts#membership-form-section" class="w-full md:w-auto md:self-start cursor-pointer border-[1.6px] border-premium-bg text-premium-bg text-btn font-normal md:font-bold px-5 py-3.5 rounded-sm mt-6 hover:bg-premium-bg hover:text-white transition-colors">
           {{ t('home.targetGroups.advisors.cta') }}
-        </button>
+        </RouterLink>
       </div>
 
     </div>

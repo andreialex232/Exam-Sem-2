@@ -42,9 +42,9 @@ const events = ref([
         <h2 class="text-3xl md:text-h2 text-primary font-bold">
           {{ t('home.events.title') }}
         </h2>
-        <button class="hidden md:block cursor-pointer border-[1.6px] border-primary text-primary font-semibold text-[15px] px-6 py-3 rounded-sm hover:bg-primary hover:text-white transition-colors">
+        <RouterLink to="/events" class="hidden md:block cursor-pointer border-[1.6px] border-primary text-primary font-semibold text-[15px] px-6 py-3 rounded-sm hover:bg-primary hover:text-white transition-colors">
           {{ t('home.events.seeAll') }}
-        </button>
+        </RouterLink> 
       </div>
 
       <!-- Desktop Table Headers -->

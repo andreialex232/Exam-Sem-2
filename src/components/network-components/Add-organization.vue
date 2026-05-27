@@ -17,7 +17,7 @@
 <template>
     <div class="grid grid-cols-1 lg:grid-cols-12 bg-premium-bg py-12 lg:pt-20 lg:pb-20 px-6 lg:px-0 gap-8 lg:gap-0">
         
-        <HeroTemplate cta_1_link="/contacts/#membership-form-section" cta_2_link="/contacts/#membership-form-section" custom class="lg:col-start-2 lg:col-end-6">
+        <HeroTemplate cta_1_link="/contacts/#membership-form-section" cta_2_link="/contacts/#contact-section" custom class="lg:col-start-2 lg:col-end-6">
             <template #subtitle>
                 add your organization
             </template>
@@ -39,7 +39,7 @@
             </template>
 
             <template #cta2-custom="{ baseClass }">
-                <RouterLink :class="`${baseClass} border-white text-white`" to="/contacts">
+                <RouterLink :class="`${baseClass} border-white text-white hover:bg-white hover:text-premium-bg transition-colors`" to="/contacts/#contact-section">
                     talk to Business DE-DK first
                 </RouterLink>
             </template>

@@ -24,11 +24,11 @@
             <slot name="description"></slot>
         </p>
 
-        <div v-if="$slots.filter" class="block mt-auto border-top border-t-[1px] pt-4 border-[#E0E1DD]">
+        <!-- <div v-if="$slots.filter" class="block mt-auto border-top border-t-[1px] pt-4 border-[#E0E1DD]">
             <button class="cursor-pointer text-accent">
                 <slot name="filter"></slot>
             </button>
-        </div>
+        </div> -->
 
     </div>
 </template>

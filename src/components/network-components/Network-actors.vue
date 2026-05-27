@@ -184,7 +184,7 @@ const colorBasedOnRole = (actor, el) => {
 </script>
 
 <template>
-  <div class="grid grid-cols-12 w-full min-h-screen bg-white py-12 px-4 font-sans selection:bg-slate-200 pb-12">
+  <div id="network-search" class="grid grid-cols-12 w-full min-h-screen bg-white py-12 px-4 font-sans selection:bg-slate-200 pb-12">
     
     <div class="col-start-2 col-end-12 flex flex-col gap-6">
       
@@ -341,7 +341,7 @@ const colorBasedOnRole = (actor, el) => {
             Back to filters
         </button>
         
-        <button @click="clearFilters" class="cursor-pointer text-sm md:text-body text-support">
+        <button @click="clearFilters" class="cursor-pointer text-sm md:text-body text-support hover:underline">
             Clear filters
         </button>
         

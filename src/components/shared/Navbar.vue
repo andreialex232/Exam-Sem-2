@@ -68,9 +68,9 @@ const toggleMenu = () => {
           >EN</button>
         </div>
 
-        <a href="#" class="hidden min-[1001px]:block bg-[var(--color-cta)] text-white px-6 py-2.5 text-xs font-semibold uppercase">
+        <RouterLink to="/contacts#membership-form-section" class="hidden min-[1001px]:block bg-[var(--color-cta)] text-white px-6 py-2.5 text-xs font-semibold uppercase">
           {{ $t('nav.become_member') }}
-        </a>
+        </RouterLink>
 
         <button @click="toggleMenu" class="min-[1001px]:hidden text-secondary focus:outline-none p-1">
           <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,12 +88,12 @@ const toggleMenu = () => {
         <RouterLink to="/network" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.network') }}</RouterLink>
         <RouterLink to="/cases" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.cases') }}</RouterLink>
         <RouterLink to="/events" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.events') }}</RouterLink>
-        <RouterLink to="/contact" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.contact') }}</RouterLink>
+        <RouterLink to="/contacts" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.contact') }}</RouterLink>
       </div>
 
-      <a href="#" class="bg-[var(--color-cta)] text-white px-6 py-4 text-center text-sm font-semibold uppercase mt-6 tracking-wide shadow-md">
+      <RouterLink to="/contacts#membership-form-section" class="bg-[var(--color-cta)] text-white px-6 py-4 text-center text-sm font-semibold uppercase mt-6 tracking-wide shadow-md">
         {{ $t('nav.become_member') }}
-      </a>
+      </RouterLink>
     </div>
   </nav>
 </template>

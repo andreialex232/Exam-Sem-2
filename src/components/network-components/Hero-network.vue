@@ -5,7 +5,7 @@
 <template>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12 lg:mt-20 px-6 lg:px-0 pb-16 lg:pb-24">
         
-        <HeroTemplate cta_1_link="/network" cta_2_link="/contact" class="lg:col-start-2 lg:col-end-6">
+        <HeroTemplate cta_1_link="/network#network-search" cta_2_link="/contacts#membership-form-section" class="lg:col-start-2 lg:col-end-6">
             <template #subtitle>
                 network database
             </template>
