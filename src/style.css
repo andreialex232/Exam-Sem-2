@@ -15,6 +15,7 @@
     --color-card-surface: #fafaf8;
     --color-subtle: #f0ebe3;
     --color-accent: #E86300;
+    --color-accent-hover: #A63F00;
 
     /* Font */
     --font-raleway: "Raleway", sans-serif;
@@ -128,18 +129,19 @@ html, body {
 @layer {
 
     .accent-btn {
-        @apply cursor-pointer capitalize bg-accent text-white text-btn px-5 py-4 rounded-sm border-none outline-none [&_a]:outline-none
+        @apply cursor-pointer capitalize bg-accent text-white text-btn px-5 py-4 rounded-sm border-none outline-none [&_a]:outline-none hover:bg-accent-hover transition-all
     }
 
     .secondary-btn {
-        @apply cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn px-5 py-4 rounded-sm
+        @apply cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn px-5 py-4 rounded-sm hover:bg-premium-bg hover:text-white transition-colors
     }
     
     .secondary-btn-long {
-        @apply cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn py-4 rounded-sm
+        @apply cursor-pointer capitalize border-[1.6px] border-premium-bg text-premium-bg text-btn py-4 rounded-sm hover:bg-premium-bg hover:text-white transition-colors
     }
+    
     .outline-btn-custom {
-        @apply cursor-pointer capitalize border-[1.6px] text-btn px-5 py-4 rounded-sm
+        @apply cursor-pointer capitalize border-[1.6px] text-btn px-5 py-4 rounded-sm hover:bg-premium-bg hover:text-white transition-colors
     }
 
     .tag {
