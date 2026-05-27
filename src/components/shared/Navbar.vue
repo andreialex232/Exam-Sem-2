@@ -30,13 +30,13 @@ const toggleMenu = () => {
   <nav class="w-full border-b border-gray-100 bg-white relative z-50">
     <div class="mx-auto max-w-[1280px] grid grid-cols-4 min-[1001px]:grid-cols-12 items-center h-[61px]">
 
-      <div class="col-span-1 min-[1001px]:col-span-3 flex items-center">
+      <RouterLink to="/" class="col-span-1 min-[1001px]:col-span-3 flex items-center">
         <img
           :src="logo"
           alt="Logo"
           class="w-auto block object-contain object-left transition-all h-[20px] min-[1001px]:h-[35px]"
         />
-      </div>
+      </RouterLink to="/">
 
       <div class="hidden min-[1001px]:flex min-[1001px]:col-span-6 justify-center items-center gap-10 text-secondary text-sm font-medium">
         <RouterLink to="/network" class="nav-link">{{ $t('nav.network') }}</RouterLink>
