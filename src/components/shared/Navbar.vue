@@ -68,7 +68,7 @@ const toggleMenu = () => {
           >EN</button>
         </div>
 
-        <RouterLink to="/contacts#membership-form-section" class="hidden min-[1001px]:block bg-[var(--color-cta)] text-white px-6 py-2.5 text-xs font-semibold uppercase">
+        <RouterLink to="/contacts#membership-form-section" class="hidden min-[1001px]:block bg-[var(--color-cta)] text-white px-6 py-2.5 text-xs font-semibold uppercase rounded-sm">
           {{ $t('nav.become_member') }}
         </RouterLink>
 
@@ -91,7 +91,7 @@ const toggleMenu = () => {
         <RouterLink to="/contacts" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.contact') }}</RouterLink>
       </div>
 
-      <RouterLink to="/contacts#membership-form-section" @click="isMenuOpen = false" class="bg-[var(--color-cta)] text-white px-6 py-4 text-center text-sm font-semibold uppercase mt-6 tracking-wide shadow-md">
+      <RouterLink to="/contacts#membership-form-section" @click="isMenuOpen = false" class="bg-[var(--color-cta)] text-white px-6 py-4 text-center text-sm font-semibold uppercase mt-6 tracking-wide shadow-md rounded-sm">
         {{ $t('nav.become_member') }}
       </RouterLink>
     </div>
