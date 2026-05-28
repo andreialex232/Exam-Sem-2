@@ -85,19 +85,15 @@ const toggleMenu = () => {
 
     <div v-if="isMenuOpen" class="min-[1001px]:hidden absolute top-[61px] left-0 w-full bg-white border-b border-gray-100 px-4 py-6 flex flex-col shadow-xl animate-fade-in">
       <div class="flex flex-col border-t border-gray-50">
-        <RouterLink to="/network" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.network') }}</RouterLink>
-        <RouterLink to="/cases" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.cases') }}</RouterLink>
-        <RouterLink to="/events" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.events') }}</RouterLink>
-        <RouterLink to="/contacts" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.contact') }}</RouterLink>
+        <RouterLink to="/network" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.network') }}</RouterLink>
+        <RouterLink to="/cases" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.cases') }}</RouterLink>
+        <RouterLink to="/events" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.events') }}</RouterLink>
+        <RouterLink to="/contacts" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.contact') }}</RouterLink>
       </div>
 
-      <RouterLink to="/contacts#membership-form-section" class="bg-[var(--color-cta)] text-white px-6 py-4 text-center text-sm font-semibold uppercase mt-6 tracking-wide shadow-md">
+      <RouterLink to="/contacts#membership-form-section" @click="isMenuOpen = false" class="bg-[var(--color-cta)] text-white px-6 py-4 text-center text-sm font-semibold uppercase mt-6 tracking-wide shadow-md">
         {{ $t('nav.become_member') }}
       </RouterLink>
     </div>
   </nav>
 </template>
-
-<style scoped>
-/* Keep your existing styles here... */
-</style>
