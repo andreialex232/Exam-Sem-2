@@ -90,7 +90,7 @@ const scrollToFilter = () => {
       </div>
     </section>
 
-    <section class="w-full bg-card-surface border-b border-grey py-12 md:py-[90px]">
+    <section id="latest" class="w-full bg-card-surface border-b border-grey py-12 md:py-[90px]">
       <div class="max-w-[1280px] mx-auto">
         <div class="flex flex-col sm:flex-row justify-between sm:items-end gap-4 mb-10 md:mb-14">
           <div>

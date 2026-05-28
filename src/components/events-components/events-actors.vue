@@ -172,7 +172,7 @@ const formatLanguages = (langs) => {
 </script>
 
 <template>
-  <div class="grid grid-cols-12 w-full min-h-screen bg-white py-12 px-4 font-sans selection:bg-slate-200 pb-12">
+  <div id="upcoming" class="grid grid-cols-12 w-full min-h-screen bg-white py-12 px-4 font-sans selection:bg-slate-200 pb-12">
     
     <div class="col-start-2 col-end-12 flex flex-col gap-6">
       

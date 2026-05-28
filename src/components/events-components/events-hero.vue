@@ -4,7 +4,7 @@
 
 <template>
     <div class="grid grid-cols-12 gap-8">
-        <HeroTemplate cta_1_link="/network" cta_2_link="/contact" class="col-start-2 col-end-8 mt-10 mb-10">
+        <HeroTemplate cta_1_link="/events#upcoming" cta_2_link="/events#event-news" class="col-start-2 col-end-8 mt-10 mb-10">
             <template #subtitle>
                 events
             </template>

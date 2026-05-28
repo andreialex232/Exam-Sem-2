@@ -9,7 +9,7 @@ import HeroTemplate from '../layout/Hero-template.vue';
       <div class="grid grid-cols-12 gap-8 lg:gap-0 items-start">
 
         <div class="col-span-12 lg:col-span-6 lg:pr-12 lg:border-r border-grey">
-          <HeroTemplate cta_1_link="/network" cta_2_link="/contact" class="w-full">
+          <HeroTemplate cta_1_link="/cases#latest" cta_2_link="/cases#shorts" class="w-full">
             <template #subtitle>
               Cases & Insights
             </template>

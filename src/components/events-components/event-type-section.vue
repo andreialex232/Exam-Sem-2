@@ -72,7 +72,7 @@ const eventTypes = [
 
           <div>
             <div class="w-[80%] h-[1px] bg-grey my-6"></div>
-            <RouterLink to="#" class="text-sm md:text-base font-bold text-cta hover:underline inline-flex items-center gap-1">
+            <RouterLink to="#" class="text-sm md:text-base text-cta hover:underline inline-flex items-center gap-1">
               Filter by this &rarr;
             </RouterLink>
           </div>
