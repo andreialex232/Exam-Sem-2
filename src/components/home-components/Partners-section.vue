@@ -5,7 +5,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="w-full bg-card-surface py-12 md:py-[90px]">
+  <section class="w-full bg-card-surface py-12 md:py-[90px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <!-- Text Header Grid -->

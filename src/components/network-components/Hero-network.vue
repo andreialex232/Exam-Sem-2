@@ -4,7 +4,7 @@
 
 <template>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12 lg:mt-20 px-6 lg:px-0 pb-16 lg:pb-24">
-        
+
         <HeroTemplate cta_1_link="/network#network-search" cta_2_link="/contacts#membership-form-section" class="lg:col-start-2 lg:col-end-6">
             <template #subtitle>
                 network database
@@ -28,13 +28,13 @@
         </HeroTemplate>
 
         <div class="lg:col-start-7 lg:col-end-13 w-full">
-            <img 
-                src="https://picsum.photos/1920/1080.webp" 
-                alt="Network Image Placeholder" 
-                class="w-full h-auto lg:h-full object-cover"
+            <img
+                src="https://picsum.photos/id/1/1920/1080.webp"
+                alt="Network Image Placeholder"
+                class="w-full h-full max-h-[895px] object-cover"
             >
         </div>
-        
+
     </div>
 </template>
 

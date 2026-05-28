@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <div class="grid grid-cols-12 gap-8">
-        <HeroTemplate cta_1_link="/events#upcoming" cta_2_link="/events#event-news" class="col-start-2 col-end-8 mt-10 mb-10">
+    <div class="grid grid-cols-12 gap-8 px-6 lg:px-0 items-center">
+        <HeroTemplate cta_1_link="/events#upcoming" cta_2_link="/events#event-news" class="col-span-12 md:col-start-2 md:col-end-6 mt-10 mb-10">
             <template #subtitle>
                 events
             </template>
@@ -27,8 +27,8 @@
 
         </HeroTemplate>
 
-        <div class="col-start-8 col-end-13">
-            <img src="https://picsum.photos/1920/1080.webp" alt="Network Image" class="w-full h-full">
+        <div class="col-span-12 md:col-start-7 md:col-end-12 flex items-center justify-center">
+            <img src="https://picsum.photos/id/20/480/380.webp" alt="Network Image" class="max-w-full max-h-full w-auto h-auto object-contain">
         </div>
 
 

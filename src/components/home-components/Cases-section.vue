@@ -9,7 +9,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="w-full bg-primary pb-[90px]">
+  <section class="w-full bg-primary pb-[90px] px-6 lg:px-0">
     <div class="grid max-w-[1280px] grid-cols-12 gap-8 mx-auto">
 
       <!-- Header Section -->
@@ -34,7 +34,7 @@ const { t } = useI18n()
       <div class="col-span-12 md:col-span-6 bg-tertiary border border-secondary md:border-0 flex flex-col overflow-hidden group pb-6 md:pb-0 rounded-sm relative">
         <div class="hidden md:block relative w-full h-[260px]">
           <img
-            src="https://picsum.photos/600/260"
+            src="https://picsum.photos/id/1/600/260"
             alt="Business meeting"
             class="w-full h-full object-cover"
           />

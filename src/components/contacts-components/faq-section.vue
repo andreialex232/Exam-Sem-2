@@ -38,7 +38,7 @@ const toggleFaq = (id) => {
 </script>
 
 <template>
-  <section class="w-full bg-card-surface py-12 md:py-[90px]">
+  <section class="w-full bg-card-surface py-12 md:py-[90px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto grid grid-cols-12">
 
       <div class="col-span-12 lg:col-span-10 lg:col-start-2 flex flex-col">

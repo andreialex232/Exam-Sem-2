@@ -40,7 +40,7 @@ const copyToClipboard = () => {
 </script>
 
 <template>
-  <section v-if="article" class="w-full bg-card-surface border-t border-b border-grey pt-12 md:pt-[90px] pb-16 md:pb-24">
+  <section v-if="article" class="w-full bg-card-surface border-t border-b border-grey pt-12 md:pt-[90px] pb-16 md:pb-24 px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <div class="grid grid-cols-12 gap-6 items-start mb-10 md:mb-14">
@@ -90,7 +90,7 @@ const copyToClipboard = () => {
 
       <div class="max-w-[1100px] w-full mx-auto aspect-[1100/500] bg-primary rounded-[4px] overflow-hidden shadow-sm">
         <img
-          src="https://picsum.photos/1100/500"
+          src="https://picsum.photos/id/6/1100/500"
           alt="Article thumbnail placeholder"
           class="w-full h-full object-cover"
         />

@@ -9,7 +9,7 @@ const pastEvents = [
     infoText: '✓ Related case available',
     actionText: 'View recap',
     link: '#',
-    image: 'https://picsum.photos/355/200?random=1'
+    image: 'https://picsum.photos/id/5/355/200?random=1'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const pastEvents = [
     infoText: '📷 Photo gallery available',
     actionText: 'View photos',
     link: '#',
-    image: 'https://picsum.photos/355/200?random=2'
+    image: 'https://picsum.photos/id/6/355/200?random=2'
   },
   {
     id: 3,
@@ -29,13 +29,13 @@ const pastEvents = [
     infoText: '▶ Short video available',
     actionText: 'View recap',
     link: '#',
-    image: 'https://picsum.photos/355/200?random=3'
+    image: 'https://picsum.photos/id/8/355/200?random=3'
   }
 ]
 </script>
 
 <template>
-  <section class="w-full bg-page-bg py-12 md:py-[90px]">
+  <section class="w-full bg-page-bg py-12 md:py-[90px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <div class="flex flex-col md:flex-row md:justify-between md:items-end w-full mb-10 md:mb-16 gap-4">

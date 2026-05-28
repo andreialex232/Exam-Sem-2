@@ -35,7 +35,7 @@ const members = [
 </script>
 
 <template>
-    <div class="grid grid-cols-12 w-full bg-page-bg pt-10 pb-10 md:pt-20 md:pb-20">
+    <div class="grid grid-cols-12 w-full bg-page-bg pt-10 pb-10 md:pt-20 md:pb-20 px-6 lg:px-0">
         <div class="col-span-12 sm:col-start-2 sm:col-end-12 sm:px-0">
             <HeroTemplate>
                 <template #subtitle>

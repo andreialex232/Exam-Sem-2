@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="w-full bg-primary border-t border-b border-grey py-14 md:py-[80px] text-center">
+  <section class="w-full bg-primary border-t border-b border-grey py-14 md:py-[80px] text-center px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto flex flex-col items-center gap-6 md:gap-8">
 
       <div class="flex flex-col gap-3 max-w-[650px] w-full">

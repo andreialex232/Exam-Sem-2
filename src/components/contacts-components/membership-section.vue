@@ -5,7 +5,7 @@ const profileType = ref('')
 </script>
 
 <template>
-  <section id="membership-form-section" class="w-full bg-white py-12 md:py-[90px]">
+  <section id="membership-form-section" class="w-full bg-white py-12 md:py-[90px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-10 md:mb-14">

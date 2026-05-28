@@ -3,7 +3,7 @@ import HeroTemplate from '../layout/Hero-template.vue';
 </script>
 
 <template>
-  <section class="w-full bg-page-bg py-12 border-t border-b border-grey">
+  <section class="w-full bg-page-bg py-12 border-t border-b border-grey px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-10 md:mb-16">

@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <section class="w-full bg-page-bg py-12 md:py-[90px]">
+  <section class="w-full bg-page-bg py-12 md:py-[90px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto flex flex-col md:grid md:grid-cols-12 md:gap-8 items-stretch">
 
       <div class="col-span-12 md:col-span-5 bg-page-bg border border-[#E0E1DD] md:border-0 p-6 md:p-0 rounded-[4px] md:rounded-none flex flex-col justify-center">

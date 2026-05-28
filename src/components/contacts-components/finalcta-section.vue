@@ -11,7 +11,7 @@ const scrollToSection = (id) => {
 </script>
 
 <template>
-  <section class="w-full bg-primary border-t border-b border-grey py-16 md:py-[100px] text-center">
+  <section class="w-full bg-primary border-t border-b border-grey py-16 md:py-[100px] text-center px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto flex flex-col items-center">
 
       <h2 class="text-3xl md:text-h2 text-white mb-4 max-w-[600px]">

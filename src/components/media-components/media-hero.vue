@@ -3,8 +3,8 @@ import HeroTemplate from '../layout/Hero-template.vue';
 </script>
 
 <template>
-  <section class="w-full bg-white py-12 md:py-[90px]">
-    <div class="max-w-[1280px] mx-auto">
+  <section class="w-full bg-white py-[80px]">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-0">
 
       <div class="grid grid-cols-12 gap-8 lg:gap-0 items-start">
 

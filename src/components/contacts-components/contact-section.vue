@@ -6,7 +6,7 @@ const language = ref('')
 </script>
 
 <template>
-  <section id="contact-section" class="w-full bg-card-surface border-t border-b border-grey py-12 md:py-[90px]">
+  <section id="contact-section" class="w-full bg-card-surface border-t border-b border-grey py-12 md:py-[90px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-10 md:mb-16">

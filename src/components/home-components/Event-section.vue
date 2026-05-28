@@ -34,7 +34,7 @@ const events = ref([
 </script>
 
 <template>
-  <section class="w-full bg-card-surface py-12 md:py-[90px]">
+  <section class="w-full bg-card-surface py-12 md:py-[90px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <!-- Section Header -->
@@ -44,7 +44,7 @@ const events = ref([
         </h2>
         <RouterLink to="/events" class="hidden md:block cursor-pointer border-[1.6px] border-primary text-primary font-semibold text-[15px] px-6 py-3 rounded-sm hover:bg-primary hover:text-white transition-colors">
           {{ t('home.events.seeAll') }}
-        </RouterLink> 
+        </RouterLink>
       </div>
 
       <!-- Desktop Table Headers -->

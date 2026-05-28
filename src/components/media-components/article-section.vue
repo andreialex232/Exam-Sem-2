@@ -52,8 +52,8 @@ const scrollToFilter = () => {
 </script>
 
 <template>
-  <div class="w-full">
-    <section id="filter-section" class="w-full bg-white border-t border-b border-grey py-10 md:py-14">
+  <div class="w-full px-6 lg:px-0">
+    <section id="filter-section" class="w-full bg-white border-t border-b border-grey py-10 md:py-14 ">
       <div class="max-w-[1280px] mx-auto flex flex-col gap-8">
         <h2 class="text-h2 text-primary font-bold">Browse by content type</h2>
         <div class="flex flex-col gap-5">
@@ -106,7 +106,7 @@ const scrollToFilter = () => {
           <div v-for="article in displayedArticles" :key="article.id" class="col-span-12 sm:col-span-6 lg:col-span-4 bg-white border border-grey border-t-[3px] rounded-sm overflow-hidden flex flex-col justify-between shadow-sm">
             <div>
               <div class="relative w-full aspect-[355/200] bg-primary overflow-hidden group">
-                <img src="https://picsum.photos/355/200" alt="Article thumbnail" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://picsum.photos/id/4/355/200" alt="Article thumbnail" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300" />
                 <div class="absolute top-4 left-4 z-10">
                   <span :class="article.labelBg" class="text-small-title px-3 py-1 rounded-[20px] uppercase font-bold tracking-wider inline-block">
                     {{ article.type }}

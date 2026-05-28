@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'; //
 import logo from "@/assets/logo.svg";
 
 // 2. Extract locale from the global scope
-const { locale } = useI18n({ useScope: 'global' }); 
+const { locale } = useI18n({ useScope: 'global' });
 
 const isMenuOpen = ref(false);
 
@@ -27,7 +27,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <nav class="w-full border-b border-gray-100 bg-white relative z-50">
+  <nav class="w-full border-b border-gray-100 bg-white relative z-50 px-6 lg:px-0">
     <div class="mx-auto max-w-[1280px] grid grid-cols-4 min-[1001px]:grid-cols-12 items-center h-[61px]">
 
       <RouterLink to="/" class="col-span-1 min-[1001px]:col-span-3 flex items-center">
@@ -52,16 +52,16 @@ const toggleMenu = () => {
           :class="locale === 'da' ? 'text-primary font-bold' : 'text-support font-normal'"
           class="transition-all hover:text-primary hover:font-bold cursor-pointer"
           >DA</button>
-          
+
           <span class="text-support">/</span>
-          
+
           <button @click="setLanguage('de')"
           :class="locale === 'de' ? 'text-primary font-bold' : 'text-support font-normal'"
           class="transition-all hover:text-primary hover:font-bold cursor-pointer"
           >DE</button>
-          
+
           <span class="text-support">/</span>
-          
+
           <button @click="setLanguage('en')"
           :class="locale === 'en' ? 'text-primary font-bold' : 'text-support font-normal'"
           class="transition-all hover:text-primary hover:font-bold cursor-pointer"

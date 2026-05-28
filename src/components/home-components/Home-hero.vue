@@ -9,7 +9,7 @@ const { t } = useI18n()
 <template>
   <section class="w-full bg-card-surface relative pb-12 md:pb-0">
 
-    <div class="grid max-w-[1280px] grid-cols-12 gap-8 h-auto md:h-[895px] bg-card-surface mx-auto relative">
+    <div class="grid max-w-[1280px] grid-cols-12 gap-8 max-h-[895px] bg-card-surface mx-auto relative pb-[80px] px-6 lg:px-0">
 
       <div class="col-span-12 md:col-span-7 flex flex-col justify-start pt-12 md:pt-[50px] z-10">
 
@@ -71,7 +71,7 @@ const { t } = useI18n()
     </div>
 
     <!-- Desktop Background Image Placement -->
-    <div class="absolute bottom-0 left-[57.5%] h-[895px] right-0 z-0 hidden md:block">
+    <div class="absolute bottom-0 left-[57.5%] h-[895px] max-w-[800px] right-0 z-0 hidden md:block">
       <img
         :src="homeHeroImage"
         alt="Business meeting"
@@ -80,7 +80,7 @@ const { t } = useI18n()
     </div>
 
     <!-- Border Line Indicator Layout -->
-    <div class="absolute top-[880px] left-[57.5%] -translate-x-1/2 flex items-center justify-center gap-2 font-bold text-xs text-secondary z-10 select-none hidden md:flex">
+    <div class="absolute top-[650px] left-[57.5%] -translate-x-1/2 flex items-center justify-center gap-2 font-bold text-xs text-secondary z-10 select-none hidden md:flex">
       <span>DK</span>
       <div class="w-12 border-t-2 border-dashed border-cta"></div>
       <span>DE</span>

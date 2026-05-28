@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section class="w-full bg-card-surface py-12 md:py-[90px]">
+  <section class="w-full bg-card-surface py-12 md:py-[90px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-10 md:mb-16 max-w-[650px]">

@@ -9,7 +9,7 @@ const relatedArticles = computed(() => {
 </script>
 
 <template>
-  <section class="w-full bg-card-surface border-t border-b border-grey py-12 md:py-[70px]">
+  <section class="w-full bg-card-surface border-t border-b border-grey py-12 md:py-[70px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <div class="mb-8 md:mb-10">

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="w-full bg-white py-12 md:py-[70px]">
+  <section class="w-full bg-white py-12 md:py-[70px] px-6 lg:px-0">
     <div class="max-w-[1280px] mx-auto">
 
       <div class="grid grid-cols-12">

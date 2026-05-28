@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 px-6 lg:px-0 pb-16 lg:pb-24 bg-card-surface">
+    <div class="grid grid-cols-12 gap-8 px-6 lg:px-0 items-center">
 
-        <HeroTemplate cta_1_link="/contacts#membership-form-section" cta_2_link="/contacts#contact-section" class="lg:col-start-2 lg:col-end-6 mt-12">
+        <HeroTemplate cta_1_link="/contacts#membership-form-section" cta_2_link="/contacts#contact-section" class="col-span-12 md:col-start-2 md:col-end-6 mt-10 mb-10">
             <template #subtitle>
                 JOIN THE NETWORK
             </template>
@@ -27,12 +27,8 @@
             </template>
         </HeroTemplate>
 
-        <div class="lg:col-start-7 lg:col-end-13 w-full">
-            <img
-                src="https://picsum.photos/500/500"
-                alt="Contacts Image Placeholder"
-                class="w-full h-auto lg:h-full object-cover"
-            >
+        <div class="col-span-12 md:col-start-7 md:col-end-12 flex items-center justify-center">
+            <img src="https://picsum.photos/id/445/480/380.webp" alt="Contact Image" class="max-w-full max-h-full w-auto h-auto object-contain">
         </div>
 
     </div>
