@@ -17,7 +17,7 @@
         <div class="col-span-12 md:col-span-4 flex flex-col items-start w-full">
 
           <div class="relative w-full mb-4 md:mb-6">
-            <div class="hidden md:block absolute left-[30px] top-1/2 -translate-y-1/2 w-[calc(100%+32px-30px)] h-[1px] bg-grey z-0"></div>
+            <div class="hidden md:block absolute left-[30px] top-1/2 -translate-y-1/2 w-[calc(100%+32px-30px)] h-[1px] bg-grey z-0" aria-hidden="true"></div>
 
             <div class="w-12 h-12 md:w-[60px] md:h-[60px] rounded-full bg-primary text-white text-xl md:text-2xl font-bold flex items-center justify-center select-none relative z-10">
               1
@@ -32,13 +32,13 @@
             Tell Business DE-DK who you are and why <br>your organisation wants to join the network.
           </p>
 
-          <div class="block md:hidden w-full h-[1px] bg-grey mt-8"></div>
+          <div class="block md:hidden w-full h-[1px] bg-grey mt-8" aria-hidden="true"></div>
         </div>
 
         <div class="col-span-12 md:col-span-4 flex flex-col items-start w-full">
 
           <div class="relative w-full mb-4 md:mb-6">
-            <div class="hidden md:block absolute left-[30px] top-1/2 -translate-y-1/2 w-[calc(100%+32px-30px)] h-[1px] bg-grey z-0"></div>
+            <div class="hidden md:block absolute left-[30px] top-1/2 -translate-y-1/2 w-[calc(100%+32px-30px)] h-[1px] bg-grey z-0" aria-hidden="true"></div>
 
             <div class="w-12 h-12 md:w-[60px] md:h-[60px] rounded-full bg-primary text-white text-xl md:text-2xl font-bold flex items-center justify-center select-none relative z-10">
               2
@@ -53,7 +53,7 @@
             The team checks your organisation type, <br>contact details and possible role in the <br>network.
           </p>
 
-          <div class="block md:hidden w-full h-[1px] bg-grey mt-8"></div>
+          <div class="block md:hidden w-full h-[1px] bg-grey mt-8" aria-hidden="true"></div>
         </div>
 
         <div class="col-span-12 md:col-span-4 flex flex-col items-start w-full">

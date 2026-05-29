@@ -53,7 +53,7 @@ const scrollToFilter = () => {
 
 <template>
   <div class="w-full px-6 lg:px-0">
-    <section id="filter-section" class="w-full bg-white border-t border-b border-grey py-10 md:py-14 ">
+    <section id="filter-section" class="w-full bg-white border-t border-b border-grey py-10 md:py-14">
       <div class="max-w-[1280px] mx-auto flex flex-col gap-8">
         <h2 class="text-h2 text-primary font-bold">Browse by content type</h2>
         <div class="flex flex-col gap-5">
@@ -63,6 +63,7 @@ const scrollToFilter = () => {
               v-for="type in ['All', 'Cases', 'Interviews', 'Insights', 'News & Updates', 'Event recaps', 'Shorts']"
               :key="type"
               @click="activeType = type; visibleRowsCount = 1"
+              :aria-pressed="activeType === type ? 'true' : 'false'"
               :class="activeType === type ? 'bg-primary text-white border-primary' : 'border-secondary/20 bg-card-surface text-secondary hover:bg-subtle'"
               class="cursor-pointer px-4 py-1.5 text-btn rounded-full border transition-all"
             >
@@ -75,6 +76,7 @@ const scrollToFilter = () => {
               v-for="lang in ['All', 'EN', 'DK', 'DE']"
               :key="lang"
               @click="activeLanguage = lang; visibleRowsCount = 1"
+              :aria-pressed="activeLanguage === lang ? 'true' : 'false'"
               :class="activeLanguage === lang ? 'bg-primary text-white border-primary' : 'border-secondary/20 bg-card-surface text-secondary hover:bg-subtle'"
               class="cursor-pointer px-4 py-1.5 text-btn rounded-full border transition-all"
             >
@@ -97,8 +99,12 @@ const scrollToFilter = () => {
             <h2 class="text-h2 text-primary font-bold leading-tight mb-3">Latest news, cases and insights</h2>
             <p class="text-body text-secondary font-normal">Showing practical examples, interviews and updates from the border region.</p>
           </div>
-          <button @click="toggleSort" class="cursor-pointer bg-white border border-grey rounded-[4px] px-4 py-2.5 text-body text-primary font-medium hover:bg-card-surface transition-colors flex items-center gap-2 self-start sm:self-auto">
-            Sort by {{ sortByNewest ? 'oldest' : 'newest' }} &#8595;
+          <button 
+            @click="toggleSort" 
+            :aria-pressed="!sortByNewest ? 'true' : 'false'"
+            class="cursor-pointer bg-white border border-grey rounded-[4px] px-4 py-2.5 text-body text-primary font-medium hover:bg-card-surface transition-colors flex items-center gap-2 self-start sm:self-auto"
+          >
+            Sort by {{ sortByNewest ? 'oldest' : 'newest' }} <span aria-hidden="true">&#8595;</span>
           </button>
         </div>
 
@@ -106,7 +112,7 @@ const scrollToFilter = () => {
           <div v-for="article in displayedArticles" :key="article.id" class="col-span-12 sm:col-span-6 lg:col-span-4 bg-white border border-grey border-t-[3px] rounded-sm overflow-hidden flex flex-col justify-between shadow-sm">
             <div>
               <div class="relative w-full aspect-[355/200] bg-primary overflow-hidden group">
-                <img src="https://picsum.photos/id/4/355/200" alt="Article thumbnail" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://picsum.photos/id/4/355/200" alt="" aria-hidden="true" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300" />
                 <div class="absolute top-4 left-4 z-10">
                   <span :class="article.labelBg" class="text-small-title px-3 py-1 rounded-[20px] uppercase font-bold tracking-wider inline-block">
                     {{ article.type }}
@@ -118,10 +124,10 @@ const scrollToFilter = () => {
                 <p class="text-body text-secondary font-normal leading-relaxed">{{ article.description }}</p>
                 <div class="flex flex-col gap-2 pt-2">
                   <div class="text-[11px] font-semibold text-support uppercase tracking-wider flex items-center gap-2">
-                    <span>🏢</span> {{ article.author }}
+                    <span aria-hidden="true">🏢</span> {{ article.author }}
                   </div>
                   <div class="inline-flex items-center gap-2 bg-grey px-2 py-1 rounded-[4px] text-[11px] font-semibold text-support max-w-max">
-                    <span>{{ article.flag }}</span> <span>{{ article.langCode }}</span>
+                    <span aria-hidden="true">{{ article.flag }}</span> <span>{{ article.langCode }}</span>
                   </div>
                 </div>
               </div>
@@ -132,7 +138,8 @@ const scrollToFilter = () => {
                 :to="{ name: 'article-detail', params: { id: article.id } }"
                 class="cursor-pointer block text-center border border-primary text-primary text-[15px] font-semibold p-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-all w-full"
               >
-                {{ article.buttonText }}
+                <span>{{ article.buttonText }}</span>
+                <span class="sr-only">: {{ article.title }}</span>
               </RouterLink>
             </div>
           </div>

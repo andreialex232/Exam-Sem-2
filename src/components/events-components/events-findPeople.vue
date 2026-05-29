@@ -34,7 +34,7 @@
               to="/network"
               class="block md:inline-block w-full md:w-auto text-center bg-cta text-white text-[15px] font-semibold px-6 py-3.5 rounded-[4px] hover:bg-[#e05e00] transition-colors cursor-pointer"
             >
-              Go to Network &rarr;
+              Go to Network <span aria-hidden="true">&rarr;</span>
             </RouterLink>
           </div>
         </div>
@@ -54,7 +54,7 @@
               to="contacts#contact-section"
               class="block md:inline-block w-full md:w-auto text-center border-[1.6px] border-primary bg-transparent text-primary text-[15px] font-semibold px-6 py-3.5 rounded-[4px] hover:bg-primary hover:text-white transition-colors cursor-pointer"
             >
-              Talk to Business DE-DK &rarr;
+              Talk to Business DE-DK <span aria-hidden="true">&rarr;</span>
             </RouterLink>
           </div>
         </div>

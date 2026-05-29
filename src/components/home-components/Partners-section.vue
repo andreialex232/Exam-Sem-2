@@ -49,17 +49,17 @@ const { t } = useI18n()
         <div class="hidden md:flex md:col-span-12 flex-row flex-nowrap items-center justify-center gap-8 text-xs text-steel font-semibold uppercase tracking-wider whitespace-nowrap">
 
           <div class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-steel/20"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-steel/20" aria-hidden="true"></span>
             <span>{{ t('home.partners.tags.supported') }}</span>
           </div>
 
           <div class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-steel/20"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-steel/20" aria-hidden="true"></span>
             <span>{{ t('home.partners.tags.cooperation') }}</span>
           </div>
 
           <div class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-steel/20"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-steel/20" aria-hidden="true"></span>
             <span>{{ t('home.partners.tags.network') }}</span>
           </div>
 

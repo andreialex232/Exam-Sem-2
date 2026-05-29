@@ -60,6 +60,8 @@ const toggleFaq = (id) => {
           >
             <button
               @click="toggleFaq(faq.id)"
+              :aria-expanded="faq.isOpen ? 'true' : 'false'"
+              :aria-controls="'faq-content-' + faq.id"
               class="w-full flex items-center justify-between text-left py-5 md:py-6 cursor-pointer group select-none bg-transparent border-none focus:outline-none"
             >
               <h3 class="text-base md:text-h4 text-primary font-bold pr-4 group-hover:text-cta transition-colors">
@@ -70,7 +72,7 @@ const toggleFaq = (id) => {
                 class="w-6 h-6 flex items-center justify-center text-primary flex-shrink-0 transition-transform duration-300 ease-in-out"
                 :class="{ 'rotate-45': faq.isOpen }"
               >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                 </svg>
               </div>
@@ -78,6 +80,7 @@ const toggleFaq = (id) => {
 
             <div
               v-show="faq.isOpen"
+              :id="'faq-content-' + faq.id"
               class="pb-5 md:pb-6 transition-all duration-300 ease-in-out"
             >
               <p class="text-body text-secondary font-normal leading-relaxed max-w-[90%]">

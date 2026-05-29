@@ -17,7 +17,7 @@
 
       <div class="max-w-[850px] w-full bg-white border border-grey rounded-sm p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5 md:gap-6 shadow-sm">
 
-        <div class="w-20 h-20 bg-page-bg rounded-[4px] border border-grey flex items-center justify-center flex-shrink-0 select-none">
+        <div class="w-20 h-20 bg-page-bg rounded-[4px] border border-grey flex items-center justify-center flex-shrink-0 select-none" aria-hidden="true">
           <span class="text-[12px] text-support font-semibold uppercase tracking-wider">
             Logo
           </span>
@@ -29,9 +29,9 @@
             <span class="bg-support text-white text-small-title px-3 py-1 rounded-[20px] uppercase font-bold tracking-wider inline-block">
               COMPANY
             </span>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <span>Denmark</span>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <span>International workforce / onboarding</span>
           </div>
 

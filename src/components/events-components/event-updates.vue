@@ -34,7 +34,9 @@
         <div class="col-span-12 md:col-span-3 flex flex-col justify-center mt-6 md:mt-0 w-full max-w-sm md:max-w-none mx-auto">
           <form @submit.prevent class="flex flex-col gap-4 w-full">
 
+            <label for="newsletter-email" class="sr-only">Your email address</label>
             <input
+              id="newsletter-email"
               type="email"
               placeholder="Your email"
               class="w-full bg-page-bg text-sm text-primary placeholder-support/70 px-4 py-3.5 rounded-[4px] border border-grey focus:outline-none focus:border-cta transition-colors"

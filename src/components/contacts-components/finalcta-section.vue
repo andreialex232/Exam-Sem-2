@@ -28,7 +28,7 @@ const scrollToSection = (id) => {
           to="/contacts/#membership-form-section"
           class="cursor-pointer w-full sm:w-auto bg-cta text-white font-bold text-base px-6 py-3.5 rounded-[4px] hover:bg-[#e05e00] transition-colors text-center whitespace-nowrap"
         >
-          Start membership request &rarr;
+          Start membership request <span aria-hidden="true">&rarr;</span>
         </RouterLink>
 
         <RouterLink

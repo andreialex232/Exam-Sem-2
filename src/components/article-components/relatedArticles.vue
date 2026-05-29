@@ -45,7 +45,8 @@ const relatedArticles = computed(() => {
               :to="{ name: 'article-detail', params: { id: item.id } }"
               class="cursor-pointer block text-center border border-primary text-primary text-base font-semibold p-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-all w-full"
             >
-              {{ item.buttonText }}
+              <span>{{ item.buttonText }}</span>
+              <span class="sr-only">: {{ item.title }}</span>
             </RouterLink>
           </div>
 

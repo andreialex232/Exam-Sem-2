@@ -7,7 +7,7 @@
     });
 </script>
 <template>
-    <div class="flex flex-col h-full bg-white border-sm p-5 gap-4">
+    <article class="flex flex-col h-full bg-white border-sm p-5 gap-4">
         <div>
             <img 
                 :src="card_image" 
@@ -30,5 +30,5 @@
             </button>
         </div> -->
 
-    </div>
+    </article>
 </template>

@@ -39,7 +39,7 @@
           to="/network"
           class="cursor-pointer text-body text-white font-semibold hover:underline transition-all py-2 sm:py-0 whitespace-nowrap"
         >
-          Go to Network &#8594;
+          Go to Network <span aria-hidden="true">&#8594;</span>
         </RouterLink>
 
       </div>

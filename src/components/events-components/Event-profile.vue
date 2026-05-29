@@ -41,12 +41,10 @@ const eventBadgeClass = (type) => {
 </script>
 
 <template>
-    <!-- Loading State -->
     <div v-if="!t" class="min-h-screen flex items-center justify-center text-premium-bg">
         <p>Loading...</p>
     </div>
 
-    <!-- Main Content -->
     <div v-else>
         <div class="bg-card-surface grid grid-cols-12 gap-4 gap-y-10 py-10 lg:py-20">
             <div class="col-start-2 col-end-12 lg:col-end-7 flex flex-col gap-6 text-white">
@@ -93,7 +91,6 @@ const eventBadgeClass = (type) => {
                         <p class="text-[16px] font-[700] text-premium-bg text-right max-w-[60%]">{{ t.practicalInformation.values.host }}</p>
                     </div>
 
-                    <!-- Hidden on mobile, flex on desktop -->
                     <div class="capitalize hidden lg:flex flex-col gap-3 pt-4">
                         <RouterLink to="" class="accent-btn text-center block w-full py-3">{{ t.hero.cta_1 }}</RouterLink>
                         <RouterLink to="" class="secondary-btn text-center block w-full py-3">{{ t.hero.cta_2 }}</RouterLink>
@@ -102,7 +99,6 @@ const eventBadgeClass = (type) => {
             </div>
         </div>
 
-        <!-- Details Section -->
         <div class="grid grid-cols-12 gap-8 gap-y-12 pt-10 pb-10 lg:pt-20 lg:pb-20">
             <div class="col-start-2 col-end-12 lg:col-end-7 space-y-8">
                 <div>
@@ -115,13 +111,12 @@ const eventBadgeClass = (type) => {
                     <h2 class="text-h3 text-premium-bg mb-2">{{ t.detailsSection.whatWillYouLearn.title }}</h2>
                     <ul class="space-y-2 text-body text-premium-bg">
                         <li v-for="(item, index) in t.detailsSection.whatWillYouLearn.items" :key="index" class="flex items-start">
-                            <span class="mr-2">—</span>
+                            <span class="mr-2" aria-hidden="true">—</span>
                             <span>{{ item }}</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Programme -->
                 <div>
                     <h2 class="text-h3 text-premium-bg mb-2">{{ t.programmeSection.title }}</h2>
                     <div class="border border-gray-200 rounded overflow-hidden">
@@ -135,7 +130,6 @@ const eventBadgeClass = (type) => {
                         </div>
                     </div>
 
-                    <!-- Visible on mobile, hidden on desktop -->
                     <div class="capitalize flex lg:hidden flex-col gap-3 pt-8">
                         <RouterLink to="" class="accent-btn text-center block w-full py-3">{{ t.hero.cta_1 }}</RouterLink>
                         <RouterLink to="" class="secondary-btn text-center block w-full py-3">{{ t.hero.cta_2 }}</RouterLink>
@@ -143,7 +137,6 @@ const eventBadgeClass = (type) => {
                 </div>
             </div>
 
-            <!-- Related Content -->
             <div class="col-start-2 col-end-12 lg:col-start-9 lg:col-end-12 space-y-6">
                 <p class="text-support text-small-title uppercase">
                     {{ t.relatedContent.sectionTitle }}
@@ -157,13 +150,12 @@ const eventBadgeClass = (type) => {
                         {{ item.title }}
                     </h3>
                     <a href="#" class="inline-flex items-center text-orange-500 font-medium hover:underline pt-2">
-                        {{ t.relatedContent.cta }} <span class="ml-1">→</span>
+                        {{ t.relatedContent.cta }} <span class="ml-1" aria-hidden="true">→</span>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Upcoming Events -->
         <div class="bg-page-bg pt-10 pb-20">
             <div class="grid grid-cols-12 gap-y-10 my-10 lg:my-20">
                 <div class="col-start-2 col-end-12 flex flex-wrap gap-4 justify-between items-end border-b border-gray-100 pb-4">
@@ -174,7 +166,7 @@ const eventBadgeClass = (type) => {
                     
                     <div>
                         <RouterLink to="" class="accent-link font-bold flex items-center gap-1 whitespace-nowrap">
-                            {{ t.upcomingEvents.seeAllCta }} <span>&rarr;</span>
+                            {{ t.upcomingEvents.seeAllCta }} <span aria-hidden="true">&rarr;</span>
                         </RouterLink>
                     </div>
                 </div>
@@ -195,15 +187,19 @@ const eventBadgeClass = (type) => {
                                     {{ event.title }}
                                 </h3>
                                 <div class="flex flex-col gap-1 text-sm text-support mt-2">
-                                    <span class="flex items-center gap-1.5">📍 {{ event.location }}</span>
-                                    <span class="flex items-center gap-1.5">🌐 {{ event.language }}</span>
+                                    <span class="flex items-center gap-1.5">
+                                        <span aria-hidden="true">📍</span> {{ event.location }}
+                                    </span>
+                                    <span class="flex items-center gap-1.5">
+                                        <span aria-hidden="true">🌐</span> {{ event.language }}
+                                    </span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="flex items-center gap-6 pt-6 mt-4 border-t border-gray-100" :class="{ 'justify-center': index === 0 }">
                             <RouterLink to="" class="font-bold text-orange-600 flex items-center gap-1">
-                                {{ t.upcomingEvents.registerCta }} <span>&rarr;</span>
+                                {{ t.upcomingEvents.registerCta }} <span aria-hidden="true">&rarr;</span>
                             </RouterLink>
                             <RouterLink to="" class="text-sm text-support hover:underline">
                                 {{ t.upcomingEvents.viewDetailsCta }}
@@ -214,7 +210,6 @@ const eventBadgeClass = (type) => {
             </div>
         </div>
 
-        <!-- Stay connected to crossborder business -->
         <div class="bg-premium-bg w-full py-16 lg:py-24 px-4 flex flex-col items-center justify-center text-center text-white">
             <div class="max-w-2xl flex flex-col gap-4 items-center w-full">
                 <h2 class="text-3xl lg:text-4xl font-bold tracking-tight">
@@ -235,7 +230,7 @@ const eventBadgeClass = (type) => {
                     </RouterLink>
                     
                     <RouterLink to="" class="text-link font-medium hover:underline px-4 py-3 flex items-center justify-center gap-1.5 whitespace-nowrap w-full sm:w-auto">
-                        {{ t.footerCta.cta_3 }} <span>&rarr;</span>
+                        {{ t.footerCta.cta_3 }} <span aria-hidden="true">&rarr;</span>
                     </RouterLink>
                 </div>
             </div>

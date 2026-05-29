@@ -23,7 +23,7 @@ import HeroTemplate from '../layout/Hero-template.vue';
             </template>
 
             <template #cta1>
-              Explore cases &#8594;
+              Explore cases <span aria-hidden="true">&#8594;</span>
             </template>
 
             <template #cta2>
@@ -38,13 +38,13 @@ import HeroTemplate from '../layout/Hero-template.vue';
 
             <div class="flex justify-between items-center w-full">
 
-              <div class="w-5 h-5 flex items-center justify-center bg-white/20 rounded-[2px] select-none">
+              <div class="w-5 h-5 flex items-center justify-center bg-white/20 rounded-[2px] select-none" aria-hidden="true">
                 <span class="text-[10px] text-cta font-bold uppercase tracking-wider">
                   DE
                 </span>
               </div>
 
-              <div class="bg-white px-3 py-1 rounded-full select-none">
+              <div class="bg-white px-3 py-1 rounded-full select-none" aria-hidden="true">
                 <span class="text-[11px] text-primary font-bold uppercase tracking-wider">
                   INTERVIEW
                 </span>
@@ -53,8 +53,11 @@ import HeroTemplate from '../layout/Hero-template.vue';
             </div>
 
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <button class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto">
-                <svg class="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 28 24">
+              <button 
+                aria-label="Play interview video"
+                class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto"
+              >
+                <svg class="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 28 24" aria-hidden="true">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </button>

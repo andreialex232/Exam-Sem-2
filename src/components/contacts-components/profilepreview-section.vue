@@ -75,6 +75,7 @@ import HeroTemplate from '../layout/Hero-template.vue';
               </button>
 
               <div class="flex gap-1.5 justify-start md:justify-end">
+                <span class="sr-only">Available languages:</span>
                 <div class="bg-grey px-2.5 py-1 rounded-[2px] text-small-title text-support uppercase font-bold tracking-wider">DA</div>
                 <div class="bg-grey px-2.5 py-1 rounded-[2px] text-small-title text-support uppercase font-bold tracking-wider">DE</div>
                 <div class="bg-grey px-2.5 py-1 rounded-[2px] text-small-title text-support uppercase font-bold tracking-wider">EN</div>
@@ -101,31 +102,31 @@ import HeroTemplate from '../layout/Hero-template.vue';
 
           <ul class="flex flex-col gap-4">
             <li class="flex items-center gap-3 text-[15px] md:text-body text-primary font-normal">
-              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0" aria-hidden="true"></span>
               Organisation name
             </li>
             <li class="flex items-center gap-3 text-[15px] md:text-body text-primary font-normal">
-              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0" aria-hidden="true"></span>
               Profile type
             </li>
             <li class="flex items-center gap-3 text-[15px] md:text-body text-primary font-normal">
-              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0" aria-hidden="true"></span>
               Country / region
             </li>
             <li class="flex items-center gap-3 text-[15px] md:text-body text-primary font-normal">
-              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0" aria-hidden="true"></span>
               Sector or service
             </li>
             <li class="flex items-center gap-3 text-[15px] md:text-body text-primary font-normal">
-              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0" aria-hidden="true"></span>
               Languages
             </li>
             <li class="flex items-center gap-3 text-[15px] md:text-body text-primary font-normal">
-              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0" aria-hidden="true"></span>
               Contact person
             </li>
             <li class="flex items-center gap-3 text-[15px] md:text-body text-primary font-normal">
-              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0" aria-hidden="true"></span>
               Related cases or events
             </li>
           </ul>

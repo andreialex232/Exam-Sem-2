@@ -182,12 +182,14 @@ const formatLanguages = (langs) => {
       </HeroTemplate>
       
       <div class="relative w-full">
+        <label for="event-search-input" class="sr-only">Search events</label>
         <span class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-secondary">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.603 10.602Z" />
           </svg>
         </span>
         <input 
+          id="event-search-input"
           ref="searchInput"
           v-model="search"
           type="text" 
@@ -200,37 +202,70 @@ const formatLanguages = (langs) => {
         <div class="flex flex-wrap items-center justify-between gap-y-6">
           <fieldset class="flex flex-wrap items-center gap-2">
             <legend class="text-label text-secondary uppercase mr-3 float-left">Event Type</legend>
-            <label v-for="option in eventTypeOptions" :key="option.value" class="cursor-pointer">
-              <input type="radio" name="event_type" :value="option.value" v-model="selectedType" class="sr-only peer" />
-              <div class="px-4 py-1.5 text-btn rounded-full border border-secondary/20 bg-card-surface text-secondary transition-all peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary hover:bg-subtle">{{option.label}}</div>
-            </label>
+            <div v-for="option in eventTypeOptions" :key="option.value" class="inline-block">
+              <input 
+                type="radio" 
+                :id="`type-${option.value}`"
+                name="event_type" 
+                :value="option.value" 
+                v-model="selectedType" 
+                class="sr-only peer" 
+              />
+              <label :for="`type-${option.value}`" class="cursor-pointer block">
+                <div class="px-4 py-1.5 text-btn rounded-full border border-secondary/20 bg-card-surface text-secondary transition-all peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary hover:bg-subtle">
+                  {{ option.label }}
+                </div>
+              </label>
+            </div>
           </fieldset>
 
           <fieldset class="flex flex-wrap items-center gap-2">
             <legend class="text-label text-secondary uppercase mr-3 float-left">Country</legend>
-            <label v-for="country in countryOptions" :key="country.value" class="cursor-pointer">
-              <input type="checkbox" :value="country.value" v-model="selectedCountries" @change="handleCountryChange(country.value)" class="sr-only peer" />
-              <div class="px-4 py-1.5 text-btn rounded-full border border-secondary/20 bg-card-surface text-secondary transition-all peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary hover:bg-subtle">{{country.label}}</div>
-            </label>
+            <div v-for="country in countryOptions" :key="country.value" class="inline-block">
+              <input 
+                type="checkbox" 
+                :id="`country-${country.value}`"
+                :value="country.value" 
+                v-model="selectedCountries" 
+                @change="handleCountryChange(country.value)" 
+                class="sr-only peer" 
+              />
+              <label :for="`country-${country.value}`" class="cursor-pointer block">
+                <div class="px-4 py-1.5 text-btn rounded-full border border-secondary/20 bg-card-surface text-secondary transition-all peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary hover:bg-subtle">
+                  {{ country.label }}
+                </div>
+              </label>
+            </div>
           </fieldset>
         </div>
 
         <fieldset class="flex flex-wrap items-center gap-2">
           <legend class="text-label text-secondary uppercase mr-3 float-left">Language</legend>
-          <label v-for="option in languageOptions" :key="option.value" class="cursor-pointer">
-            <input type="checkbox" :value="option.value" v-model="selectedLanguages" @change="handleLanguageChange(option.value)" class="sr-only peer" />
-            <div class="px-4 py-1.5 text-btn rounded-full border border-secondary/20 bg-card-surface text-secondary transition-all peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary hover:bg-subtle">{{ option.label }}</div>
-          </label>
+          <div v-for="option in languageOptions" :key="option.value" class="inline-block">
+            <input 
+              type="checkbox" 
+              :id="`lang-${option.value}`"
+              :value="option.value" 
+              v-model="selectedLanguages" 
+              @change="handleLanguageChange(option.value)" 
+              class="sr-only peer" 
+            />
+            <label :for="`lang-${option.value}`" class="cursor-pointer block">
+              <div class="px-4 py-1.5 text-btn rounded-full border border-secondary/20 bg-card-surface text-secondary transition-all peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary hover:bg-subtle">
+                {{ option.label }}
+              </div>
+            </label>
+          </div>
         </fieldset>
       </div>
 
       <div class="flex flex-wrap items-center justify-between text-meta mt-6 text-support">
         <div class="flex items-center gap-2">
           <button @click="clearFilters" type="button" class="hover:underline text-support cursor-pointer">Clear filters</button>
-          <span class="text-support/40 select-none px-1">.</span>
+          <span class="text-support/40 select-none px-1" aria-hidden="true">.</span>
           <button @click="clearFilters" type="button" class="hover:underline text-support cursor-pointer">Back to all events</button>
         </div>
-        <div class="text-support/90">
+        <div class="text-support/90" aria-live="polite">
           Showing {{ filteredEvents.length }} of {{ events.length }} events
         </div>
       </div>
@@ -242,7 +277,7 @@ const formatLanguages = (langs) => {
           
           <div v-for="event in paginatedEvents" :key="event.id" class="bg-white rounded border border-slate-200 shadow-sm p-6 lg:p-8 flex gap-6 hover:shadow-md transition-shadow">
             
-            <div class="flex flex-col items-center min-w-[3rem] mt-1">
+            <div class="flex flex-col items-center min-w-[3rem] mt-1" aria-hidden="true">
               <span class="text-3xl font-extrabold text-slate-900 leading-none">{{ event.date.day }}</span>
               <span class="text-xs font-bold text-[#F97316] uppercase mt-1 tracking-wider">{{ event.date.time }}</span>
             </div>
@@ -265,26 +300,26 @@ const formatLanguages = (langs) => {
 
               <div class="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-400 mb-6">
                 <div class="flex items-center gap-1.5">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                   </svg>
-                  <span>{{ event.location }}</span>
+                  <span><span class="sr-only">Location:</span> {{ event.location }}</span>
                 </div>
                 <div class="flex items-center gap-1.5">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.91 0-5.657-.534-8.143-1.493m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
                   </svg>
-                  <span>{{ formatLanguages(event.language) }}</span>
+                  <span><span class="sr-only">Language:</span> {{ formatLanguages(event.language) }}</span>
                 </div>
               </div>
 
               <div class="flex items-center gap-6 mt-auto border-t border-slate-100 pt-5">
                 <RouterLink :to="`/events/${event.slug}/register`" class="text-[#F97316] font-semibold text-sm hover:underline flex items-center gap-1">
-                  Register &rarr;
+                  Register <span aria-hidden="true">&rarr;</span>
                 </RouterLink>
                 <RouterLink :to="`/events/${event.slug}`" class="text-slate-400 text-sm hover:underline">
-                  View details
+                  View details <span class="sr-only">for {{ event.name }}</span>
                 </RouterLink>
               </div>
               
@@ -303,13 +338,14 @@ const formatLanguages = (langs) => {
               @click="currentPage--; scrollToList()" 
               class="px-5 py-3 border border-slate-800 rounded text-slate-800 font-medium disabled:opacity-30 disabled:cursor-not-allowed"
             >
-              &larr; Previous
+              <span aria-hidden="true">&larr;</span> Previous
             </button>
 
             <button 
               v-for="page in totalPages" 
               :key="page" 
               @click="currentPage = page; scrollToList()" 
+              :aria-current="currentPage === page ? 'page' : undefined"
               :class="[
                 'w-12 h-12 flex items-center justify-center font-medium rounded',
                 currentPage === page 
@@ -320,21 +356,21 @@ const formatLanguages = (langs) => {
               {{ page }}
             </button>
 
-            <span v-if="totalPages > 3 && currentPage < totalPages - 1" class="px-2 text-slate-400">...</span>
+            <span v-if="totalPages > 3 && currentPage < totalPages - 1" class="px-2 text-slate-400" aria-hidden="true">...</span>
 
             <button 
               :disabled="currentPage === totalPages" 
               @click="currentPage++; scrollToList()" 
               class="px-5 py-3 border border-slate-800 rounded text-slate-800 font-medium disabled:opacity-30 disabled:cursor-not-allowed"
             >
-              Next &rarr;
+              Next <span aria-hidden="true">&rarr;</span>
             </button>
           </div>
         </div>
       </div>
 
-      <div v-else class="text-center py-16 flex flex-col items-center justify-center gap-2 border border-dashed border-slate-200 rounded-md mt-6">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-slate-300">
+      <div v-else class="text-center py-16 flex flex-col items-center justify-center gap-2 border border-dashed border-slate-200 rounded-md mt-6" aria-live="polite">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-12 h-12 text-slate-300">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
         </svg>
         <p class="text-xl font-medium text-slate-700 mt-2">We couldn't find any events matching your criteria.</p>

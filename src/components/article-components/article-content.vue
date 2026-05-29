@@ -23,24 +23,24 @@
               Key takeaways
             </h3>
 
-            <ul class="flex flex-col gap-3.5 list-none pl-0 m-0">
-              <li class="flex items-start gap-4 text-body text-primary font-normal leading-relaxed">
-                <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0 mt-[9px]"></span>
+            <ul role="list" class="flex flex-col gap-3.5 list-none pl-0 m-0">
+              <li role="listitem" class="flex items-start gap-4 text-body text-primary font-normal leading-relaxed">
+                <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0 mt-[9px]" aria-hidden="true"></span>
                 <span>Onboarding is not only about the workplace</span>
               </li>
 
-              <li class="flex items-start gap-4 text-body text-primary font-normal leading-relaxed">
-                <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0 mt-[9px]"></span>
+              <li role="listitem" class="flex items-start gap-4 text-body text-primary font-normal leading-relaxed">
+                <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0 mt-[9px]" aria-hidden="true"></span>
                 <span>International employees also need support in the local community</span>
               </li>
 
-              <li class="flex items-start gap-4 text-body text-primary font-normal leading-relaxed">
-                <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0 mt-[9px]"></span>
+              <li role="listitem" class="flex items-start gap-4 text-body text-primary font-normal leading-relaxed">
+                <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0 mt-[9px]" aria-hidden="true"></span>
                 <span>Companies can use buddy systems, leadership training and social integration</span>
               </li>
 
-              <li class="flex items-start gap-4 text-body text-primary font-normal leading-relaxed">
-                <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0 mt-[9px]"></span>
+              <li role="listitem" class="flex items-start gap-4 text-body text-primary font-normal leading-relaxed">
+                <span class="w-2 h-2 rounded-full bg-cta flex-shrink-0 mt-[9px]" aria-hidden="true"></span>
                 <span>The experience can inspire other employers in the border region</span>
               </li>
             </ul>

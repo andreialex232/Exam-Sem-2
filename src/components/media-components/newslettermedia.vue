@@ -23,7 +23,9 @@
         <div class="w-full lg:col-span-4 pt-6 lg:pt-0 lg:pl-8 flex flex-col gap-3 justify-center">
           <form @submit.prevent class="flex flex-col gap-3 w-full" novalidate>
 
+            <label for="newsletter-email-input" class="sr-only">Your email address</label>
             <input
+              id="newsletter-email-input"
               type="email"
               placeholder="Your email"
               class="w-full bg-[#f4f4f4] border border-grey rounded-[4px] p-3.5 text-sm text-support placeholder-support/60 focus:outline-none focus:border-white transition-colors"

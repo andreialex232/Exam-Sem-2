@@ -52,13 +52,13 @@ const copyToClipboard = () => {
               {{ article.type }}
             </span>
 
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <span>{{ article.date }}</span>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <span class="uppercase">{{ article.lang }}</span>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <span>{{ article.topic }}</span>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <span>{{ article.author }}</span>
           </div>
 
@@ -77,8 +77,9 @@ const copyToClipboard = () => {
             @click="copyToClipboard"
             :class="copied ? 'border-cta bg-cta/10 text-cta' : 'border-grey bg-page-bg text-primary hover:bg-grey/20'"
             class="cursor-pointer flex items-center justify-center gap-2 border rounded-[4px] px-4 py-2.5 w-full lg:w-auto transition-all"
+            aria-live="polite"
           >
-            <img v-if="!copied" src="@/assets/svg/share.svg" alt="Share icon" class="w-4 h-4 select-none" />
+            <img v-if="!copied" src="@/assets/svg/share.svg" alt="" aria-hidden="true" class="w-4 h-4 select-none" />
 
             <span class="text-[13px] lg:text-[14px] font-semibold whitespace-nowrap">
               {{ copied ? 'Copied!' : 'Share content' }}

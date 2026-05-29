@@ -194,12 +194,14 @@ const colorBasedOnRole = (actor, el) => {
       </HeroTemplate>
       
       <div class="relative w-full">
+        <label for="network-search-input" class="sr-only">Search the cross-border network database</label>
         <span class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-secondary">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.603 10.602Z" />
           </svg>
         </span>
         <input 
+          id="network-search-input"
           ref="searchInput"
           v-model="search"
           type="text" 
@@ -209,6 +211,7 @@ const colorBasedOnRole = (actor, el) => {
       </div>
 
       <div class="flex flex-col gap-5 mt-2">
+        <h3 class="sr-only">Filter categories</h3>
         <div class="flex flex-wrap items-center justify-between gap-y-6">
           <fieldset class="flex flex-wrap items-center gap-2">
             <legend class="text-label text-secondary uppercase mr-3 float-left">Profile Type</legend>
@@ -239,10 +242,10 @@ const colorBasedOnRole = (actor, el) => {
       <div class="flex flex-wrap items-center justify-between text-meta mt-6 text-support">
         <div class="flex items-center gap-2">
           <button @click="clearFilters" type="button" class="hover:underline text-support cursor-pointer">Clear filters</button>
-          <span class="text-support/40 select-none px-1">.</span>
+          <span class="text-support/40 select-none px-1" aria-hidden="true">.</span>
           <button @click="clearFilters" type="button" class="hover:underline text-support cursor-pointer">Back to all results</button>
         </div>
-        <div class="text-support/90">
+        <div class="text-support/90" role="status" aria-live="polite">
           Showing {{ filteredNetworkActors.length }} of {{ networkActors.length }} network actors
         </div>
       </div>
@@ -256,13 +259,13 @@ const colorBasedOnRole = (actor, el) => {
           <div v-for="actor in paginatedNetworkActors" :key="actor.id" class="bg-white rounded-sm flex flex-col gap-0.5 border border-slate-100 shadow-sm">
             <div class="h-16 flex px-6 bg-page-bg justify-between items-center">
               <img v-if="actor.logo !== ''" :src="actor.logo" :alt="actor.name" class="w-16 h-16 object-contain">
-              <div v-else :class="colorBasedOnRole(actor, 'bg')" class="text-white w-12 h-12 rounded-full flex items-center justify-center text-h4">{{ actor.name[0] }}</div>
+              <div v-else :class="colorBasedOnRole(actor, 'bg')" class="text-white w-12 h-12 rounded-full flex items-center justify-center text-h4" aria-hidden="true">{{ actor.name[0] }}</div>
               <p :class="colorBasedOnRole(actor, 'text')" class="uppercase text-small-title">{{ actor.role }}</p>
             </div>
             <p class="px-6 py-3 text-h4 text-premium-bg">{{ actor.name }}</p>
             <div class="px-6 flex justify-content items-center gap-2">
-              <img v-if="actor.country === 'Denmark'" class="w-4 h-4" :src="danishFlag" alt="">
-              <img v-if="actor.country === 'Germany'" class="w-4 h-4" :src="germanFlag" alt="">
+              <img v-if="actor.country === 'Denmark'" class="w-4 h-4" :src="danishFlag" alt="" aria-hidden="true">
+              <img v-if="actor.country === 'Germany'" class="w-4 h-4" :src="germanFlag" alt="" aria-hidden="true">
               <p class="text-body-sm text-support">{{ actor.country }}</p>
             </div>
             
@@ -275,12 +278,15 @@ const colorBasedOnRole = (actor, el) => {
               </span>
             </div>
             <div class="p-6 text-center mx-auto w-full">
-              <RouterLink class="text-center mx-auto block secondary-btn-long w-full" :to="`network/${actor.slug}`">View Profile</RouterLink>
+              <RouterLink class="text-center mx-auto block secondary-btn-long w-full" :to="`network/${actor.slug}`">
+                <span>View Profile</span>
+                <span class="sr-only">: {{ actor.name }}</span>
+              </RouterLink>
             </div>
           </div>
         </div>
 
-        <div class="mt-16 border-t border-slate-100 pt-12 flex flex-col items-center gap-6">
+        <nav class="mt-16 border-t border-slate-100 pt-12 flex flex-col items-center gap-6" aria-label="Network directory table pagination">
           <p class="text-slate-500 font-sans text-base">
             Showing {{ displayStart }}–{{ displayEnd }} of {{ totalItems }} network actors
           </p>
@@ -291,13 +297,15 @@ const colorBasedOnRole = (actor, el) => {
               @click="currentPage--; scrollToList()" 
               class="px-5 py-3 border border-slate-800 rounded text-slate-800 font-medium disabled:opacity-30 disabled:cursor-not-allowed"
             >
-              &larr; Previous
+              <span aria-hidden="true">&larr;</span> Previous
             </button>
 
             <button 
               v-for="page in totalPages" 
               :key="page" 
               @click="currentPage = page; scrollToList()" 
+              :aria-current="currentPage === page ? 'page' : undefined"
+              :aria-label="'Go to page ' + page"
               :class="[
                 'w-12 h-12 flex items-center justify-center font-medium rounded',
                 currentPage === page 
@@ -308,21 +316,21 @@ const colorBasedOnRole = (actor, el) => {
               {{ page }}
             </button>
 
-            <span v-if="totalPages > 3 && currentPage < totalPages - 1" class="px-2 text-slate-400">...</span>
+            <span v-if="totalPages > 3 && currentPage < totalPages - 1" class="px-2 text-slate-400" aria-hidden="true">...</span>
 
             <button 
               :disabled="currentPage === totalPages" 
               @click="currentPage++; scrollToList()" 
               class="px-5 py-3 border border-slate-800 rounded text-slate-800 font-medium disabled:opacity-30 disabled:cursor-not-allowed"
             >
-              Next &rarr;
+              Next <span aria-hidden="true">&rarr;</span>
             </button>
           </div>
-        </div>
+        </nav>
       </div>
 
-      <div v-else class="text-center py-16 flex flex-col items-center justify-center gap-2 border border-dashed border-slate-200 rounded-md mt-6">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-slate-300">
+      <div v-else class="text-center py-16 flex flex-col items-center justify-center gap-2 border border-dashed border-slate-200 rounded-md mt-6" role="status">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-slate-300" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
         </svg>
         <p class="text-xl font-medium text-slate-700 mt-2">We couldn't find any network actors matching your criteria.</p>
@@ -330,24 +338,18 @@ const colorBasedOnRole = (actor, el) => {
       </div>
 
       <div class="bg-page-bg p-6 md:p-10 text-center flex flex-col items-center gap-3 md:gap-4 mt-8 rounded-sm w-[90%] md:w-160 mx-auto">
-    
-    <p class="text-sm md:text-body text-secondary">
-        Need to refine your search?
-    </p>
-
-    <div class="flex items-center justify-center gap-3 md:gap-5 mt-2">
-        
-        <button @click="jumpToSearch" class="secondary-btn text-sm md:text-base">
+        <p class="text-sm md:text-body text-secondary">
+          Need to refine your search?
+        </p>
+        <div class="flex items-center justify-center gap-3 md:gap-5 mt-2">
+          <button @click="jumpToSearch" class="secondary-btn text-sm md:text-base">
             Back to filters
-        </button>
-        
-        <button @click="clearFilters" class="cursor-pointer text-sm md:text-body text-support hover:underline">
+          </button>
+          <button @click="clearFilters" class="cursor-pointer text-sm md:text-body text-support hover:underline">
             Clear filters
-        </button>
-        
-    </div>
-    
-</div>
+          </button>
+        </div>
+      </div>
 
     </div>
   </div>

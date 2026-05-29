@@ -15,7 +15,7 @@ const { t } = useI18n()
     <div class="box-border max-md:col-span-2 max-[420px]:col-span-1">
  
       <div class="mb-4 w-[160px] h-[48px] flex items-center">
-        <RouterLink class="block w-full h-full flex items-center" to="/">
+        <RouterLink class="block w-full h-full flex items-center" to="/" aria-label="Business DE-DK Home">
           <img class="white-svg" :src="logo" alt="Business DE-DK Logo">
         </RouterLink>
       </div>
@@ -26,25 +26,25 @@ const { t } = useI18n()
       <div class="flex gap-2">
         <a href="https://www.linkedin.com/company/businessdedk/posts/?feedView=all" aria-label="LinkedIn"
            class="box-border flex items-center justify-center w-8 h-8 border border-secondary rounded text-support no-underline transition-colors duration-200 hover:border-support hover:text-white">
-           <img src="@/assets/svg/linked.svg" alt="LinkedIn Icon" class="w-8 h-8">
+           <img src="@/assets/svg/linked.svg" alt="" class="w-8 h-8" aria-hidden="true">
           </a>
         <a href="https://www.facebook.com/BusinessDEDK/" aria-label="Facebook"
            class="box-border flex items-center justify-center w-8 h-8 border border-secondary rounded text-support no-underline transition-colors duration-200 hover:border-support hover:text-white">
-           <img src="@/assets/svg/fb.svg" alt="Facebook Icon" class="w-5 h-5">
+           <img src="@/assets/svg/fb.svg" alt="" class="w-5 h-5" aria-hidden="true">
           </a>
         <a href="https://www.youtube.com/@Business-region/videos" aria-label="YouTube"
            class="box-border flex items-center justify-center w-8 h-8 border border-secondary rounded text-support no-underline transition-colors duration-200 hover:border-support hover:text-white">
-           <img src="@/assets/svg/yt.svg" alt="YouTube Icon" class="w-8 h-8">
+           <img src="@/assets/svg/yt.svg" alt="" class="w-8 h-8" aria-hidden="true">
           </a>
         <a href="#" aria-label="Instagram"
            class="box-border flex items-center justify-center w-8 h-8 border border-secondary rounded text-support no-underline transition-colors duration-200 hover:border-support hover:text-white">
-           <img src="@/assets/svg/ig.svg" alt="Instagram Icon" class="w-8 h-8">
+           <img src="@/assets/svg/ig.svg" alt="" class="w-8 h-8" aria-hidden="true">
           </a>
       </div>
     </div>
     
-    <nav class="box-border flex flex-col gap-2 max-md:col-start-1">
-      <h4 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">{{ t('footer.quickLinks.title') }}</h4>
+    <nav class="box-border flex flex-col gap-2 max-md:col-start-1" :aria-label="t('footer.quickLinks.title')">
+      <h3 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">{{ t('footer.quickLinks.title') }}</h3>
       <ul class="box-border m-0 p-0 list-none flex flex-col gap-[0.45rem]">
         <li class="m-0 p-0">
           <RouterLink class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white" to="/network">{{ t('footer.quickLinks.network') }}</RouterLink>
@@ -62,21 +62,21 @@ const { t } = useI18n()
     </nav>
     
     <div class="box-border flex flex-col gap-2 max-md:col-start-2 max-[420px]:col-start-1">
-      <h4 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">{{ t('footer.openingHours.title') }}</h4>
+      <h3 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">{{ t('footer.openingHours.title') }}</h3>
       <p class="box-border m-0 p-0 text-support text-meta">{{ t('footer.openingHours.callHours') }}</p>
       <p class="box-border m-0 p-0 text-support text-meta">{{ t('footer.openingHours.times') }}</p>
       <p class="box-border m-0 p-0 text-support text-meta">{{ t('footer.openingHours.visitingHours') }}</p>
     </div>
     
     <div class="box-border flex flex-col gap-1.5 max-md:col-start-1 max-[420px]:col-start-1">
-      <h4 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">{{ t('footer.contact.title') }}</h4>
-      <a href="tel:+4521775916" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white">+45 21 77 59 16</a>
-      <a href="mailto:lecba@toender.dk" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white">lecba@toender.dk</a>
+      <h3 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">{{ t('footer.contact.title') }}</h3>
+      <a href="tel:+4521775916" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white"><span class="sr-only">Call phone number </span>+45 21 77 59 16</a>
+      <a href="mailto:lecba@toender.dk" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white"><span class="sr-only">Send email to </span>lecba@toender.dk</a>
       <p class="box-border m-0 p-0 text-support text-meta">{{ t('footer.contact.address') }}</p>
     </div>
     
-    <nav class="box-border flex flex-col gap-2 max-md:col-start-2 max-[420px]:col-start-1">
-      <h4 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">{{ t('footer.legal.title') }}</h4>
+    <nav class="box-border flex flex-col gap-2 max-md:col-start-2 max-[420px]:col-start-1" :aria-label="t('footer.legal.title')">
+      <h3 class="box-border m-0 mb-3 p-0 text-white text-label uppercase">{{ t('footer.legal.title') }}</h3>
       <ul class="box-border m-0 p-0 list-none flex flex-col gap-[0.45rem]">
         <li class="m-0 p-0"><a href="#" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white">{{ t('footer.legal.privacy') }}</a></li>
         <li class="m-0 p-0"><a href="#" class="block text-support no-underline text-meta transition-colors duration-200 hover:text-white">{{ t('footer.legal.strategy') }}</a></li>
@@ -91,14 +91,14 @@ const { t } = useI18n()
               flex items-center justify-between
               max-md:flex-col max-md:items-center max-md:gap-3 max-md:px-5 max-md:py-4 max-md:text-center">
     <p class="box-border m-0 p-0 text-caption text-secondary">{{ t('footer.bottomBar.copyright') }}</p>
-    <div class="box-border flex items-center gap-1.5 text-caption text-secondary">
+    <nav class="box-border flex items-center gap-1.5 text-caption text-secondary" :aria-label="t('footer.bottomBar.language')">
       <span class="mr-1">{{ t('footer.bottomBar.language') }}</span>
-      <a href="#" class="text-secondary no-underline tracking-[0.04em] transition-colors duration-200 hover:text-white">DA</a>
-      <span class="opacity-50">/</span>
-      <a href="#" class="text-secondary no-underline tracking-[0.04em] transition-colors duration-200 hover:text-white">DE</a>
-      <span class="opacity-50">/</span>
-      <a href="#" class="text-secondary no-underline tracking-[0.04em] transition-colors duration-200 hover:text-white">EN</a>
-    </div>
+      <a href="#" :aria-label="`Switch language to DA`" class="text-secondary no-underline tracking-[0.04em] transition-colors duration-200 hover:text-white">DA</a>
+      <span class="opacity-50" aria-hidden="true">/</span>
+      <a href="#" :aria-label="`Switch language to DE`" class="text-secondary no-underline tracking-[0.04em] transition-colors duration-200 hover:text-white">DE</a>
+      <span class="opacity-50" aria-hidden="true">/</span>
+      <a href="#" :aria-label="`Switch language to EN`" class="text-secondary no-underline tracking-[0.04em] transition-colors duration-200 hover:text-white">EN</a>
+    </nav>
   </div>
  
 </footer>

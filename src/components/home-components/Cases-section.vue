@@ -20,7 +20,7 @@ const { t } = useI18n()
           </h2>
           <div class="hidden md:block text-white font-medium text-sm">
             <RouterLink to="/cases" class="hover:underline">
-              {{ t('home.news.goToCases') }} →
+              {{ t('home.news.goToCases') }} <span aria-hidden="true">→</span>
             </RouterLink>
           </div>
         </div>
@@ -31,7 +31,7 @@ const { t } = useI18n()
       </div>
 
       <!-- Article 1 (Main Card - Interview) -->
-      <div class="col-span-12 md:col-span-6 bg-tertiary border border-secondary md:border-0 flex flex-col overflow-hidden group pb-6 md:pb-0 rounded-sm relative">
+      <article class="col-span-12 md:col-span-6 bg-tertiary border border-secondary md:border-0 flex flex-col overflow-hidden group pb-6 md:pb-0 rounded-sm relative">
         <div class="hidden md:block relative w-full h-[260px]">
           <img
             src="https://picsum.photos/id/1/600/260"
@@ -54,17 +54,17 @@ const { t } = useI18n()
           </p>
           <div class="text-cta font-semibold text-[11px] md:text-sm">
             <RouterLink to="/cases" class="hover:underline">
-              {{ t('home.news.links.explore') }} →
+              {{ t('home.news.links.explore') }} <span aria-hidden="true">→</span>
             </RouterLink>
           </div>
         </div>
-      </div>
+      </article>
 
       <!-- Sidebar Cards Stack -->
       <div class="col-span-12 md:col-span-6 flex flex-col gap-6 md:gap-8">
 
         <!-- Article 2 (Case) -->
-        <div class="bg-tertiary border border-secondary md:border-0 p-6 md:p-8 flex flex-col justify-between h-auto md:h-[234px] rounded-sm">
+        <article class="bg-tertiary border border-secondary md:border-0 p-6 md:p-8 flex flex-col justify-between h-auto md:h-[234px] rounded-sm">
           <div>
             <span class="inline-block md:hidden bg-secondary text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
               {{ t('home.news.labels.case') }}
@@ -80,14 +80,14 @@ const { t } = useI18n()
             </p>
             <div class="text-cta font-semibold text-[11px] md:text-sm">
               <RouterLink to="/cases" class="hover:underline">
-                {{ t('home.news.links.read') }} →
+                {{ t('home.news.links.read') }} <span aria-hidden="true">→</span>
               </RouterLink>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Article 3 (Insight) -->
-        <div class="bg-tertiary md:bg-secondary border border-secondary md:border-0 p-6 md:p-8 flex flex-col justify-between h-auto md:h-[234px] rounded-sm">
+        <article class="bg-tertiary md:bg-secondary border border-secondary md:border-0 p-6 md:p-8 flex flex-col justify-between h-auto md:h-[234px] rounded-sm">
           <div>
             <span class="inline-block md:hidden bg-[#4B5E78] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
               {{ t('home.news.labels.insight') }}
@@ -103,11 +103,11 @@ const { t } = useI18n()
             </p>
             <div class="text-white font-semibold text-[11px] md:text-sm mt-4 md:mt-10">
               <RouterLink to="/cases" class="hover:underline">
-                {{ t('home.news.links.view') }} →
+                {{ t('home.news.links.view') }} <span aria-hidden="true">→</span>
               </RouterLink>
             </div>
           </div>
-        </div>
+        </article>
 
       </div>
 
@@ -117,7 +117,7 @@ const { t } = useI18n()
           to="/cases"
           class="block w-full text-center border-[1.6px] border-white text-white font-semibold text-[15px] py-4 rounded-sm hover:bg-white hover:text-primary transition-colors"
         >
-          {{ t('home.news.goToCases') }} →
+          {{ t('home.news.goToCases') }} <span aria-hidden="true">→</span>
         </RouterLink>
       </div>
 

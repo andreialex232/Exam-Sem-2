@@ -27,16 +27,16 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <nav class="w-full border-b border-gray-100 bg-white relative z-50 px-6 lg:px-0">
+  <nav class="w-full border-b border-gray-100 bg-white relative z-50 px-6 lg:px-0" aria-label="Main Navigation">
     <div class="mx-auto max-w-[1280px] grid grid-cols-4 min-[1001px]:grid-cols-12 items-center h-[61px]">
 
       <RouterLink to="/" class="col-span-1 min-[1001px]:col-span-3 flex items-center">
         <img
           :src="logo"
-          alt="Logo"
+          alt="Business DE-DK - Home"
           class="w-auto block object-contain object-left transition-all h-[20px] min-[1001px]:h-[35px]"
         />
-      </RouterLink to="/">
+      </RouterLink>
 
       <div class="hidden min-[1001px]:flex min-[1001px]:col-span-6 justify-center items-center gap-10 text-secondary text-sm font-medium">
         <RouterLink to="/network" class="nav-link">{{ $t('nav.network') }}</RouterLink>
@@ -47,24 +47,30 @@ const toggleMenu = () => {
 
       <div class="col-span-3 min-[1001px]:col-span-3 flex items-center justify-end gap-4 md:gap-6">
 
-        <div class="flex items-center gap-1 text-[12px] uppercase">
+        <div class="flex items-center gap-1 text-[12px] uppercase" aria-label="Language selection">
           <button @click="setLanguage('da')"
-          :class="locale === 'da' ? 'text-primary font-bold' : 'text-support font-normal'"
-          class="transition-all hover:text-primary hover:font-bold cursor-pointer"
+            :aria-current="locale === 'da' ? 'true' : undefined"
+            :aria-label="locale === 'da' ? 'Dansk (Valgt)' : 'Skift sprog til dansk'"
+            :class="locale === 'da' ? 'text-primary font-bold' : 'text-support font-normal'"
+            class="transition-all hover:text-primary hover:font-bold cursor-pointer"
           >DA</button>
 
-          <span class="text-support">/</span>
+          <span class="text-support" aria-hidden="true">/</span>
 
           <button @click="setLanguage('de')"
-          :class="locale === 'de' ? 'text-primary font-bold' : 'text-support font-normal'"
-          class="transition-all hover:text-primary hover:font-bold cursor-pointer"
+            :aria-current="locale === 'de' ? 'true' : undefined"
+            :aria-label="locale === 'de' ? 'Deutsch (Ausgewählt)' : 'Sprache auf Deutsch umstellen'"
+            :class="locale === 'de' ? 'text-primary font-bold' : 'text-support font-normal'"
+            class="transition-all hover:text-primary hover:font-bold cursor-pointer"
           >DE</button>
 
-          <span class="text-support">/</span>
+          <span class="text-support" aria-hidden="true">/</span>
 
           <button @click="setLanguage('en')"
-          :class="locale === 'en' ? 'text-primary font-bold' : 'text-support font-normal'"
-          class="transition-all hover:text-primary hover:font-bold cursor-pointer"
+            :aria-current="locale === 'en' ? 'true' : undefined"
+            :aria-label="locale === 'en' ? 'English (Selected)' : 'Change language to English'"
+            :class="locale === 'en' ? 'text-primary font-bold' : 'text-support font-normal'"
+            class="transition-all hover:text-primary hover:font-bold cursor-pointer"
           >EN</button>
         </div>
 
@@ -72,11 +78,17 @@ const toggleMenu = () => {
           {{ $t('nav.become_member') }}
         </RouterLink>
 
-        <button @click="toggleMenu" class="min-[1001px]:hidden text-secondary focus:outline-none p-1">
-          <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button 
+          @click="toggleMenu" 
+          class="min-[1001px]:hidden text-secondary focus:outline-none p-1"
+          :aria-expanded="isMenuOpen.toString()"
+          aria-haspopup="menu"
+          :aria-label="isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'"
+        >
+          <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -84,11 +96,11 @@ const toggleMenu = () => {
     </div>
 
     <div v-if="isMenuOpen" class="min-[1001px]:hidden absolute top-[61px] left-0 w-full bg-white border-b border-gray-100 px-4 py-6 flex flex-col shadow-xl animate-fade-in">
-      <div class="flex flex-col border-t border-gray-50">
-        <RouterLink to="/network" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.network') }}</RouterLink>
-        <RouterLink to="/cases" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.cases') }}</RouterLink>
-        <RouterLink to="/events" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.events') }}</RouterLink>
-        <RouterLink to="/contacts" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.contact') }}</RouterLink>
+      <div class="flex flex-col border-t border-gray-50" role="menu">
+        <RouterLink role="menuitem" to="/network" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.network') }}</RouterLink>
+        <RouterLink role="menuitem" to="/cases" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.cases') }}</RouterLink>
+        <RouterLink role="menuitem" to="/events" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.events') }}</RouterLink>
+        <RouterLink role="menuitem" to="/contacts" @click="isMenuOpen = false" class="py-4 text-secondary text-[15px] font-medium border-b border-gray-50 hover:bg-gray-50 px-2 transition-colors">{{ $t('nav.contact') }}</RouterLink>
       </div>
 
       <RouterLink to="/contacts#membership-form-section" @click="isMenuOpen = false" class="bg-[var(--color-cta)] text-white px-6 py-4 text-center text-sm font-semibold uppercase mt-6 tracking-wide shadow-md rounded-sm">

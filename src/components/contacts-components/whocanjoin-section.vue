@@ -57,7 +57,7 @@ const members = [
                     </template>
 
                     <template #filter>
-                        Filter by this &#8594;
+                        Filter by this <span aria-hidden="true">&#8594;</span>
                     </template>
                 </CardsWIcons>
             </div>

@@ -57,7 +57,7 @@ const eventTypes = [
             <div class="flex flex-row items-center gap-4 mb-4 md:flex-col md:items-start md:gap-0 md:mb-0">
 
               <div :class="[type.bgClass, 'w-12 h-12 rounded-full flex items-center justify-center md:mb-6 flex-shrink-0']">
-                <img :src="`/src/assets/svg/${type.icon}`" :alt="type.title" class="w-5 h-5" />
+                <img :src="`/src/assets/svg/${type.icon}`" alt="" aria-hidden="true" class="w-5 h-5" />
               </div>
 
               <h3 class="text-lg md:text-h3 text-primary font-normal md:font-bold md:mb-4">
@@ -73,7 +73,7 @@ const eventTypes = [
           <div>
             <div class="w-[80%] h-[1px] bg-grey my-6"></div>
             <RouterLink to="#" class="text-sm md:text-base text-cta hover:underline inline-flex items-center gap-1">
-              Filter by this &rarr;
+              Filter by this <span aria-hidden="true">&rarr;</span>
             </RouterLink>
           </div>
         </div>

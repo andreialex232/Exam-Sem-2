@@ -17,6 +17,7 @@
                     four types of <br>network actors
                 </template>
             </HeroTemplate>
+            
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] pt-12">
                 <CardsWIcons v-for="network in networkTypes" :key="network.id" :card_image="network.icon">
                     <template #h3>
@@ -26,12 +27,10 @@
                         {{ network.description }}
                     </template>
                     <template #filter>
-                        Filter by this &#8594;
+                        Filter by this <span aria-hidden="true">&#8594;</span>
                     </template>
                 </CardsWIcons>
             </div>
-            
-            
 
         </div>
     </div>

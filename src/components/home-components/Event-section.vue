@@ -85,9 +85,10 @@ const events = ref([
           </div>
 
           <div class="col-span-2 flex items-center h-full gap-4 relative">
-            <div class="h-[60px] w-[1px] bg-[#E0E1DD] flex-shrink-0"></div>
+            <div class="h-[60px] w-[1px] bg-[#E0E1DD] flex-shrink-0" aria-hidden="true"></div>
             <div class="flex items-center gap-1.5 text-[13px] text-support">
-              <span>📍 {{ event.location }}</span>
+              <span aria-hidden="true">📍</span>
+              <span><span class="sr-only">Location: </span>{{ event.location }}</span>
             </div>
           </div>
 
@@ -136,12 +137,12 @@ const events = ref([
 
           <div class="flex flex-col gap-2 text-support mb-6">
             <div class="flex items-center gap-1.5 text-xs">
-              <span>📍</span>
-              <span>{{ event.location }}</span>
+              <span aria-hidden="true">📍</span>
+              <span><span class="sr-only">Location: </span>{{ event.location }}</span>
             </div>
             <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider">
-              <span>🌐</span>
-              <span>DA / EN</span>
+              <span aria-hidden="true">🌐</span>
+              <span><span class="sr-only">Languages: </span>DA / EN</span>
             </div>
           </div>
 
@@ -161,7 +162,7 @@ const events = ref([
       <!-- Mobile Bottom Button -->
       <div class="block md:hidden mt-10 text-center">
         <button class="cursor-pointer text-h4 text-cta font-bold hover:underline inline-flex items-center gap-2">
-          {{ t('home.events.seeAll') }} →
+          {{ t('home.events.seeAll') }} <span aria-hidden="true">→</span>
         </button>
       </div>
 

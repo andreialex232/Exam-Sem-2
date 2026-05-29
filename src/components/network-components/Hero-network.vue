@@ -30,7 +30,8 @@
         <div class="lg:col-start-7 lg:col-end-13 w-full">
             <img
                 src="https://picsum.photos/id/1/1920/1080.webp"
-                alt="Network Image Placeholder"
+                alt=""
+                aria-hidden="true"
                 class="w-full h-full max-h-[895px] object-cover"
             >
         </div>

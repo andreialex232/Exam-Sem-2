@@ -27,7 +27,7 @@ const { t } = useI18n()
           </template>
 
           <template #cta1>
-            {{ t('home.hero.ctaExplore') }} →
+            {{ t('home.hero.ctaExplore') }} <span aria-hidden="true">→</span>
           </template>
 
           <template #cta2>
@@ -50,17 +50,17 @@ const { t } = useI18n()
             <h4 class="text-h4 text-primary">{{ t('home.hero.stats.interreg') }}</h4>
             <p class="text-body-sm uppercase text-support">{{ t('home.hero.stats.programme') }}</p>
           </div>
-          <div class="h-10 w-[1px] bg-[#E0E1DD]"></div>
+          <div class="h-10 w-[1px] bg-[#E0E1DD]" aria-hidden="true"></div>
           <div>
             <h4 class="text-h4 text-primary">{{ t('home.hero.stats.across') }}</h4>
             <p class="text-body-sm uppercase text-support">{{ t('home.hero.stats.theBorder') }}</p>
           </div>
-          <div class="h-10 w-[1px] bg-[#E0E1DD]"></div>
+          <div class="h-10 w-[1px] bg-[#E0E1DD]" aria-hidden="true"></div>
           <div>
             <h4 class="text-h4 text-primary">{{ t('home.hero.stats.dkDe') }}</h4>
             <p class="text-body-sm uppercase text-support">{{ t('home.hero.stats.countries') }}</p>
           </div>
-          <div class="h-10 w-[1px] bg-[#E0E1DD]"></div>
+          <div class="h-10 w-[1px] bg-[#E0E1DD]" aria-hidden="true"></div>
           <div>
             <h4 class="text-h4 text-primary">{{ t('home.hero.stats.network') }}</h4>
             <p class="text-body-sm uppercase text-support">{{ t('home.hero.stats.platform') }}</p>
@@ -80,7 +80,7 @@ const { t } = useI18n()
     </div>
 
     <!-- Border Line Indicator Layout -->
-    <div class="absolute top-[650px] left-[57.5%] -translate-x-1/2 flex items-center justify-center gap-2 font-bold text-xs text-secondary z-10 select-none hidden md:flex">
+    <div class="absolute top-[650px] left-[57.5%] -translate-x-1/2 flex items-center justify-center gap-2 font-bold text-xs text-secondary z-10 select-none hidden md:flex" aria-hidden="true">
       <span>DK</span>
       <div class="w-12 border-t-2 border-dashed border-cta"></div>
       <span>DE</span>

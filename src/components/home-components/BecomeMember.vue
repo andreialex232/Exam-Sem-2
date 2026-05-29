@@ -21,15 +21,15 @@ const { t } = useI18n()
 
         <ul class="flex md:hidden flex-col gap-5 text-[16px] font-normal mb-10">
           <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
             <span>{{ t('home.membership.benefits.visible') }}</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
             <span>{{ t('home.membership.benefits.connect') }}</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
             <span>{{ t('home.membership.benefits.events') }}</span>
           </li>
         </ul>
@@ -58,19 +58,19 @@ const { t } = useI18n()
           {{ t('home.membership.whatYouGet') }}
         </span>
 
-        <div class="w-full h-[1px] bg-support mb-6"></div>
+        <div class="w-full h-[1px] bg-support mb-6" aria-hidden="true"></div>
 
         <ul class="flex flex-col gap-5 text-[16px] font-normal">
           <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
             <span>{{ t('home.membership.benefits.visible') }}</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
             <span>{{ t('home.membership.benefits.connect') }}</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+            <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
             <span>{{ t('home.membership.benefits.events') }}</span>
           </li>
         </ul>

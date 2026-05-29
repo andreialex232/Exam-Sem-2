@@ -27,20 +27,22 @@ const profileType = ref('')
           <div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-0 gap-y-2">
               <div class="flex flex-col gap-2">
-                <label class="text-small-title text-support font-bold uppercase tracking-wider">
+                <label for="request-org" class="text-small-title text-support font-bold uppercase tracking-wider">
                   ORGANISATION NAME
                 </label>
                 <input
+                  id="request-org"
                   type="text"
                   placeholder="Your organisation"
                   class="w-full border border-grey rounded-[4px] sm:rounded-r-none p-3.5 text-[15px] text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary focus:z-10 relative transition-colors"
                 />
               </div>
               <div class="flex flex-col gap-2 sm:-ml-[1px]">
-                <label class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
+                <label for="request-name" class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
                   CONTACT PERSON
                 </label>
                 <input
+                  id="request-name"
                   type="text"
                   placeholder="Full name"
                   class="w-full border border-grey rounded-[4px] sm:rounded-l-none p-3.5 text-[15px] text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary focus:z-10 relative transition-colors"
@@ -52,20 +54,22 @@ const profileType = ref('')
           <div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-0 gap-y-2">
               <div class="flex flex-col gap-2">
-                <label class="text-small-title text-support font-bold uppercase tracking-wider">
+                <label for="request-email" class="text-small-title text-support font-bold uppercase tracking-wider">
                   EMAIL
                 </label>
                 <input
+                  id="request-email"
                   type="email"
                   placeholder="email@example.com"
                   class="w-full border border-grey rounded-[4px] sm:rounded-r-none p-3.5 text-[15px] text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary focus:z-10 relative transition-colors"
                 />
               </div>
               <div class="flex flex-col gap-2 sm:-ml-[1px]">
-                <label class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
+                <label for="request-phone" class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
                   PHONE
                 </label>
                 <input
+                  id="request-phone"
                   type="text"
                   placeholder="+45 / +49..."
                   class="w-full border border-grey rounded-[4px] sm:rounded-l-none p-3.5 text-[15px] text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary focus:z-10 relative transition-colors"
@@ -77,20 +81,22 @@ const profileType = ref('')
           <div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-0 gap-y-2">
               <div class="flex flex-col gap-2">
-                <label class="text-small-title text-support font-bold uppercase tracking-wider">
+                <label for="request-country" class="text-small-title text-support font-bold uppercase tracking-wider">
                   COUNTRY
                 </label>
                 <input
+                  id="request-country"
                   type="text"
                   class="w-full border border-grey rounded-[4px] sm:rounded-r-none p-3.5 text-[15px] text-primary focus:outline-none focus:border-primary focus:z-10 relative transition-colors"
                 />
               </div>
               <div class="flex flex-col gap-2 sm:-ml-[1px]">
-                <label class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
+                <label for="request-profile-type" class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
                   PROFILE TYPE
                 </label>
                 <div class="relative w-full">
                   <select
+                    id="request-profile-type"
                     v-model="profileType"
                     class="w-full border border-grey rounded-[4px] sm:rounded-l-none p-3.5 text-[15px] text-primary bg-white appearance-none focus:outline-none focus:border-primary focus:z-10 relative transition-colors cursor-pointer pr-10"
                   >
@@ -100,7 +106,7 @@ const profileType = ref('')
                     <option value="advisor">Partner organisation</option>
                     <option value="institution">Institution</option>
                   </select>
-                  <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-support z-20">
+                  <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-support z-20" aria-hidden="true">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                   </div>
                 </div>
@@ -109,10 +115,11 @@ const profileType = ref('')
           </div>
 
           <div class="flex flex-col gap-2">
-            <label class="text-small-title text-support font-bold uppercase tracking-wider">
+            <label for="request-website" class="text-small-title text-support font-bold uppercase tracking-wider">
               WEBSITE
             </label>
             <input
+              id="request-website"
               type="url"
               placeholder="https://..."
               class="w-full border border-grey rounded-[4px] p-3.5 text-[15px] text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary transition-colors"
@@ -120,10 +127,11 @@ const profileType = ref('')
           </div>
 
           <div class="flex flex-col gap-2">
-            <label class="text-small-title text-support font-bold uppercase tracking-wider">
+            <label for="request-message" class="text-small-title text-support font-bold uppercase tracking-wider">
               MESSAGE
             </label>
             <textarea
+              id="request-message"
               rows="5"
               placeholder="Tell us about your organisation and why you want to join..."
               class="w-full border border-grey rounded-[4px] p-3.5 text-[15px] text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary transition-colors resize-none"
@@ -170,19 +178,19 @@ const profileType = ref('')
 
           <ul class="flex flex-col gap-5">
             <li class="flex items-start gap-3 text-body text-primary font-normal leading-relaxed">
-              <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
               <span>Your request is received by the Business DE-DK team</span>
             </li>
             <li class="flex items-start gap-3 text-body text-primary font-normal leading-relaxed">
-              <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
               <span>The team reviews your information</span>
             </li>
             <li class="flex items-start gap-3 text-body text-primary font-normal leading-relaxed">
-              <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
               <span>You will be contacted before anything is published</span>
             </li>
             <li class="flex items-start gap-3 text-body text-primary font-normal leading-relaxed">
-              <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-cta mt-2 flex-shrink-0" aria-hidden="true"></span>
               <span>Nothing is shared without your approval</span>
             </li>
           </ul>

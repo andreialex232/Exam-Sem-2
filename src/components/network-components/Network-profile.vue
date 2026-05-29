@@ -48,14 +48,18 @@
                 <div>
                     <p class="text-h4 text-premium-bg">{{ t.hero.title }}</p>
                     <div class="text-body text-support">
-                        {{ t.hero.country }} &#8729; {{ t.hero.subtitle }}
+                        {{ t.hero.country }} <span aria-hidden="true">&#8729;</span> {{ t.hero.subtitle }}
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-wrap gap-2 lg:col-start-2 lg:col-end-6 order-3 lg:order-3 mt-2 lg:mt-6">
-            <p v-for="tag in t.tags" :key="tag" class="capitalize border-[0.8px] border-[#E0E1DD] py-2 px-4 rounded-full text-body text-premium-bg">{{ tag }}</p>
+        <div class="lg:col-start-2 lg:col-end-6 order-3 lg:order-3 mt-2 lg:mt-6">
+            <ul class="flex flex-wrap gap-2" aria-label="Profile tags">
+                <li v-for="tag in t.tags" :key="tag" class="capitalize border-[0.8px] border-[#E0E1DD] py-2 px-4 rounded-full text-body text-premium-bg">
+                    {{ tag }}
+                </li>
+            </ul>
         </div>
 
     </div>
@@ -75,7 +79,7 @@
                     <div>
                         <div v-for="(label, key) in t.quickFactsSection.labels" :key="key" class="flex flex-col sm:flex-row sm:gap-6 py-4 border-t-[0.8px] border-[#E0E1DD] sm:items-center justify-start">
                             <p class="uppercase text-small-title text-support w-full sm:w-[140px]">{{ label }}</p>
-                            <p  class="capitalize">{{ t.quickFactsSection.values[key] }}</p>
+                            <p class="capitalize text-premium-bg">{{ t.quickFactsSection.values[key] }}</p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +93,7 @@
                     <div>
                         <div v-for="(label, key) in t.contactSection.labels" :key="key" class="flex flex-col sm:flex-row sm:gap-6 py-4 border-t-[0.8px] border-[#E0E1DD] sm:items-center justify-start">
                             <p class="uppercase text-small-title text-support w-full sm:w-[140px]">{{ label }}</p>
-                            <p class="capitalize">{{ t.contactSection.values[key] }}</p>
+                            <p class="capitalize text-premium-bg">{{ t.contactSection.values[key] }}</p>
                         </div>
                         <RouterLink to='/network' class="text-center mt-6 secondary-btn-long mx-auto block w-full">
                             {{ t.contactSection.backButton }}
@@ -117,7 +121,7 @@
         
         <div class="text-secondary mt-8 lg:mt-20 lg:col-start-2 lg:col-end-12 bg-white p-6 lg:p-8 flex flex-col gap-8 border-[#E0E1DD] border-[0.8px] rounded-sm">
             <div v-for="(section, index) in t.aboutSection.sections" :key="index" class="flex flex-col gap-4">
-                <h3 v-if="section.title" class="text-h3">{{ section.title }}</h3>
+                <h3 v-if="section.title" class="text-h3 text-premium-bg">{{ section.title }}</h3>
                 <p v-for="(paragraph, pIndex) in section.content" :key="pIndex" :class="section.title && pIndex === 0 ? 'text-body' : ''">
                     {{ paragraph }}
                 </p>
@@ -128,7 +132,7 @@
     <div class="bg-[#FAFAF8] px-6 lg:px-0">
         <div class="grid grid-cols-1 lg:grid-cols-12 w-full gap-6 py-12 lg:pt-20 lg:pb-20">
             <div class="lg:col-start-2 lg:col-end-12 gap-4 lg:gap-6 flex flex-col lg:flex-row">
-                <img v-if="pageContent" v-for="(mediaItem, index) in pageContent.media" :key="index" class="w-full lg:w-1/2 object-cover" :src="mediaItem.url" :alt="mediaItem.alt[locale] || mediaItem.alt.en">
+                <img v-if="pageContent" v-for="(mediaItem, index) in pageContent.media" :key="index" class="w-full lg:w-1/2 object-cover" :src="mediaItem.url" :alt="mediaItem.alt[locale] || mediaItem.alt.en || ''">
             </div>
         </div>
     </div>
@@ -159,7 +163,10 @@
                         <p class="inline px-3 py-1.5 rounded-full uppercase text-small-title text-white bg-accent">case</p>
                     </div>
                     <h3 class="pb-6 capitalize text-h4 text-premium-bg">supporting cross-border cooperation in practice</h3>
-                    <RouterLink class="text-center mx-auto block secondary-btn-long w-full" to="/">Read case</RouterLink>
+                    <RouterLink class="text-center mx-auto block secondary-btn-long w-full" to="/">
+                        <span>Read case</span>
+                        <span class="sr-only">: supporting cross-border cooperation in practice</span>
+                    </RouterLink>
                 </div>
 
                 <div class="flex w-full flex-col gap-6 bg-white p-6 rounded-sm">
@@ -167,7 +174,10 @@
                         <p class="inline px-3 py-1.5 rounded-full uppercase text-small-title text-white bg-accent">case</p>
                     </div>
                     <h3 class="pb-6 capitalize text-h4 text-premium-bg">supporting cross-border cooperation in practice</h3>
-                    <RouterLink class="text-center mx-auto block secondary-btn-long w-full" to="/">Read case</RouterLink>
+                    <RouterLink class="text-center mx-auto block secondary-btn-long w-full" to="/">
+                        <span>Read case</span>
+                        <span class="sr-only">: supporting cross-border cooperation in practice</span>
+                    </RouterLink>
                 </div>
 
                 <div class="flex w-full flex-col gap-6 bg-white p-6 rounded-sm">
@@ -175,7 +185,10 @@
                         <p class="inline px-3 py-1.5 rounded-full uppercase text-small-title text-white bg-accent">case</p>
                     </div>
                     <h3 class="pb-6 capitalize text-h4 text-premium-bg">supporting cross-border cooperation in practice</h3>
-                    <RouterLink class="text-center mx-auto block secondary-btn-long w-full" to="/">Read case</RouterLink>
+                    <RouterLink class="text-center mx-auto block secondary-btn-long w-full" to="/">
+                        <span>Read case</span>
+                        <span class="sr-only">: supporting cross-border cooperation in practice</span>
+                    </RouterLink>
                 </div>
 
             </div>
@@ -190,9 +203,9 @@
                 add your organization
             </template>
             <template #h2-custom="{baseClass}">
-                <div :class="`${baseClass} text-white`">
+                <h2 :class="`${baseClass} text-white`">
                     add your organization <br>to the network
-                </div>
+                </h2>
             </template>
             <template #hero-description-custom="{baseClass}">
                 <span :class="`${baseClass} text-body text-support block`">
@@ -212,10 +225,16 @@
         <div class="lg:col-start-8 lg:col-end-12 border border-secondary bg-[#1B2B4B] rounded-sm p-8 lg:p-10 flex flex-col justify-center">
             <div class="flex flex-col">
                 <h3 class="uppercase pb-5 text-support text-small-title">why join the network</h3>
-                <ul class="flex flex-col pt-5 space-y-3 border-t-[1.6px] border-secondary list-disc list-inside text-body marker:text-accent marker:text-2xl">
-                    <li class="text-body text-white">Be found by relevant companies and partners.</li>
-                    <li class="text-body text-white">Show your services, language and region.</li>
-                    <li class="text-body text-white">Connect your profile to cases and events.</li>
+                <ul class="flex flex-col pt-5 space-y-3 border-t-[1.6px] border-secondary list-disc pl-5 text-body marker:text-accent marker:text-2xl">
+                    <li class="text-body text-white">
+                        <span>Be found by relevant companies and partners.</span>
+                    </li>
+                    <li class="text-body text-white">
+                        <span>Show your services, language and region.</span>
+                    </li>
+                    <li class="text-body text-white">
+                        <span>Connect your profile to cases and events.</span>
+                    </li>
                 </ul>
             </div>
         </div>

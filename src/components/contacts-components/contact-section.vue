@@ -70,20 +70,22 @@ const language = ref('')
             <div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-0 gap-y-4 sm:gap-y-0">
                 <div class="flex flex-col gap-2">
-                  <label class="text-small-title text-support font-bold uppercase tracking-wider">
+                  <label for="contact-name" class="text-small-title text-support font-bold uppercase tracking-wider">
                     NAME
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     placeholder="Your name"
                     class="w-full border border-grey rounded-[4px] sm:rounded-r-none p-3.5 text-body text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary focus:z-10 relative transition-colors"
                   />
                 </div>
                 <div class="flex flex-col gap-2 sm:-ml-[1px]">
-                  <label class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
+                  <label for="contact-email" class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
                     EMAIL
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
                     placeholder="email@example.com"
                     class="w-full border border-grey rounded-[4px] sm:rounded-l-none p-3.5 text-body text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary focus:z-10 relative transition-colors"
@@ -93,10 +95,11 @@ const language = ref('')
             </div>
 
             <div class="flex flex-col gap-2">
-              <label class="text-small-title text-support font-bold uppercase tracking-wider">
+              <label for="contact-organisation" class="text-small-title text-support font-bold uppercase tracking-wider">
                 ORGANISATION
               </label>
               <input
+                id="contact-organisation"
                 type="text"
                 placeholder="Your organisation"
                 class="w-full border border-grey rounded-[4px] p-3.5 text-body text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary transition-colors"
@@ -106,11 +109,12 @@ const language = ref('')
             <div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-0 gap-y-4 sm:gap-y-0">
                 <div class="flex flex-col gap-2">
-                  <label class="text-small-title text-support font-bold uppercase tracking-wider">
+                  <label for="contact-topic" class="text-small-title text-support font-bold uppercase tracking-wider">
                     TOPIC
                   </label>
                   <div class="relative w-full">
                     <select
+                      id="contact-topic"
                       v-model="topic"
                       class="w-full border border-grey rounded-[4px] sm:rounded-r-none p-3.5 text-body text-primary bg-white appearance-none focus:outline-none focus:border-primary focus:z-10 relative transition-colors cursor-pointer pr-10"
                     >
@@ -120,17 +124,18 @@ const language = ref('')
                       <option value="other">Other question</option>
                     </select>
                     <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-support z-20">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                   </div>
                 </div>
 
                 <div class="flex flex-col gap-2 sm:-ml-[1px]">
-                  <label class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
+                  <label for="contact-language" class="text-small-title text-support font-bold uppercase tracking-wider sm:pl-4">
                     LANGUAGE
                   </label>
                   <div class="relative w-full">
                     <select
+                      id="contact-language"
                       v-model="language"
                       class="w-full border border-grey rounded-[4px] sm:rounded-l-none p-3.5 text-body text-primary bg-white appearance-none focus:outline-none focus:border-primary focus:z-10 relative transition-colors cursor-pointer pr-10"
                     >
@@ -140,7 +145,7 @@ const language = ref('')
                       <option value="en">English</option>
                     </select>
                     <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-support z-20">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                   </div>
                 </div>
@@ -148,10 +153,11 @@ const language = ref('')
             </div>
 
             <div class="flex flex-col gap-2">
-              <label class="text-small-title text-support font-bold uppercase tracking-wider">
+              <label for="contact-message" class="text-small-title text-support font-bold uppercase tracking-wider">
                 MESSAGE
               </label>
               <textarea
+                id="contact-message"
                 rows="5"
                 placeholder="Your message..."
                 class="w-full border border-grey rounded-[4px] p-3.5 text-body text-primary placeholder-premium-bg/50 focus:outline-none focus:border-primary transition-colors resize-none"

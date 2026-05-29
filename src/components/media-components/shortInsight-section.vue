@@ -23,18 +23,22 @@
           to="#"
           class="cursor-pointer text-body text-cta underline hover:text-[#e05e00] transition-colors whitespace-nowrap self-start sm:self-auto"
         >
-          See all shorts &rarr;
+          See all shorts <span aria-hidden="true">&rarr;</span>
         </RouterLink>
       </div>
 
       <div class="grid grid-cols-12 gap-6 md:gap-8 items-stretch">
 
+        <!-- Card 1 -->
         <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-white border border-grey rounded-sm overflow-hidden flex flex-col justify-between">
           <div class="relative bg-primary aspect-[4/3] w-full p-4 flex flex-col justify-between items-center group">
 
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <button class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto">
-                <svg class="w-3.5 h-3.5 text-white transform translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24">
+              <button 
+                aria-label="Play video: One cross-border challenge"
+                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto"
+              >
+                <svg class="w-3.5 h-3.5 text-white transform translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </button>
@@ -61,17 +65,22 @@
                 to="#"
                 class="cursor-pointer block text-center border border-primary text-primary text-[15px] font-semibold p-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-colors w-full"
               >
-                Watch short
+                <span>Watch short</span>
+                <span class="sr-only">: One cross-border challenge</span>
               </RouterLink>
             </div>
           </div>
         </div>
 
+        <!-- Card 2 -->
         <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-white border border-grey rounded-sm overflow-hidden flex flex-col justify-between">
           <div class="relative bg-primary aspect-[4/3] w-full p-4 flex flex-col justify-between items-center group">
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <button class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto">
-                <svg class="w-3.5 h-3.5 text-white transform translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24">
+              <button 
+                aria-label="Play video: Why companies join the network"
+                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto"
+              >
+                <svg class="w-3.5 h-3.5 text-white transform translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </button>
@@ -97,17 +106,22 @@
                 to="#"
                 class="cursor-pointer block text-center border border-primary text-primary text-[15px] font-semibold p-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-colors w-full"
               >
-                Watch short
+                <span>Watch short</span>
+                <span class="sr-only">: Why companies join the network</span>
               </RouterLink>
             </div>
           </div>
         </div>
 
+        <!-- Card 3 -->
         <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-white border border-grey rounded-sm overflow-hidden flex flex-col justify-between">
           <div class="relative bg-primary aspect-[4/3] w-full p-4 flex flex-col justify-between items-center group">
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <button class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto">
-                <svg class="w-3.5 h-3.5 text-white transform translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24">
+              <button 
+                aria-label="Play video: What advisors can explain"
+                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto"
+              >
+                <svg class="w-3.5 h-3.5 text-white transform translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </button>
@@ -133,17 +147,22 @@
                 to="#"
                 class="cursor-pointer block text-center border border-primary text-primary text-[15px] font-semibold p-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-colors w-full"
               >
-                Watch short
+                <span>Watch short</span>
+                <span class="sr-only">: What advisors can explain</span>
               </RouterLink>
             </div>
           </div>
         </div>
 
+        <!-- Card 4 -->
         <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-white border border-grey rounded-sm overflow-hidden flex flex-col justify-between">
           <div class="relative bg-primary aspect-[4/3] w-full p-4 flex flex-col justify-between items-center group">
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <button class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto">
-                <svg class="w-3.5 h-3.5 text-white transform translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24">
+              <button 
+                aria-label="Play video: One lesson from an event"
+                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-white/30 transition-all cursor-pointer pointer-events-auto"
+              >
+                <svg class="w-3.5 h-3.5 text-white transform translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </button>
@@ -169,21 +188,24 @@
                 to="#"
                 class="cursor-pointer block text-center border border-primary text-primary text-[15px] font-semibold p-3 rounded-[4px] bg-transparent hover:bg-primary hover:text-white transition-colors w-full"
               >
-                Watch short
+                <span>Watch short</span>
+                <span class="sr-only">: One lesson from an event</span>
               </RouterLink>
             </div>
           </div>
         </div>
 
       </div>
-      <div class=" mt-8 flex justify-center md:hidden">
+
+      <div class="mt-8 flex justify-center md:hidden">
         <RouterLink
-            to="#"
-            class="cursor-pointer text-body text-cta underline hover:text-[#e05e00] transition-colors whitespace-nowrap self-start sm:self-auto"
-          >
-            See all shorts &rarr;
-          </RouterLink>
+          to="#"
+          class="cursor-pointer text-body text-cta underline hover:text-[#e05e00] transition-colors whitespace-nowrap self-start sm:self-auto"
+        >
+          See all shorts <span aria-hidden="true">&rarr;</span>
+        </RouterLink>
       </div>
+
     </div>
   </section>
 </template>

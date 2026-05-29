@@ -56,7 +56,7 @@ const pastEvents = [
             to="#"
             class="cursor-pointer text-[13px] md:text-sm font-semibold text-cta hover:underline inline-flex items-center gap-1"
           >
-            See all past events &rarr;
+            See all past events <span aria-hidden="true">&rarr;</span>
           </RouterLink>
         </div>
       </div>
@@ -71,7 +71,7 @@ const pastEvents = [
         >
           <div>
             <div class="w-full h-[200px] bg-grey">
-              <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
+              <img :src="event.image" alt="" aria-hidden="true" class="w-full h-full object-cover" />
             </div>
 
             <div class="p-6 md:p-8 flex flex-col items-start">
@@ -97,7 +97,7 @@ const pastEvents = [
               class="inline-flex items-center justify-center w-full text-center border-[1.6px] border-primary md:border-0 rounded-[4px] md:rounded-none py-3.5 md:py-0 text-[15px] font-semibold text-primary hover:bg-primary hover:text-white md:hover:bg-transparent md:hover:text-primary md:hover:underline transition-colors gap-1"
             >
               <span>{{ event.actionText }}</span>
-              <span>&rarr;</span>
+              <span aria-hidden="true">&rarr;</span>
             </RouterLink>
           </div>
         </div>
